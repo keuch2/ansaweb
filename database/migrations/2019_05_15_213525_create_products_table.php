@@ -24,7 +24,7 @@ class CreateProductsTable extends Migration
             $table->foreign('brand_id')->references('id')->on('brands');
             $table->text('description')->nullable();
             $table->float('price')->nullable();
-            $table->float('discount_rate')->nullable();
+            $table->float('discount_rate')->nullable()->default(0);
             $table->float('final_price')->nullable();
             $table->enum('state', ['ACTIVO', 'INACTIVO'])->default('ACTIVO');
             $table->boolean('featured')->default(true);

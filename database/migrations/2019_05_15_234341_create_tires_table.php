@@ -38,7 +38,7 @@ class CreateTiresTable extends Migration
 
             $table->text('description')->nullable();
             $table->float('price')->nullable();
-            $table->float('discount_rate')->nullable();
+            $table->float('discount_rate')->nullable()->default(0);
             $table->float('final_price')->nullable();
 
             $table->enum('state', ['ACTIVO', 'INACTIVO'])->default('ACTIVO');

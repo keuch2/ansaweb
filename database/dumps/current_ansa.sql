@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 15, 2019 at 09:41 PM
+-- Generation Time: May 15, 2019 at 11:24 PM
 -- Server version: 5.7.22-0ubuntu0.17.10.1
 -- PHP Version: 7.2.7-1+ubuntu17.10.1+deb.sury.org+1
 
@@ -53,6 +53,13 @@ CREATE TABLE `brands` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `brands`
+--
+
+INSERT INTO `brands` (`id`, `brand_name`, `photo`, `local_link`, `external_link`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 'marca de prueba', NULL, NULL, NULL, NULL, '2019-05-16 06:08:26', NULL);
 
 -- --------------------------------------------------------
 
@@ -195,7 +202,11 @@ INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `d
 (13, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/login', 'Ingreso de admin@ansa.com desde la Dirección IP 127.0.0.1', '', 1, '2019-05-16 00:13:02', NULL),
 (14, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/settings/add-save', 'Añadir nueva información cotizacion_dolar_usd_guaranigs en Settings', '', 1, '2019-05-16 02:32:44', NULL),
 (15, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/settings/add-save', 'Añadir nueva información  en Settings', '', 1, '2019-05-16 02:32:50', NULL),
-(16, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/settings/edit-save/18', 'Actualizar información  en Settings', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td></td><td></td></tr><tr><td>content</td><td></td><td></td></tr><tr><td>content_input_type</td><td></td><td>text</td></tr><tr><td>dataenum</td><td></td><td></td></tr><tr><td>helper</td><td>Valor de 1 Dolar (USD) en  (Gs)</td><td>Valor de 1 Dolar (USD) en  Reales (R$)</td></tr><tr><td>group_setting</td><td>General Setting</td><td>Cotizaciones</td></tr><tr><td>label</td><td></td><td>Cotizacion Dolar (USD) - Reales(R$)</td></tr></tbody></table>', 1, '2019-05-16 02:34:00', NULL);
+(16, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/settings/edit-save/18', 'Actualizar información  en Settings', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td></td><td></td></tr><tr><td>content</td><td></td><td></td></tr><tr><td>content_input_type</td><td></td><td>text</td></tr><tr><td>dataenum</td><td></td><td></td></tr><tr><td>helper</td><td>Valor de 1 Dolar (USD) en  (Gs)</td><td>Valor de 1 Dolar (USD) en  Reales (R$)</td></tr><tr><td>group_setting</td><td>General Setting</td><td>Cotizaciones</td></tr><tr><td>label</td><td></td><td>Cotizacion Dolar (USD) - Reales(R$)</td></tr></tbody></table>', 1, '2019-05-16 02:34:00', NULL),
+(17, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/menu_management/edit-save/3', 'Actualizar información Anchos en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>Ancho</td><td>Anchos</td></tr><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>3</td><td></td></tr></tbody></table>', 1, '2019-05-16 05:15:52', NULL),
+(18, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/brands/add-save', 'Añadir nueva información marca de prueba en Marcas', '', 1, '2019-05-16 06:08:26', NULL),
+(19, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/product_categories/add-save', 'Añadir nueva información AAA en Categoria de Productos', '', 1, '2019-05-16 06:08:35', NULL),
+(20, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/products/add-save', 'Añadir nueva información producto prueba en Productos', '', 1, '2019-05-16 06:11:19', NULL);
 
 -- --------------------------------------------------------
 
@@ -219,6 +230,20 @@ CREATE TABLE `cms_menus` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `cms_menus`
+--
+
+INSERT INTO `cms_menus` (`id`, `name`, `type`, `path`, `color`, `icon`, `parent_id`, `is_active`, `is_dashboard`, `id_cms_privileges`, `sorting`, `created_at`, `updated_at`) VALUES
+(1, 'Marcas', 'Route', 'AdminBrandsControllerGetIndex', NULL, 'fa fa-tags', 0, 1, 0, 1, 1, '2019-05-16 04:59:55', NULL),
+(2, 'Radios', 'Route', 'AdminRadiusesControllerGetIndex', NULL, 'fa fa-circle-thin', 0, 1, 0, 1, 2, '2019-05-16 05:02:08', NULL),
+(3, 'Anchos', 'Route', 'AdminWidthsControllerGetIndex', 'normal', 'fa fa-circle-thin', 0, 1, 0, 1, 3, '2019-05-16 05:14:41', '2019-05-16 05:15:52'),
+(4, 'Perfiles', 'Route', 'AdminProfilesControllerGetIndex', NULL, 'fa fa-circle-thin', 0, 1, 0, 1, 4, '2019-05-16 05:17:00', NULL),
+(5, 'Banners', 'Route', 'AdminBannersControllerGetIndex', NULL, 'fa fa-image', 0, 1, 0, 1, 5, '2019-05-16 05:20:09', NULL),
+(6, 'Categoria de Productos', 'Route', 'AdminProductCategoriesControllerGetIndex', NULL, 'fa fa-cog', 0, 1, 0, 1, 6, '2019-05-16 05:25:39', NULL),
+(7, 'Productos', 'Route', 'AdminProductsControllerGetIndex', NULL, 'fa fa-product-hunt', 0, 1, 0, 1, 7, '2019-05-16 05:27:44', NULL),
+(8, 'Imagenes de productos', 'Route', 'AdminProductPhotosControllerGetIndex', NULL, 'fa fa-image', 0, 1, 0, 1, 8, '2019-05-16 06:03:33', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -230,6 +255,20 @@ CREATE TABLE `cms_menus_privileges` (
   `id_cms_menus` int(11) DEFAULT NULL,
   `id_cms_privileges` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `cms_menus_privileges`
+--
+
+INSERT INTO `cms_menus_privileges` (`id`, `id_cms_menus`, `id_cms_privileges`) VALUES
+(1, 1, 1),
+(2, 2, 1),
+(4, 3, 1),
+(5, 4, 1),
+(6, 5, 1),
+(7, 6, 1),
+(8, 7, 1),
+(9, 8, 1);
 
 -- --------------------------------------------------------
 
@@ -266,7 +305,15 @@ INSERT INTO `cms_moduls` (`id`, `name`, `icon`, `path`, `table_name`, `controlle
 (8, 'Email Templates', 'fa fa-envelope-o', 'email_templates', 'cms_email_templates', 'EmailTemplatesController', 1, 1, '2019-05-15 05:10:15', NULL, NULL),
 (9, 'Statistic Builder', 'fa fa-dashboard', 'statistic_builder', 'cms_statistics', 'StatisticBuilderController', 1, 1, '2019-05-15 05:10:15', NULL, NULL),
 (10, 'API Generator', 'fa fa-cloud-download', 'api_generator', '', 'ApiCustomController', 1, 1, '2019-05-15 05:10:15', NULL, NULL),
-(11, 'Log User Access', 'fa fa-flag-o', 'logs', 'cms_logs', 'LogsController', 1, 1, '2019-05-15 05:10:15', NULL, NULL);
+(11, 'Log User Access', 'fa fa-flag-o', 'logs', 'cms_logs', 'LogsController', 1, 1, '2019-05-15 05:10:15', NULL, NULL),
+(12, 'Marcas', 'fa fa-tags', 'brands', 'brands', 'AdminBrandsController', 0, 0, '2019-05-16 04:59:55', NULL, NULL),
+(13, 'Radios', 'fa fa-circle-thin', 'radiuses', 'radiuses', 'AdminRadiusesController', 0, 0, '2019-05-16 05:02:08', NULL, NULL),
+(14, 'Anchos', 'fa fa-circle-thin', 'widths', 'widths', 'AdminWidthsController', 0, 0, '2019-05-16 05:14:41', NULL, NULL),
+(15, 'Perfiles', 'fa fa-circle-thin', 'profiles', 'profiles', 'AdminProfilesController', 0, 0, '2019-05-16 05:17:00', NULL, NULL),
+(16, 'Banners', 'fa fa-image', 'banners', 'banners', 'AdminBannersController', 0, 0, '2019-05-16 05:20:09', NULL, NULL),
+(17, 'Categoria de Productos', 'fa fa-cog', 'product_categories', 'product_categories', 'AdminProductCategoriesController', 0, 0, '2019-05-16 05:25:39', NULL, NULL),
+(18, 'Productos', 'fa fa-product-hunt', 'products', 'products', 'AdminProductsController', 0, 0, '2019-05-16 05:27:44', NULL, NULL),
+(19, 'Imagenes de productos', 'fa fa-image', 'product_photos', 'product_photos', 'AdminProductPhotosController', 0, 0, '2019-05-16 06:03:33', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -340,7 +387,15 @@ INSERT INTO `cms_privileges_roles` (`id`, `is_visible`, `is_create`, `is_read`, 
 (8, 1, 1, 1, 1, 1, 1, 8, '2019-05-15 05:10:15', NULL),
 (9, 1, 1, 1, 1, 1, 1, 9, '2019-05-15 05:10:15', NULL),
 (10, 1, 1, 1, 1, 1, 1, 10, '2019-05-15 05:10:15', NULL),
-(11, 1, 0, 1, 0, 1, 1, 11, '2019-05-15 05:10:15', NULL);
+(11, 1, 0, 1, 0, 1, 1, 11, '2019-05-15 05:10:15', NULL),
+(12, 1, 1, 1, 1, 1, 1, 12, NULL, NULL),
+(13, 1, 1, 1, 1, 1, 1, 13, NULL, NULL),
+(14, 1, 1, 1, 1, 1, 1, 14, NULL, NULL),
+(15, 1, 1, 1, 1, 1, 1, 15, NULL, NULL),
+(16, 1, 1, 1, 1, 1, 1, 16, NULL, NULL),
+(17, 1, 1, 1, 1, 1, 1, 17, NULL, NULL),
+(18, 1, 1, 1, 1, 1, 1, 18, NULL, NULL),
+(19, 1, 1, 1, 1, 1, 1, 19, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -513,7 +568,7 @@ CREATE TABLE `products` (
   `brand_id` int(10) UNSIGNED NOT NULL,
   `description` text COLLATE utf8mb4_unicode_ci,
   `price` double(8,2) DEFAULT NULL,
-  `discount_rate` double(8,2) DEFAULT NULL,
+  `discount_rate` double(8,2) DEFAULT '0.00',
   `final_price` double(8,2) DEFAULT NULL,
   `state` enum('ACTIVO','INACTIVO') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'ACTIVO',
   `featured` tinyint(1) NOT NULL DEFAULT '1',
@@ -522,6 +577,13 @@ CREATE TABLE `products` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `product_code`, `product_name`, `product_category_id`, `brand_id`, `description`, `price`, `discount_rate`, `final_price`, `state`, `featured`, `photo`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, '1', 'producto prueba', 1, 1, '<p>asdasd</p>', 254000.00, 0.02, 0.00, 'ACTIVO', 1, 'uploads/1/2019-05/1bc6d62bfdc7622732fc9a3018074375.jpg', NULL, '2019-05-16 06:11:19', NULL);
 
 -- --------------------------------------------------------
 
@@ -537,6 +599,13 @@ CREATE TABLE `product_categories` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `product_categories`
+--
+
+INSERT INTO `product_categories` (`id`, `category_name`, `photo`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 'AAA', NULL, NULL, '2019-05-16 06:08:35', NULL);
 
 -- --------------------------------------------------------
 
@@ -601,7 +670,7 @@ CREATE TABLE `tires` (
   `profile_id` int(10) UNSIGNED NOT NULL,
   `description` text COLLATE utf8mb4_unicode_ci,
   `price` double(8,2) DEFAULT NULL,
-  `discount_rate` double(8,2) DEFAULT NULL,
+  `discount_rate` double(8,2) DEFAULT '0.00',
   `final_price` double(8,2) DEFAULT NULL,
   `state` enum('ACTIVO','INACTIVO') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'ACTIVO',
   `featured` tinyint(1) NOT NULL DEFAULT '1',
@@ -895,7 +964,7 @@ ALTER TABLE `banners`
 -- AUTO_INCREMENT for table `brands`
 --
 ALTER TABLE `brands`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `cms_apicustom`
 --
@@ -925,22 +994,22 @@ ALTER TABLE `cms_email_templates`
 -- AUTO_INCREMENT for table `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `cms_menus`
 --
 ALTER TABLE `cms_menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `cms_menus_privileges`
 --
 ALTER TABLE `cms_menus_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `cms_moduls`
 --
 ALTER TABLE `cms_moduls`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `cms_notifications`
 --
@@ -955,7 +1024,7 @@ ALTER TABLE `cms_privileges`
 -- AUTO_INCREMENT for table `cms_privileges_roles`
 --
 ALTER TABLE `cms_privileges_roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `cms_settings`
 --
@@ -985,12 +1054,12 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `product_categories`
 --
 ALTER TABLE `product_categories`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `product_photos`
 --
