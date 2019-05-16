@@ -40,7 +40,7 @@
 
 
             if (isset($_GET['product_id'])) {
-                $product = DB::table('products')->where('id', Request::get('product_id'))->first();
+                $product = \DB::table('products')->where('id', Request::get('product_id'))->first();
                 $this->form[] = ['label'=>'Producto','name'=>'product_ids','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'products,product_name','value' => $product->id, 'disabled' => true];
                 $this->form[] = ['name' => 'product_id', 'type' => 'hidden', 'value' => $product->id];
             } else {

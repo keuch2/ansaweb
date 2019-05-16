@@ -39,7 +39,7 @@
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
 			$this->form[] = ['label'=>'Titulo banner','name'=>'title','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'Puedes introducir solo una letra'];
-			$this->form[] = ['label'=>'Imagen','name'=>'photo','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'Tipo de imágenes soportados: JPG, JPEG, PNG, GIF, BMP'];
+			$this->form[] = ['label'=>'Imagen','name'=>'photo','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'Tipo de imágenes soportados: JPG, JPEG, PNG, GIF, BMP', 'upload_encrypt'=>'true'];
 			$this->form[] = ['label'=>'Link local','name'=>'local_link','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Link externo','name'=>'external_link','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE

@@ -5,12 +5,12 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminProductsController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminVehicleTypePhotosController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
-			$this->title_field = "product_name";
+			$this->title_field = "title";
 			$this->limit = "20";
 			$this->orderby = "id,desc";
 			$this->global_privilege = false;
@@ -25,51 +25,36 @@
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "products";
+			$this->table = "vehicle_type_photos";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Codigo","name"=>"product_code"];
-			$this->col[] = ["label"=>"Nombre del producto","name"=>"product_name"];
-			$this->col[] = ["label"=>"Categoria","name"=>"product_category_id","join"=>"product_categories,category_name"];
-			$this->col[] = ["label"=>"Marca","name"=>"brand_id","join"=>"brands,brand_name"];
-			$this->col[] = ["label"=>"Precio base","name"=>"price"];
-			$this->col[] = ["label"=>"Porcentaje de descuento","name"=>"discount_rate"];
-			$this->col[] = ["label"=>"Precio final","name"=>"final_price"];
-			$this->col[] = ["label"=>"Estado","name"=>"state"];
-			$this->col[] = ["label"=>"Destacado","name"=>"featured"];
+			$this->col[] = ["label"=>"Tipo de vehiculo","name"=>"vehicle_type_id","join"=>"vehicle_types,vehicle_type"];
+			$this->col[] = ["label"=>"Titulo","name"=>"title"];
 			$this->col[] = ["label"=>"Imagen","name"=>"photo","image"=>true];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Codigo','name'=>'product_code','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Nombre del producto','name'=>'product_name','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Categoria','name'=>'product_category_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'product_categories,category_name','help'=>'Categoria del producto'];
-			$this->form[] = ['label'=>'Marca','name'=>'brand_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'brands,brand_name','help'=>'Marca del producto'];
-			$this->form[] = ['label'=>'Descripcion','name'=>'description','type'=>'wysiwyg','validation'=>'string|min:5|max:5000','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Precio base','name'=>'price','type'=>'number','validation'=>'required|numeric','width'=>'col-sm-10','help'=>'Precio base del producto (en Dolares USD)'];
-			$this->form[] = ['label'=>'Porcentaje de descuento','name'=>'discount_rate','type'=>'number','validation'=>'numeric','width'=>'col-sm-10','help'=>'Porcentaje del descuento 0.x','placeholder'=>'Porcentaje del descuento 0.x'];
-			$this->form[] = ['label'=>'Precio final','name'=>'final_price','type'=>'money','validation'=>'min:0|numeric','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Estado','name'=>'state','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'ACTIVO;INACTIVO','help'=>'Estado del producto, ACTIVO o INACTIVO'];
-			$this->form[] = ['label'=>'Destacado','name'=>'featured','type'=>'checkbox','width'=>'col-sm-10','dataenum'=>'1|SI','help'=>'Si el producto sera destacado'];
+
+            if (isset($_GET['vehicle_type_id'])) {
+                $vehicleType = \DB::table('vehicle_types')->where('id', Request::get('vehicle_type_id'))->first();
+                $this->form[] = ['label'=>'Tipo de vehiculo','name'=>'vehicle_type_ids','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'vehicle_types,vehicle_type','value' => $vehicleType->id, 'disabled' => true];
+                $this->form[] = ['name' => 'vehicle_type_id', 'type' => 'hidden', 'value' => $vehicleType->id];
+            } else {
+                $this->form[] = ['label'=>'Tipo de vehiculo','name'=>'vehicle_type_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'vehicle_types,vehicle_type','help'=>'El tipo de vehiculo'];
+            }
+
+			$this->form[] = ['label'=>'Titulo','name'=>'title','type'=>'text','validation'=>'string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'Puedes introducir solo una letra'];
 			$this->form[] = ['label'=>'Imagen','name'=>'photo','type'=>'upload','validation'=>'image|max:3000','width'=>'col-sm-10','help'=>'Tipo de imágenes soportados: JPG, JPEG, PNG, GIF, BMP', 'upload_encrypt'=>'true'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Codigo','name'=>'product_code','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Nombre del producto','name'=>'product_name','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Categoria','name'=>'product_category_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'product_categories,category_name','help'=>'Categoria del producto'];
-			//$this->form[] = ['label'=>'Marca','name'=>'brand_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'brands,brand_name','help'=>'Marca del producto'];
-			//$this->form[] = ['label'=>'Descripcion','name'=>'description','type'=>'textarea','validation'=>'string|min:5|max:5000','width'=>'col-sm-10', 'type'=>'wysiwyg'];
-			//$this->form[] = ['label'=>'Precio base','name'=>'price','type'=>'number','validation'=>'required|numeric','width'=>'col-sm-10','help'=>'Precio base del producto (en Dolares USD)'];
-			//$this->form[] = ['label'=>'Porcentaje de descuento','name'=>'discount_rate','type'=>'number','validation'=>'numeric', 'step'=>'any','width'=>'col-sm-10','help'=>'Porcentaje del descuento 0.x','placeholder'=>'Porcentaje del descuento 0.x'];
-			//$this->form[] = ['label'=>'Precio final','name'=>'final_price','type'=>'money','validation'=>'min:0|numeric','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Estado','name'=>'state','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'ACTIVO;INACTIVO','help'=>'Estado del producto, ACTIVO o INACTIVO'];
-			//$this->form[] = ['label'=>'Destacado','name'=>'featured','type'=>'checkbox','width'=>'col-sm-10','dataenum'=>'1|SI','help'=>'Si el producto sera destacado'];
-			//$this->form[] = ['label'=>'Imagen','name'=>'photo','type'=>'upload','validation'=>'image|max:3000','width'=>'col-sm-10','help'=>'Tipo de imágenes soportados: JPG, JPEG, PNG, GIF, BMP', 'upload_encrypt'=>'true'];
+			//$this->form[] = ['label'=>'Tipo de vehiculo','name'=>'vehicle_type_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'vehicle_types,vehicle_type','help'=>'El tipo de vehiculo'];
+			//$this->form[] = ['label'=>'Titulo','name'=>'title','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'Puedes introducir solo una letra'];
+			//$this->form[] = ['label'=>'Imagen','name'=>'photo','type'=>'upload','validation'=>'image|max:3000','width'=>'col-sm-10','help'=>'Tipo de imágenes soportados: JPG, JPEG, PNG, GIF, BMP'];
 			# OLD END FORM
 
 			/* 
@@ -229,14 +214,6 @@
 	        |
 	        */
 	        $this->load_css = array();
-
-
-
-            // View Product photos
-            $this->sub_module[] = ['label' => 'Imagenes', 'path' => 'product_photos', 'parent_columns' => 'product_name,description', 'foreign_key' => 'product_id', 'button_color' => 'success', 'button_icon' => 'fa fa-photo', 'parent_columns_alias' => 'Producto,Descripcion'];
-
-            // Action Button In Grid Data (New Product Photo)
-            $this->addaction[] = ['label' => 'Agregar imagen', 'url' => CRUDBooster::mainpath('../product_photos/add/?product_id=[id]'), 'icon' => 'fa fa-plus', 'color' => 'info'];
 	        
 	        
 	    }
@@ -287,11 +264,7 @@
 	    */
 	    public function hook_before_add(&$postdata) {        
 	        //Your code here
-            if(!$postdata['featured']){
-                $postdata['featured']=0;
-            }else{
-                $postdata['featured']=1;
-            }
+
 	    }
 
 	    /* 
@@ -316,11 +289,6 @@
 	    */
 	    public function hook_before_edit(&$postdata,$id) {        
 	        //Your code here
-            if(!$postdata['featured']){
-                $postdata['featured']=0;
-            }else{
-                $postdata['featured']=1;
-            }
 
 	    }
 

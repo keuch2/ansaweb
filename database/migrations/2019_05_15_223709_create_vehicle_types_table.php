@@ -17,7 +17,7 @@ class CreateVehicleTypesTable extends Migration
             $table->increments('id');
             $table->string('vehicle_type');
             $table->text('description')->nullable();
-            $table->string('photo');
+            $table->string('photo')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
