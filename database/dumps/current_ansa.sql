@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 16, 2019 at 08:24 PM
+-- Generation Time: May 19, 2019 at 02:06 AM
 -- Server version: 5.7.22-0ubuntu0.17.10.1
 -- PHP Version: 7.2.7-1+ubuntu17.10.1+deb.sury.org+1
 
@@ -59,7 +59,7 @@ CREATE TABLE `brands` (
 --
 
 INSERT INTO `brands` (`id`, `brand_name`, `photo`, `local_link`, `external_link`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 'marca de prueba', NULL, NULL, NULL, NULL, '2019-05-16 06:08:26', NULL);
+(1, 'marca de prueba', NULL, NULL, NULL, '2019-05-19 09:04:19', '2019-05-16 06:08:26', NULL);
 
 -- --------------------------------------------------------
 
@@ -219,7 +219,42 @@ INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `d
 (30, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/settings/edit-save/18', 'Actualizar información  en Settings', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td></td><td></td></tr><tr><td>content</td><td></td><td></td></tr><tr><td>dataenum</td><td></td><td></td></tr><tr><td>label</td><td>Cotizacion Dolar (USD) - Reales(R$)</td><td>Cotizacion Dolar (USD) - Reales(R)</td></tr></tbody></table>', 1, '2019-05-17 02:29:33', NULL),
 (31, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/vehicle_type_photos/add-save', 'Añadir nueva información prueba en Imagenes de tipos de vehiculos', '', 1, '2019-05-17 02:33:35', NULL),
 (32, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/vehicle_types/edit-save/1', 'Actualizar información  en Tipos de vehiculos', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>description</td><td><p>Autos y autitos</p></td><td>Autos y autitos</td></tr></tbody></table>', 1, '2019-05-17 02:41:30', NULL),
-(33, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/menu_management/add-save', 'Añadir nueva información Vehiculos en Menu Management', '', 1, '2019-05-17 02:51:37', NULL);
+(33, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/menu_management/add-save', 'Añadir nueva información Vehiculos en Menu Management', '', 1, '2019-05-17 02:51:37', NULL),
+(34, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/login', 'Ingreso de admin@ansa.com desde la Dirección IP 127.0.0.1', '', 1, '2019-05-19 00:54:49', NULL),
+(35, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/logout', 'admin@ansa.com se desconectó', '', 1, '2019-05-19 01:52:44', NULL),
+(36, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/login', 'Ingreso de admin@ansa.com desde la Dirección IP 127.0.0.1', '', 1, '2019-05-19 01:52:51', NULL),
+(37, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/menu_management/add-save', 'Añadir nueva información Neumaticos en Menu Management', '', 1, '2019-05-19 01:54:23', NULL),
+(38, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/menu_management/edit-save/14', 'Actualizar información Listar Neumaticos en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>Neumaticos</td><td>Listar Neumaticos</td></tr><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>9</td><td></td></tr></tbody></table>', 1, '2019-05-19 01:54:38', NULL),
+(39, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/menu_management/edit-save/16', 'Actualizar información Imagenes de neumaticos en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>name</td><td>Fotografias de neumaticos</td><td>Imagenes de neumaticos</td></tr><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>7</td><td></td></tr></tbody></table>', 1, '2019-05-19 02:00:19', NULL),
+(40, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/tires/add-save', 'Añadir nueva información GY R13 en Neumaticos', '', 1, '2019-05-19 02:08:13', NULL),
+(41, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/tires/edit-save/1', 'Actualizar información GY R13 en Neumaticos', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>discount_rate</td><td>26</td><td>25</td></tr><tr><td>final_price</td><td>185000</td><td>187500</td></tr><tr><td>visit_counter</td><td></td><td></td></tr><tr><td>deleted_at</td><td></td><td></td></tr></tbody></table>', 1, '2019-05-19 02:10:16', NULL),
+(42, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/tire_photos/add-save', 'Añadir nueva información imagen de prueba en Imagenes de neumaticos', '', 1, '2019-05-19 02:12:32', NULL),
+(43, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/login', 'Ingreso de admin@ansa.com desde la Dirección IP 127.0.0.1', '', 1, '2019-05-19 08:43:28', NULL),
+(44, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/tire_photos/delete/1', 'Eliminar información imagen de prueba en Imagenes de neumaticos', '', 1, '2019-05-19 08:44:27', NULL),
+(45, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/tire_photos/add-save', 'Añadir nueva información  en Imagenes de neumaticos', '', 1, '2019-05-19 08:44:34', NULL),
+(46, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/tires/delete-image', 'Eliminar la imagen de GY R13 en Neumaticos', '', 1, '2019-05-19 08:46:45', NULL),
+(47, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/tires/edit-save/1', 'Actualizar información GY R13 en Neumaticos', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>visit_counter</td><td></td><td></td></tr><tr><td>photo</td><td></td><td>uploads/1/2019-05/911819af7f6935af425c4f3c472c3ccb.jpg</td></tr><tr><td>deleted_at</td><td></td><td></td></tr></tbody></table>', 1, '2019-05-19 08:46:55', NULL),
+(48, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/vehicle_types/add-save', 'Añadir nueva información  en Tipos de vehiculos', '', 1, '2019-05-19 09:03:33', NULL),
+(49, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/vehicle_types/add-save', 'Añadir nueva información  en Tipos de vehiculos', '', 1, '2019-05-19 09:03:39', NULL),
+(50, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/vehicle_types/add-save', 'Añadir nueva información  en Tipos de vehiculos', '', 1, '2019-05-19 09:03:43', NULL),
+(51, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/tires/edit-save/1', 'Actualizar información GY R13 en Neumaticos', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>visit_counter</td><td></td><td></td></tr><tr><td>deleted_at</td><td></td><td></td></tr></tbody></table>', 1, '2019-05-19 09:03:54', NULL),
+(52, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/brands/delete/1', 'Eliminar información marca de prueba en Marcas', '', 1, '2019-05-19 09:04:19', NULL),
+(53, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/tire_photos/delete/2', 'Eliminar información  en Imagenes de neumaticos', '', 1, '2019-05-19 09:04:26', NULL),
+(54, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/tires/delete/1', 'Eliminar información GY R13 en Neumaticos', '', 1, '2019-05-19 09:04:29', NULL),
+(55, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/radiuses/delete/1', 'Eliminar información R13 en Radios', '', 1, '2019-05-19 09:04:32', NULL),
+(56, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/widths/delete/1', 'Eliminar información 25.5 en Anchos', '', 1, '2019-05-19 09:04:35', NULL),
+(57, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/profiles/delete/1', 'Eliminar información 12 en Perfiles', '', 1, '2019-05-19 09:04:38', NULL),
+(58, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/products/delete/1', 'Eliminar información producto prueba en Productos', '', 1, '2019-05-19 09:04:45', NULL),
+(59, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/product_categories/delete/1', 'Eliminar información AAA en Categoria de Productos', '', 1, '2019-05-19 09:04:48', NULL),
+(60, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/vehicle_types/delete/1', 'Eliminar información 1 en Tipos de vehiculos', '', 1, '2019-05-19 09:04:53', NULL),
+(61, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/vehicle_types/delete/2', 'Eliminar información 2 en Tipos de vehiculos', '', 1, '2019-05-19 09:04:55', NULL),
+(62, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/vehicle_types/delete/3', 'Eliminar información 3 en Tipos de vehiculos', '', 1, '2019-05-19 09:04:57', NULL),
+(63, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/vehicle_types/delete/4', 'Eliminar información 4 en Tipos de vehiculos', '', 1, '2019-05-19 09:04:58', NULL),
+(64, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/vehicle_type_photos/delete/1', 'Eliminar información prueba en Imagenes de tipos de vehiculos', '', 1, '2019-05-19 09:05:02', NULL),
+(65, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/vehicle_types/add-save', 'Añadir nueva información  en Tipos de vehiculos', '', 1, '2019-05-19 09:05:18', NULL),
+(66, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/vehicle_type_photos/add-save', 'Añadir nueva información  en Imagenes de tipos de vehiculos', '', 1, '2019-05-19 09:05:35', NULL),
+(67, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/vehicle_type_photos/delete/2', 'Eliminar información  en Imagenes de tipos de vehiculos', '', 1, '2019-05-19 09:05:41', NULL),
+(68, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/vehicle_types/delete/5', 'Eliminar información 5 en Tipos de vehiculos', '', 1, '2019-05-19 09:05:49', NULL);
 
 -- --------------------------------------------------------
 
@@ -248,19 +283,22 @@ CREATE TABLE `cms_menus` (
 --
 
 INSERT INTO `cms_menus` (`id`, `name`, `type`, `path`, `color`, `icon`, `parent_id`, `is_active`, `is_dashboard`, `id_cms_privileges`, `sorting`, `created_at`, `updated_at`) VALUES
-(1, 'Marcas', 'Route', 'AdminBrandsControllerGetIndex', NULL, 'fa fa-tags', 0, 1, 0, 1, 7, '2019-05-16 04:59:55', NULL),
-(2, 'Radios', 'Route', 'AdminRadiusesControllerGetIndex', NULL, 'fa fa-circle-thin', 0, 1, 0, 1, 2, '2019-05-16 05:02:08', NULL),
-(3, 'Anchos', 'Route', 'AdminWidthsControllerGetIndex', 'normal', 'fa fa-circle-thin', 0, 1, 0, 1, 3, '2019-05-16 05:14:41', '2019-05-16 05:15:52'),
-(4, 'Perfiles', 'Route', 'AdminProfilesControllerGetIndex', NULL, 'fa fa-circle-thin', 0, 1, 0, 1, 4, '2019-05-16 05:17:00', NULL),
-(5, 'Banners', 'Route', 'AdminBannersControllerGetIndex', NULL, 'fa fa-image', 0, 1, 0, 1, 8, '2019-05-16 05:20:09', NULL),
+(1, 'Marcas', 'Route', 'AdminBrandsControllerGetIndex', NULL, 'fa fa-tags', 0, 1, 0, 1, 5, '2019-05-16 04:59:55', NULL),
+(2, 'Radios', 'Route', 'AdminRadiusesControllerGetIndex', NULL, 'fa fa-circle-thin', 15, 1, 0, 1, 2, '2019-05-16 05:02:08', NULL),
+(3, 'Anchos', 'Route', 'AdminWidthsControllerGetIndex', 'normal', 'fa fa-circle-thin', 15, 1, 0, 1, 3, '2019-05-16 05:14:41', '2019-05-16 05:15:52'),
+(4, 'Perfiles', 'Route', 'AdminProfilesControllerGetIndex', NULL, 'fa fa-circle-thin', 15, 1, 0, 1, 4, '2019-05-16 05:17:00', NULL),
+(5, 'Banners', 'Route', 'AdminBannersControllerGetIndex', NULL, 'fa fa-image', 0, 1, 0, 1, 6, '2019-05-16 05:20:09', NULL),
 (6, 'Categoria de Productos', 'Route', 'AdminProductCategoriesControllerGetIndex', NULL, 'fa fa-cog', 9, 1, 0, 1, 2, '2019-05-16 05:25:39', NULL),
 (7, 'Listar Productos', 'Route', 'AdminProductsControllerGetIndex', 'normal', 'fa fa-product-hunt', 9, 1, 0, 1, 1, '2019-05-16 05:27:44', '2019-05-17 02:21:36'),
 (8, 'Imagenes de productos', 'Route', 'AdminProductPhotosControllerGetIndex', NULL, 'fa fa-image', 9, 1, 0, 1, 3, '2019-05-16 06:03:33', NULL),
-(9, 'Productos', 'Module', 'products', 'normal', 'fa fa-product-hunt', 0, 1, 0, 1, 1, '2019-05-17 02:19:16', '2019-05-17 02:20:36'),
+(9, 'Productos', 'Module', 'products', 'normal', 'fa fa-product-hunt', 0, 1, 0, 1, 2, '2019-05-17 02:19:16', '2019-05-17 02:20:36'),
 (10, 'Tipos de vehiculos', 'Route', 'AdminVehicleTypesControllerGetIndex', NULL, 'fa fa-bus', 13, 1, 0, 1, 1, '2019-05-17 02:22:39', NULL),
-(11, 'Cotizaciones', 'URL', 'http://localhost:8002/admin/settings/show?group=Cotizaciones&m=0', 'normal', 'fa fa-money', 0, 1, 0, 1, 6, '2019-05-17 02:28:00', NULL),
+(11, 'Cotizaciones', 'URL', 'http://localhost:8002/admin/settings/show?group=Cotizaciones&m=0', 'normal', 'fa fa-money', 0, 1, 0, 1, 4, '2019-05-17 02:28:00', NULL),
 (12, 'Imagenes de tipos de vehiculos', 'Route', 'AdminVehicleTypePhotosControllerGetIndex', NULL, 'fa fa-image', 13, 1, 0, 1, 2, '2019-05-17 02:31:45', NULL),
-(13, 'Vehiculos', 'Module', 'vehicle_types', 'normal', 'fa fa-automobile', 0, 1, 0, 1, 5, '2019-05-17 02:51:37', NULL);
+(13, 'Vehiculos', 'Module', 'vehicle_types', 'normal', 'fa fa-automobile', 0, 1, 0, 1, 3, '2019-05-17 02:51:37', NULL),
+(14, 'Listar Neumaticos', 'Route', 'AdminTiresControllerGetIndex', 'normal', 'fa fa-gears', 15, 1, 0, 1, 1, '2019-05-19 01:22:44', '2019-05-19 01:54:38'),
+(15, 'Neumaticos', 'Module', 'tires', 'normal', 'fa fa-gears', 0, 1, 0, 1, 1, '2019-05-19 01:54:23', NULL),
+(16, 'Imagenes de neumaticos', 'Route', 'AdminTirePhotosControllerGetIndex', 'normal', 'fa fa-image', 15, 1, 0, 1, 5, '2019-05-19 01:58:50', '2019-05-19 02:00:19');
 
 -- --------------------------------------------------------
 
@@ -291,7 +329,10 @@ INSERT INTO `cms_menus_privileges` (`id`, `id_cms_menus`, `id_cms_privileges`) V
 (13, 10, 1),
 (14, 11, 1),
 (15, 12, 1),
-(16, 13, 1);
+(16, 13, 1),
+(18, 15, 1),
+(19, 14, 1),
+(21, 16, 1);
 
 -- --------------------------------------------------------
 
@@ -338,7 +379,9 @@ INSERT INTO `cms_moduls` (`id`, `name`, `icon`, `path`, `table_name`, `controlle
 (18, 'Productos', 'fa fa-product-hunt', 'products', 'products', 'AdminProductsController', 0, 0, '2019-05-16 05:27:44', NULL, NULL),
 (19, 'Imagenes de productos', 'fa fa-image', 'product_photos', 'product_photos', 'AdminProductPhotosController', 0, 0, '2019-05-16 06:03:33', NULL, NULL),
 (20, 'Tipos de vehiculos', 'fa fa-bus', 'vehicle_types', 'vehicle_types', 'AdminVehicleTypesController', 0, 0, '2019-05-17 02:22:39', NULL, NULL),
-(21, 'Imagenes de tipos de vehiculos', 'fa fa-image', 'vehicle_type_photos', 'vehicle_type_photos', 'AdminVehicleTypePhotosController', 0, 0, '2019-05-17 02:31:45', NULL, NULL);
+(21, 'Imagenes de tipos de vehiculos', 'fa fa-image', 'vehicle_type_photos', 'vehicle_type_photos', 'AdminVehicleTypePhotosController', 0, 0, '2019-05-17 02:31:45', NULL, NULL),
+(22, 'Neumaticos', 'fa fa-gears', 'tires', 'tires', 'AdminTiresController', 0, 0, '2019-05-19 01:22:44', NULL, NULL),
+(23, 'Imagenes de neumaticos', 'fa fa-image', 'tire_photos', 'tire_photos', 'AdminTirePhotosController', 0, 0, '2019-05-19 01:58:50', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -422,7 +465,9 @@ INSERT INTO `cms_privileges_roles` (`id`, `is_visible`, `is_create`, `is_read`, 
 (18, 1, 1, 1, 1, 1, 1, 18, NULL, NULL),
 (19, 1, 1, 1, 1, 1, 1, 19, NULL, NULL),
 (20, 1, 1, 1, 1, 1, 1, 20, NULL, NULL),
-(21, 1, 1, 1, 1, 1, 1, 21, NULL, NULL);
+(21, 1, 1, 1, 1, 1, 1, 21, NULL, NULL),
+(22, 1, 1, 1, 1, 1, 1, 22, NULL, NULL),
+(23, 1, 1, 1, 1, 1, 1, 23, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -610,7 +655,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `product_code`, `product_name`, `product_category_id`, `brand_id`, `description`, `price`, `discount_rate`, `final_price`, `state`, `featured`, `photo`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, '1', 'producto prueba', 1, 1, '<p>asdasd</p>', 254000.00, 0.02, 0.00, 'ACTIVO', 1, 'uploads/1/2019-05/1bc6d62bfdc7622732fc9a3018074375.jpg', NULL, '2019-05-16 06:11:19', NULL);
+(1, '1', 'producto prueba', 1, 1, '<p>asdasd</p>', 254000.00, 0.02, 0.00, 'ACTIVO', 1, 'uploads/1/2019-05/1bc6d62bfdc7622732fc9a3018074375.jpg', '2019-05-19 09:04:45', '2019-05-16 06:11:19', NULL);
 
 -- --------------------------------------------------------
 
@@ -632,7 +677,7 @@ CREATE TABLE `product_categories` (
 --
 
 INSERT INTO `product_categories` (`id`, `category_name`, `photo`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 'AAA', NULL, NULL, '2019-05-16 06:08:35', NULL);
+(1, 'AAA', NULL, '2019-05-19 09:04:48', '2019-05-16 06:08:35', NULL);
 
 -- --------------------------------------------------------
 
@@ -670,7 +715,7 @@ CREATE TABLE `profiles` (
 --
 
 INSERT INTO `profiles` (`id`, `profile_name`, `profile_value`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, '12', 12.00, NULL, '2019-05-17 02:08:49', NULL);
+(1, '12', 12.00, '2019-05-19 09:04:38', '2019-05-17 02:08:49', NULL);
 
 -- --------------------------------------------------------
 
@@ -692,7 +737,7 @@ CREATE TABLE `radiuses` (
 --
 
 INSERT INTO `radiuses` (`id`, `radius_name`, `radius_value`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 'R13', 13.00, NULL, '2019-05-17 02:08:23', NULL);
+(1, 'R13', 13.00, '2019-05-19 09:04:32', '2019-05-17 02:08:23', NULL);
 
 -- --------------------------------------------------------
 
@@ -707,7 +752,7 @@ CREATE TABLE `tires` (
   `tire_type` enum('RADIAL','CONVENCIONAL') COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `brand_id` int(10) UNSIGNED NOT NULL,
   `radius_id` int(10) UNSIGNED NOT NULL,
-  `witdh_id` int(10) UNSIGNED NOT NULL,
+  `width_id` int(10) UNSIGNED NOT NULL,
   `profile_id` int(10) UNSIGNED NOT NULL,
   `description` text COLLATE utf8mb4_unicode_ci,
   `price` double(8,2) DEFAULT NULL,
@@ -721,6 +766,13 @@ CREATE TABLE `tires` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tires`
+--
+
+INSERT INTO `tires` (`id`, `tire_code`, `tire_name`, `tire_type`, `brand_id`, `radius_id`, `width_id`, `profile_id`, `description`, `price`, `discount_rate`, `final_price`, `state`, `featured`, `visit_counter`, `photo`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, '84', 'GY R13', 'RADIAL', 1, 1, 1, 1, '<p>asdasd asd as</p>', 250000.00, 25.00, 187500.00, 'ACTIVO', 1, NULL, 'uploads/1/2019-05/911819af7f6935af425c4f3c472c3ccb.jpg', '2019-05-19 09:04:29', '2019-05-19 02:08:13', '2019-05-19 09:03:54');
 
 -- --------------------------------------------------------
 
@@ -738,6 +790,14 @@ CREATE TABLE `tire_photos` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `tire_photos`
+--
+
+INSERT INTO `tire_photos` (`id`, `tire_id`, `title`, `photo`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 1, 'imagen de prueba', 'uploads/1/2019-05/screenshot_from_2019_05_14_21_40_35.png', '2019-05-19 08:44:27', '2019-05-19 02:12:32', NULL),
+(2, 1, NULL, 'uploads/1/2019-05/4c30945d3bda87ff70bd155c1103d113.png', '2019-05-19 09:04:26', '2019-05-19 08:44:34', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -749,6 +809,15 @@ CREATE TABLE `tire_vehicle_types` (
   `tires_id` int(10) UNSIGNED NOT NULL,
   `vehicle_types_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tire_vehicle_types`
+--
+
+INSERT INTO `tire_vehicle_types` (`id`, `tires_id`, `vehicle_types_id`) VALUES
+(1, 1, 1),
+(2, 1, 2),
+(3, 1, 4);
 
 -- --------------------------------------------------------
 
@@ -771,7 +840,11 @@ CREATE TABLE `vehicle_types` (
 --
 
 INSERT INTO `vehicle_types` (`id`, `vehicle_type`, `description`, `photo`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 'Autos', 'Autos y autitos', NULL, NULL, '2019-05-17 02:24:57', '2019-05-17 02:41:30');
+(1, 'Autos', 'Autos y autitos', NULL, '2019-05-19 09:04:53', '2019-05-17 02:24:57', '2019-05-17 02:41:30'),
+(2, 'Camionetas', NULL, NULL, '2019-05-19 09:04:55', '2019-05-19 09:03:33', NULL),
+(3, 'Camiones', NULL, NULL, '2019-05-19 09:04:57', '2019-05-19 09:03:39', NULL),
+(4, 'Motos', NULL, NULL, '2019-05-19 09:04:58', '2019-05-19 09:03:43', NULL),
+(5, 'aaa', NULL, NULL, '2019-05-19 09:05:49', '2019-05-19 09:05:18', NULL);
 
 -- --------------------------------------------------------
 
@@ -794,7 +867,8 @@ CREATE TABLE `vehicle_type_photos` (
 --
 
 INSERT INTO `vehicle_type_photos` (`id`, `vehicle_type_id`, `title`, `photo`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 1, 'prueba', 'uploads/1/2019-05/meme.jpg', NULL, '2019-05-17 02:33:35', NULL);
+(1, 1, 'prueba', 'uploads/1/2019-05/meme.jpg', '2019-05-19 09:05:02', '2019-05-17 02:33:35', NULL),
+(2, 5, NULL, 'uploads/1/2019-05/1323a06d7e7b69aa3597513b8db9351e.jpg', '2019-05-19 09:05:41', '2019-05-19 09:05:35', NULL);
 
 -- --------------------------------------------------------
 
@@ -816,7 +890,7 @@ CREATE TABLE `widths` (
 --
 
 INSERT INTO `widths` (`id`, `width_name`, `width_value`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, '25.5', 85.00, NULL, '2019-05-17 02:08:43', NULL);
+(1, '25.5', 85.00, '2019-05-19 09:04:35', '2019-05-17 02:08:43', NULL);
 
 --
 -- Indexes for dumped tables
@@ -976,7 +1050,7 @@ ALTER TABLE `tires`
   ADD PRIMARY KEY (`id`),
   ADD KEY `tires_brand_id_foreign` (`brand_id`),
   ADD KEY `tires_radius_id_foreign` (`radius_id`),
-  ADD KEY `tires_witdh_id_foreign` (`witdh_id`),
+  ADD KEY `tires_witdh_id_foreign` (`width_id`),
   ADD KEY `tires_profile_id_foreign` (`profile_id`);
 
 --
@@ -1056,22 +1130,22 @@ ALTER TABLE `cms_email_templates`
 -- AUTO_INCREMENT for table `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 --
 -- AUTO_INCREMENT for table `cms_menus`
 --
 ALTER TABLE `cms_menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `cms_menus_privileges`
 --
 ALTER TABLE `cms_menus_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT for table `cms_moduls`
 --
 ALTER TABLE `cms_moduls`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `cms_notifications`
 --
@@ -1086,7 +1160,7 @@ ALTER TABLE `cms_privileges`
 -- AUTO_INCREMENT for table `cms_privileges_roles`
 --
 ALTER TABLE `cms_privileges_roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `cms_settings`
 --
@@ -1141,27 +1215,27 @@ ALTER TABLE `radiuses`
 -- AUTO_INCREMENT for table `tires`
 --
 ALTER TABLE `tires`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tire_photos`
 --
 ALTER TABLE `tire_photos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tire_vehicle_types`
 --
 ALTER TABLE `tire_vehicle_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `vehicle_types`
 --
 ALTER TABLE `vehicle_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `vehicle_type_photos`
 --
 ALTER TABLE `vehicle_type_photos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `widths`
 --
@@ -1191,7 +1265,7 @@ ALTER TABLE `tires`
   ADD CONSTRAINT `tires_brand_id_foreign` FOREIGN KEY (`brand_id`) REFERENCES `brands` (`id`),
   ADD CONSTRAINT `tires_profile_id_foreign` FOREIGN KEY (`profile_id`) REFERENCES `profiles` (`id`),
   ADD CONSTRAINT `tires_radius_id_foreign` FOREIGN KEY (`radius_id`) REFERENCES `radiuses` (`id`),
-  ADD CONSTRAINT `tires_witdh_id_foreign` FOREIGN KEY (`witdh_id`) REFERENCES `widths` (`id`);
+  ADD CONSTRAINT `tires_witdh_id_foreign` FOREIGN KEY (`width_id`) REFERENCES `widths` (`id`);
 
 --
 -- Constraints for table `tire_photos`

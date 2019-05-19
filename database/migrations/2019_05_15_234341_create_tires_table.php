@@ -30,8 +30,8 @@ class CreateTiresTable extends Migration
             $table->integer('radius_id')->unsigned();
             $table->foreign('radius_id')->references('id')->on('radiuses');
 
-            $table->integer('witdh_id')->unsigned();
-            $table->foreign('witdh_id')->references('id')->on('widths');
+            $table->integer('width_id')->unsigned();
+            $table->foreign('width_id')->references('id')->on('widths');
 
             $table->integer('profile_id')->unsigned();
             $table->foreign('profile_id')->references('id')->on('profiles');
