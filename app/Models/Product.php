@@ -23,4 +23,9 @@ class Product extends Model
     {
         return $this->belongsTo(ProductCategory::class);
     }
+
+    public function vehicleTypes()
+    {
+        return $this->belongsToMany(VehicleType::class, 'product_vehicle_types', 'products_id', 'vehicle_types_id' )->withPivot(['id', 'products_id', 'vehicle_types_id']);
+    }
 }

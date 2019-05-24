@@ -48,6 +48,10 @@
 			$this->form[] = ['label'=>'Nombre del producto','name'=>'product_name','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Categoria','name'=>'product_category_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'product_categories,category_name','help'=>'Categoria del producto'];
 			$this->form[] = ['label'=>'Marca','name'=>'brand_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'brands,brand_name','help'=>'Marca del producto'];
+
+            // Vehicle Types
+            $this->form[] = ['label'=> 'Tipos de vehiculos', 'type'=>'select2', 'name'=> 'tiposvehiculos', 'datatable'=>'vehicle_types,vehicle_type', 'relationship_table'=>'product_vehicle_types'];
+
 			$this->form[] = ['label'=>'Descripcion','name'=>'description','type'=>'wysiwyg','validation'=>'string|min:5|max:5000','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Precio base','name'=>'price','type'=>'number','validation'=>'required|numeric','width'=>'col-sm-10','help'=>'Precio base del producto (en Dolares USD)'];
 			$this->form[] = ['label'=>'Porcentaje de descuento','name'=>'discount_rate','type'=>'number','validation'=>'numeric','width'=>'col-sm-10','help'=>'Porcentaje del descuento 0.x','placeholder'=>'Porcentaje del descuento 0.x'];
