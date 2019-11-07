@@ -1,0 +1,42 @@
+#content .secciones {
+	padding-top:30px;
+	padding-bottom:30px;
+}
+
+#content .secciones h2 {
+	font-size: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	color:#003399;
+}
+
+#content #servicios ul {
+	list-style-type: none;
+	padding: 0px;
+	margin:0px;
+}
+
+#content #servicios ul li{
+	padding: 0px;
+	margin:0px;
+	border-bottom: 1px solid #ffca05;
+	color:#003399;
+	font-size: 18px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: normal;
+	text-align: center;
+
+}
+
+#content #lassucursales .sucursal {
+	margin-bottom: 20px;
+}
+
+#content #lassucursales .sucursal h3 {
+	color:#003399;
+	padding: 0px;
+	margin:0px;
+	font-size: 18px;
+}
