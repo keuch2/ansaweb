@@ -201,51 +201,27 @@
         <!-- END DESTACADOS -->
 
         <div class="mb-5"></div><!-- margin -->
-        <!-- PROMOCIONES -->
-        <div class="banners-section">
-            <div class="container">
-                <h2 class="subtitle text-center"><span>Promociones</span></h2>
-                <div class="cats-carousel owl-carousel owl-theme">
-                    <div class="banner banner-image">
-                        <a href="#">
-                            <img src="img/balanceo.jpg" alt="banner">
-                        </a>
-                    </div><!-- End .banner -->
-                    <div class="banner banner-image">
-                        <a href="#">
-                            <img src="img/balanceo.jpg" alt="banner">
-                        </a>
-                    </div><!-- End .banner -->
-                    <div class="banner banner-image">
-                        <a href="#">
-                            <img src="img/balanceo.jpg" alt="banner">
-                        </a>
-                    </div><!-- End .banner -->
-                    <div class="banner banner-image">
-                        <a href="#">
-                            <img src="img/balanceo.jpg" alt="banner">
-                        </a>
-                    </div><!-- End .banner -->
-                    <div class="banner banner-image">
-                        <a href="#">
-                            <img src="img/balanceo.jpg" alt="banner">
-                        </a>
-                    </div><!-- End .banner -->
-                    <div class="banner banner-image">
-                        <a href="#">
-                            <img src="img/balanceo.jpg" alt="banner">
-                        </a>
-                    </div><!-- End .banner -->
-                    <div class="banner banner-image">
-                        <a href="#">
-                            <img src="img/balanceo.jpg" alt="banner">
-                        </a>
-                    </div><!-- End .banner -->
 
-                </div><!-- End .cat-carousel -->
-            </div><!-- End .container -->
-        </div><!-- End .banners-section -->
-        <!-- END PROMOCIONES -->
+        @if(isset($promotions))
+            @if(count($promotions) > 0)
+                <!-- PROMOCIONES -->
+                <div class="banners-section">
+                    <div class="container">
+                        <h2 class="subtitle text-center"><span>Promociones</span></h2>
+                        <div class="cats-carousel owl-carousel owl-theme">
+                            @foreach($promotions as $promotion)
+                                <div class="banner banner-image">
+                                    <a href="#">
+                                        <img src="{{ url($promotion->photo) }}" alt="promotion">
+                                    </a>
+                                </div><!-- End .banner -->
+                            @endforeach
+                        </div><!-- End .cat-carousel -->
+                    </div><!-- End .container -->
+                </div><!-- End .banners-section -->
+                <!-- END PROMOCIONES -->
+            @endif
+        @endif
 
         <div class="mb-5"></div><!-- margin -->
         <!-- NUESTRAS MARCAS -->
@@ -255,37 +231,11 @@
                     <span>Nuestras Marcas</span>
                 </h2>
                 <div class="partners-carousel owl-carousel owl-theme">
-                    <a href="#" class="partner">
-                        <img src="img/marcas/1.jpg" alt="logo">
-                    </a>
-                    <a href="#" class="partner">
-                        <img src="img/marcas/2.jpg" alt="logo">
-                    </a>
-                    <a href="#" class="partner">
-                        <img src="img/marcas/3.jpg" alt="logo">
-                    </a>
-                    <a href="#" class="partner">
-                        <img src="img/marcas/4.jpg" alt="logo">
-                    </a>
-                    <a href="#" class="partner">
-                        <img src="img/marcas/5.jpg" alt="logo">
-                    </a>
-                    <a href="#" class="partner">
-                        <img src="img/marcas/6.jpg" alt="logo">
-                    </a>
-                    <a href="#" class="partner">
-                        <img src="img/marcas/7.jpg" alt="logo">
-                    </a>
-                    <a href="#" class="partner">
-                        <img src="img/marcas/8.jpg" alt="logo">
-                    </a>
-                    <a href="#" class="partner">
-                        <img src="img/marcas/9.jpg" alt="logo">
-                    </a>
-                    <a href="#" class="partner">
-                        <img src="img/marcas/10.jpg" alt="logo">
-                    </a>
-
+                    @foreach($brands as $brand)
+                        <a href="#" class="partner">
+                            <img src="{{ url($brand->photo) }}" alt="logo">
+                        </a>
+                    @endforeach
                 </div><!-- End .partners-carousel -->
             </div><!-- End .container -->
         </div><!-- End .partners-container -->

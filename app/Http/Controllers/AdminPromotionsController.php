@@ -5,12 +5,12 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminRadiusesController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminPromotionsController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
-			$this->title_field = "radius_name";
+			$this->title_field = "title";
 			$this->limit = "20";
 			$this->orderby = "id,desc";
 			$this->global_privilege = false;
@@ -25,28 +25,34 @@
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "radiuses";
+			$this->table = "promotions";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Nombre del radio","name"=>"radius_name"];
-			$this->col[] = ["label"=>"Valor del radio","name"=>"radius_value"];
+			$this->col[] = ["label"=>"Titulo promocion","name"=>"title"];
+			$this->col[] = ["label"=>"Imagen","name"=>"photo","image"=>true];
+			$this->col[] = ["label"=>"Link local","name"=>"local_link"];
+			$this->col[] = ["label"=>"Link externo","name"=>"external_link"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Nombre del radio','name'=>'radius_name','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Valor del radio','name'=>'radius_value','type'=>'number','validation'=>'required|min:0','step'=>'any' ,'width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Titulo promocion','name'=>'title','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'Puedes introducir solo una letra'];
+			$this->form[] = ['label'=>'Imagen','name'=>'photo','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'Tipo de imágenes soportados: JPG, JPEG, PNG, GIF, BMP', 'upload_encrypt'=>'true'];
+			$this->form[] = ['label'=>'Link local','name'=>'local_link','type'=>'text','validation'=>'min:0|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Link externo','name'=>'external_link','type'=>'text','validation'=>'min:0|max:255','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ["label"=>"Radius Name","name"=>"radius_name","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Radius Value","name"=>"radius_value","type"=>"money","required"=>TRUE,"validation"=>"required|integer|min:0"];
+			//$this->form[] = ["label"=>"Title","name"=>"title","type"=>"text","required"=>TRUE,"validation"=>"required|string|min:3|max:70","placeholder"=>"Puedes introducir solo una letra"];
+			//$this->form[] = ["label"=>"Photo","name"=>"photo","type"=>"upload","required"=>TRUE,"validation"=>"required|image|max:3000","help"=>"Tipo de imágenes soportados: JPG, JPEG, PNG, GIF, BMP"];
+			//$this->form[] = ["label"=>"Local Link","name"=>"local_link","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
+			//$this->form[] = ["label"=>"External Link","name"=>"external_link","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
 			# OLD END FORM
 
-			/*
+			/* 
 	        | ---------------------------------------------------------------------- 
 	        | Sub Module
 	        | ----------------------------------------------------------------------     
