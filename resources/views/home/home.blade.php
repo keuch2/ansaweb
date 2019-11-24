@@ -290,37 +290,11 @@
                     <span>Nuestras Marcas</span>
                 </h2>
                 <div class="partners-carousel owl-carousel owl-theme">
-                    <a href="#" class="partner">
-                        <img src="img/marcas/1.jpg" alt="logo">
-                    </a>
-                    <a href="#" class="partner">
-                        <img src="img/marcas/2.jpg" alt="logo">
-                    </a>
-                    <a href="#" class="partner">
-                        <img src="img/marcas/3.jpg" alt="logo">
-                    </a>
-                    <a href="#" class="partner">
-                        <img src="img/marcas/4.jpg" alt="logo">
-                    </a>
-                    <a href="#" class="partner">
-                        <img src="img/marcas/5.jpg" alt="logo">
-                    </a>
-                    <a href="#" class="partner">
-                        <img src="img/marcas/6.jpg" alt="logo">
-                    </a>
-                    <a href="#" class="partner">
-                        <img src="img/marcas/7.jpg" alt="logo">
-                    </a>
-                    <a href="#" class="partner">
-                        <img src="img/marcas/8.jpg" alt="logo">
-                    </a>
-                    <a href="#" class="partner">
-                        <img src="img/marcas/9.jpg" alt="logo">
-                    </a>
-                    <a href="#" class="partner">
-                        <img src="img/marcas/10.jpg" alt="logo">
-                    </a>
-
+                    @foreach($brands as $brand)
+                        <a href="#" class="partner">
+                            <img src="{{ url($brand->photo) }}" alt="logo">
+                        </a>
+                    @endforeach
                 </div><!-- End .partners-carousel -->
             </div><!-- End .container -->
         </div><!-- End .partners-container -->
