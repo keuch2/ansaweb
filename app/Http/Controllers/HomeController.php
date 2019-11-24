@@ -16,6 +16,8 @@ class HomeController extends Controller
         $vehicleTypes = VehicleType::all();
         $brands = Brand::all();
         $productCategories = ProductCategory::all();
+
+
         return view('home.home', ['data' => null,
                                         'currencies' => $currencies,
                                         'vehicleTypes' => $vehicleTypes,
