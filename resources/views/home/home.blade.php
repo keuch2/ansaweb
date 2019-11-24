@@ -236,51 +236,27 @@
         <!-- END DESTACADOS -->
 
         <div class="mb-5"></div><!-- margin -->
-        <!-- PROMOCIONES -->
-        <div class="banners-section">
-            <div class="container">
-                <h2 class="subtitle text-center"><span>Promociones</span></h2>
-                <div class="cats-carousel owl-carousel owl-theme">
-                    <div class="banner banner-image">
-                        <a href="#">
-                            <img src="img/balanceo.jpg" alt="banner">
-                        </a>
-                    </div><!-- End .banner -->
-                    <div class="banner banner-image">
-                        <a href="#">
-                            <img src="img/balanceo.jpg" alt="banner">
-                        </a>
-                    </div><!-- End .banner -->
-                    <div class="banner banner-image">
-                        <a href="#">
-                            <img src="img/balanceo.jpg" alt="banner">
-                        </a>
-                    </div><!-- End .banner -->
-                    <div class="banner banner-image">
-                        <a href="#">
-                            <img src="img/balanceo.jpg" alt="banner">
-                        </a>
-                    </div><!-- End .banner -->
-                    <div class="banner banner-image">
-                        <a href="#">
-                            <img src="img/balanceo.jpg" alt="banner">
-                        </a>
-                    </div><!-- End .banner -->
-                    <div class="banner banner-image">
-                        <a href="#">
-                            <img src="img/balanceo.jpg" alt="banner">
-                        </a>
-                    </div><!-- End .banner -->
-                    <div class="banner banner-image">
-                        <a href="#">
-                            <img src="img/balanceo.jpg" alt="banner">
-                        </a>
-                    </div><!-- End .banner -->
 
-                </div><!-- End .cat-carousel -->
-            </div><!-- End .container -->
-        </div><!-- End .banners-section -->
-        <!-- END PROMOCIONES -->
+        @if(isset($promotions))
+            @if(count($promotions) > 0)
+                <!-- PROMOCIONES -->
+                <div class="banners-section">
+                    <div class="container">
+                        <h2 class="subtitle text-center"><span>Promociones</span></h2>
+                        <div class="cats-carousel owl-carousel owl-theme">
+                            @foreach($promotions as $promotion)
+                                <div class="banner banner-image">
+                                    <a href="#">
+                                        <img src="{{ url($promotion->photo) }}" alt="promotion">
+                                    </a>
+                                </div><!-- End .banner -->
+                            @endforeach
+                        </div><!-- End .cat-carousel -->
+                    </div><!-- End .container -->
+                </div><!-- End .banners-section -->
+                <!-- END PROMOCIONES -->
+            @endif
+        @endif
 
         <div class="mb-5"></div><!-- margin -->
         <!-- NUESTRAS MARCAS -->
