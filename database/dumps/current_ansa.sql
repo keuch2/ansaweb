@@ -1,20 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6deb5
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: May 19, 2019 at 02:06 AM
--- Server version: 5.7.22-0ubuntu0.17.10.1
--- PHP Version: 7.2.7-1+ubuntu17.10.1+deb.sury.org+1
+-- Host: localhost:8889
+-- Generation Time: Nov 24, 2019 at 01:02 AM
+-- Server version: 5.7.23
+-- PHP Version: 7.2.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `ansa_v2`
@@ -59,7 +53,16 @@ CREATE TABLE `brands` (
 --
 
 INSERT INTO `brands` (`id`, `brand_name`, `photo`, `local_link`, `external_link`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 'marca de prueba', NULL, NULL, NULL, '2019-05-19 09:04:19', '2019-05-16 06:08:26', NULL);
+(3, 'GoodYear', 'uploads/1/2019-11/fc6fff1f1a0b9aa9bf62e9e67d0215da.jpg', NULL, NULL, NULL, '2019-11-24 05:21:09', '2019-11-24 05:50:09'),
+(4, 'Titan', 'uploads/1/2019-11/dd15254f6a170972c6262964d72bd7bc.jpg', NULL, NULL, NULL, '2019-11-24 05:21:44', NULL),
+(5, 'Rinaldi', 'uploads/1/2019-11/f95d4101d814a76b3a55fea5e537d6df.jpg', NULL, NULL, NULL, '2019-11-24 05:21:58', NULL),
+(6, 'Hyundai XTeer', 'uploads/1/2019-11/ef411633a6ac1ce97e19e3a40a9a2791.jpg', NULL, NULL, NULL, '2019-11-24 05:22:19', NULL),
+(7, 'ActiOil', 'uploads/1/2019-11/de5e86db8966317489aa24707e6d3975.jpg', NULL, NULL, NULL, '2019-11-24 05:22:35', NULL),
+(8, 'Tortuga', 'uploads/1/2019-11/7bf7a010b97dda8eef8d1ae6c0fa10e5.jpg', NULL, NULL, NULL, '2019-11-24 05:22:48', NULL),
+(9, 'Xtire', 'uploads/1/2019-11/f218d4f7805873244a289224bf90c9c4.jpg', NULL, NULL, NULL, '2019-11-24 05:22:59', NULL),
+(10, 'Maxion', 'uploads/1/2019-11/1cf4aadd09f9263aabdf872755eff100.jpg', NULL, NULL, NULL, '2019-11-24 05:23:12', NULL),
+(11, 'KLL', 'uploads/1/2019-11/baf66d9bbfa6e810f0b61db555c5376f.jpg', NULL, NULL, NULL, '2019-11-24 05:23:27', NULL),
+(12, 'Alcoa', 'uploads/1/2019-11/9d01690cbdfc26d77ec4a9f0f622e8bf.jpg', NULL, NULL, NULL, '2019-11-24 05:23:40', NULL);
 
 -- --------------------------------------------------------
 
@@ -254,7 +257,40 @@ INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `d
 (65, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/vehicle_types/add-save', 'Añadir nueva información  en Tipos de vehiculos', '', 1, '2019-05-19 09:05:18', NULL),
 (66, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/vehicle_type_photos/add-save', 'Añadir nueva información  en Imagenes de tipos de vehiculos', '', 1, '2019-05-19 09:05:35', NULL),
 (67, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/vehicle_type_photos/delete/2', 'Eliminar información  en Imagenes de tipos de vehiculos', '', 1, '2019-05-19 09:05:41', NULL),
-(68, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/vehicle_types/delete/5', 'Eliminar información 5 en Tipos de vehiculos', '', 1, '2019-05-19 09:05:49', NULL);
+(68, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8002/admin/vehicle_types/delete/5', 'Eliminar información 5 en Tipos de vehiculos', '', 1, '2019-05-19 09:05:49', NULL),
+(69, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8003/admin/login', 'Ingreso de admin@ansa.com desde la Dirección IP 127.0.0.1', '', 1, '2019-05-24 07:20:08', NULL),
+(70, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8003/admin/logout', 'admin@ansa.com se desconectó', '', 1, '2019-05-24 07:21:07', NULL),
+(71, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8001/admin/login', 'Ingreso de admin@ansa.com desde la Dirección IP 127.0.0.1', '', 1, '2019-06-25 09:51:28', NULL),
+(72, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8001/admin/menu_management/edit-save/11', 'Actualizar información Cotizaciones en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>path</td><td>http://localhost:8002/admin/settings/show?group=Cotizaciones&m=0</td><td>http://localhost:8001/admin/settings/show?group=Cotizaciones&m=0</td></tr><tr><td>sorting</td><td>4</td><td></td></tr></tbody></table>', 1, '2019-06-25 10:41:44', NULL),
+(73, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36', 'http://localhost:8001/admin/login', 'Ingreso de admin@ansa.com desde la Dirección IP 127.0.0.1', '', 1, '2019-09-11 03:41:48', NULL),
+(74, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/login', 'Ingreso de admin@ansa.com desde la Dirección IP 127.0.0.1', '', 1, '2019-11-20 17:08:53', NULL),
+(75, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/login', 'Ingreso de admin@ansa.com desde la Dirección IP 127.0.0.1', '', 1, '2019-11-21 19:38:08', NULL),
+(76, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/brands/add-save', 'Añadir nueva información GoodYear en Marcas', '', 1, '2019-11-21 19:44:10', NULL),
+(77, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/brands/delete/2', 'Eliminar información GoodYear en Marcas', '', 1, '2019-11-21 20:01:07', NULL),
+(78, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/login', 'Ingreso de admin@ansa.com desde la Dirección IP 127.0.0.1', '', 1, '2019-11-21 22:29:12', NULL),
+(79, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/login', 'Ingreso de admin@ansa.com desde la Dirección IP 127.0.0.1', '', 1, '2019-11-22 20:37:06', NULL),
+(80, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/logout', 'admin@ansa.com se desconectó', '', 1, '2019-11-23 00:04:33', NULL),
+(81, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/login', 'Ingreso de admin@ansa.com desde la Dirección IP 127.0.0.1', '', 1, '2019-11-24 04:11:43', NULL),
+(82, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/vehicle_types/edit-save/1', 'Actualizar información  en Tipos de vehiculos', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>description</td><td>Autos y autitos</td><td></td></tr></tbody></table>', 1, '2019-11-24 04:25:37', NULL),
+(83, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/vehicle_types/edit-save/1', 'Actualizar información  en Tipos de vehiculos', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>description</td><td>Autos y autitos</td><td></td></tr></tbody></table>', 1, '2019-11-24 04:25:46', NULL),
+(84, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/vehicle_types/edit-save/4', 'Actualizar información  en Tipos de vehiculos', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody></tbody></table>', 1, '2019-11-24 04:26:45', NULL),
+(85, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/vehicle_types/edit-save/4', 'Actualizar información  en Tipos de vehiculos', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>description</td><td>motossss</td><td></td></tr></tbody></table>', 1, '2019-11-24 04:26:50', NULL),
+(86, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/vehicle_types/edit-save/4', 'Actualizar información  en Tipos de vehiculos', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>description</td><td>motossss</td><td></td></tr></tbody></table>', 1, '2019-11-24 04:26:59', NULL),
+(87, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/vehicle_types/edit-save/4', 'Actualizar información  en Tipos de vehiculos', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>description</td><td>motossss</td><td>mos</td></tr></tbody></table>', 1, '2019-11-24 04:27:06', NULL),
+(88, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/vehicle_types/edit-save/4', 'Actualizar información  en Tipos de vehiculos', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>description</td><td>mos</td><td>m</td></tr></tbody></table>', 1, '2019-11-24 04:27:11', NULL),
+(89, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/vehicle_types/edit-save/4', 'Actualizar información  en Tipos de vehiculos', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>description</td><td>m</td><td></td></tr></tbody></table>', 1, '2019-11-24 04:27:17', NULL),
+(90, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/vehicle_types/add-save', 'Añadir nueva información  en Tipos de vehiculos', '', 1, '2019-11-24 04:29:13', NULL),
+(91, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/brands/add-save', 'Añadir nueva información GoodYear en Marcas', '', 1, '2019-11-24 05:21:09', NULL),
+(92, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/brands/add-save', 'Añadir nueva información Titan en Marcas', '', 1, '2019-11-24 05:21:44', NULL),
+(93, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/brands/add-save', 'Añadir nueva información Rinaldi en Marcas', '', 1, '2019-11-24 05:21:58', NULL),
+(94, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/brands/add-save', 'Añadir nueva información Hyundai XTeer en Marcas', '', 1, '2019-11-24 05:22:19', NULL),
+(95, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/brands/add-save', 'Añadir nueva información ActiOil en Marcas', '', 1, '2019-11-24 05:22:35', NULL),
+(96, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/brands/add-save', 'Añadir nueva información Tortuga en Marcas', '', 1, '2019-11-24 05:22:48', NULL),
+(97, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/brands/add-save', 'Añadir nueva información Xtire en Marcas', '', 1, '2019-11-24 05:22:59', NULL),
+(98, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/brands/add-save', 'Añadir nueva información Maxion en Marcas', '', 1, '2019-11-24 05:23:12', NULL),
+(99, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/brands/add-save', 'Añadir nueva información KLL en Marcas', '', 1, '2019-11-24 05:23:27', NULL),
+(100, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/brands/add-save', 'Añadir nueva información Alcoa en Marcas', '', 1, '2019-11-24 05:23:40', NULL),
+(101, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/brands/edit-save/3', 'Actualizar información GoodYear sebastiandjmaciel en Marcas', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>brand_name</td><td>GoodYear</td><td>GoodYear sebastiandjmaciel</td></tr><tr><td>local_link</td><td></td><td></td></tr><tr><td>external_link</td><td></td><td></td></tr><tr><td>deleted_at</td><td></td><td></td></tr></tbody></table>', 1, '2019-11-24 05:50:09', NULL);
 
 -- --------------------------------------------------------
 
@@ -293,7 +329,7 @@ INSERT INTO `cms_menus` (`id`, `name`, `type`, `path`, `color`, `icon`, `parent_
 (8, 'Imagenes de productos', 'Route', 'AdminProductPhotosControllerGetIndex', NULL, 'fa fa-image', 9, 1, 0, 1, 3, '2019-05-16 06:03:33', NULL),
 (9, 'Productos', 'Module', 'products', 'normal', 'fa fa-product-hunt', 0, 1, 0, 1, 2, '2019-05-17 02:19:16', '2019-05-17 02:20:36'),
 (10, 'Tipos de vehiculos', 'Route', 'AdminVehicleTypesControllerGetIndex', NULL, 'fa fa-bus', 13, 1, 0, 1, 1, '2019-05-17 02:22:39', NULL),
-(11, 'Cotizaciones', 'URL', 'http://localhost:8002/admin/settings/show?group=Cotizaciones&m=0', 'normal', 'fa fa-money', 0, 1, 0, 1, 4, '2019-05-17 02:28:00', NULL),
+(11, 'Cotizaciones', 'URL', 'http://localhost:8001/admin/settings/show?group=Cotizaciones&m=0', 'normal', 'fa fa-money', 0, 1, 0, 1, 4, '2019-05-17 02:28:00', '2019-06-25 10:41:44'),
 (12, 'Imagenes de tipos de vehiculos', 'Route', 'AdminVehicleTypePhotosControllerGetIndex', NULL, 'fa fa-image', 13, 1, 0, 1, 2, '2019-05-17 02:31:45', NULL),
 (13, 'Vehiculos', 'Module', 'vehicle_types', 'normal', 'fa fa-automobile', 0, 1, 0, 1, 3, '2019-05-17 02:51:37', NULL),
 (14, 'Listar Neumaticos', 'Route', 'AdminTiresControllerGetIndex', 'normal', 'fa fa-gears', 15, 1, 0, 1, 1, '2019-05-19 01:22:44', '2019-05-19 01:54:38'),
@@ -327,12 +363,12 @@ INSERT INTO `cms_menus_privileges` (`id`, `id_cms_menus`, `id_cms_privileges`) V
 (11, 9, 1),
 (12, 7, 1),
 (13, 10, 1),
-(14, 11, 1),
 (15, 12, 1),
 (16, 13, 1),
 (18, 15, 1),
 (19, 14, 1),
-(21, 16, 1);
+(21, 16, 1),
+(22, 11, 1);
 
 -- --------------------------------------------------------
 
@@ -624,7 +660,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (43, '2019_05_15_233137_create_vehicle_type_photos_table', 3),
 (44, '2019_05_15_234341_create_tires_table', 4),
 (45, '2019_05_16_002014_create_tire_photos_table', 5),
-(46, '2019_05_16_003511_create_tire_vehicle_types_table', 6);
+(46, '2019_05_16_003511_create_tire_vehicle_types_table', 6),
+(47, '2019_05_24_031510_create_product_vehicle_types_table', 7);
 
 -- --------------------------------------------------------
 
@@ -693,6 +730,18 @@ CREATE TABLE `product_photos` (
   `deleted_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product_vehicle_types`
+--
+
+CREATE TABLE `product_vehicle_types` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `products_id` int(10) UNSIGNED NOT NULL,
+  `vehicle_types_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -840,11 +889,11 @@ CREATE TABLE `vehicle_types` (
 --
 
 INSERT INTO `vehicle_types` (`id`, `vehicle_type`, `description`, `photo`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 'Autos', 'Autos y autitos', NULL, '2019-05-19 09:04:53', '2019-05-17 02:24:57', '2019-05-17 02:41:30'),
-(2, 'Camionetas', NULL, NULL, '2019-05-19 09:04:55', '2019-05-19 09:03:33', NULL),
-(3, 'Camiones', NULL, NULL, '2019-05-19 09:04:57', '2019-05-19 09:03:39', NULL),
-(4, 'Motos', NULL, NULL, '2019-05-19 09:04:58', '2019-05-19 09:03:43', NULL),
-(5, 'aaa', NULL, NULL, '2019-05-19 09:05:49', '2019-05-19 09:05:18', NULL);
+(1, 'Autos', NULL, NULL, NULL, '2019-05-17 02:24:57', '2019-11-24 04:25:46'),
+(2, 'Camionetas', NULL, NULL, NULL, '2019-05-19 09:03:33', NULL),
+(3, 'Camiones', NULL, NULL, NULL, '2019-05-19 09:03:39', NULL),
+(4, 'Motos', NULL, NULL, NULL, '2019-05-19 09:03:43', '2019-11-24 04:27:17'),
+(6, 'SUV', NULL, NULL, NULL, '2019-11-24 04:29:13', NULL);
 
 -- --------------------------------------------------------
 
@@ -861,14 +910,6 @@ CREATE TABLE `vehicle_type_photos` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `vehicle_type_photos`
---
-
-INSERT INTO `vehicle_type_photos` (`id`, `vehicle_type_id`, `title`, `photo`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 1, 'prueba', 'uploads/1/2019-05/meme.jpg', '2019-05-19 09:05:02', '2019-05-17 02:33:35', NULL),
-(2, 5, NULL, 'uploads/1/2019-05/1323a06d7e7b69aa3597513b8db9351e.jpg', '2019-05-19 09:05:41', '2019-05-19 09:05:35', NULL);
 
 -- --------------------------------------------------------
 
@@ -1032,6 +1073,14 @@ ALTER TABLE `product_photos`
   ADD KEY `product_photos_product_id_foreign` (`product_id`);
 
 --
+-- Indexes for table `product_vehicle_types`
+--
+ALTER TABLE `product_vehicle_types`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `product_vehicle_types_products_id_vehicle_types_id_unique` (`products_id`,`vehicle_types_id`),
+  ADD KEY `product_vehicle_types_vehicle_types_id_foreign` (`vehicle_types_id`);
+
+--
 -- Indexes for table `profiles`
 --
 ALTER TABLE `profiles`
@@ -1096,151 +1145,187 @@ ALTER TABLE `widths`
 --
 ALTER TABLE `banners`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `brands`
 --
 ALTER TABLE `brands`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
 --
 -- AUTO_INCREMENT for table `cms_apicustom`
 --
 ALTER TABLE `cms_apicustom`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `cms_apikey`
 --
 ALTER TABLE `cms_apikey`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `cms_dashboard`
 --
 ALTER TABLE `cms_dashboard`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `cms_email_queues`
 --
 ALTER TABLE `cms_email_queues`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `cms_email_templates`
 --
 ALTER TABLE `cms_email_templates`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
+
 --
 -- AUTO_INCREMENT for table `cms_menus`
 --
 ALTER TABLE `cms_menus`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
 --
 -- AUTO_INCREMENT for table `cms_menus_privileges`
 --
 ALTER TABLE `cms_menus_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
 --
 -- AUTO_INCREMENT for table `cms_moduls`
 --
 ALTER TABLE `cms_moduls`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
 --
 -- AUTO_INCREMENT for table `cms_notifications`
 --
 ALTER TABLE `cms_notifications`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `cms_privileges`
 --
 ALTER TABLE `cms_privileges`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `cms_privileges_roles`
 --
 ALTER TABLE `cms_privileges_roles`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
 --
 -- AUTO_INCREMENT for table `cms_settings`
 --
 ALTER TABLE `cms_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
 --
 -- AUTO_INCREMENT for table `cms_statistics`
 --
 ALTER TABLE `cms_statistics`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `cms_statistic_components`
 --
 ALTER TABLE `cms_statistic_components`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `cms_users`
 --
 ALTER TABLE `cms_users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `product_categories`
 --
 ALTER TABLE `product_categories`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `product_photos`
 --
 ALTER TABLE `product_photos`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `product_vehicle_types`
+--
+ALTER TABLE `product_vehicle_types`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `profiles`
 --
 ALTER TABLE `profiles`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `radiuses`
 --
 ALTER TABLE `radiuses`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `tires`
 --
 ALTER TABLE `tires`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `tire_photos`
 --
 ALTER TABLE `tire_photos`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `tire_vehicle_types`
 --
 ALTER TABLE `tire_vehicle_types`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `vehicle_types`
 --
 ALTER TABLE `vehicle_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `vehicle_type_photos`
 --
 ALTER TABLE `vehicle_type_photos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `widths`
 --
 ALTER TABLE `widths`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- Constraints for dumped tables
 --
@@ -1257,6 +1342,13 @@ ALTER TABLE `products`
 --
 ALTER TABLE `product_photos`
   ADD CONSTRAINT `product_photos_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
+
+--
+-- Constraints for table `product_vehicle_types`
+--
+ALTER TABLE `product_vehicle_types`
+  ADD CONSTRAINT `product_vehicle_types_products_id_foreign` FOREIGN KEY (`products_id`) REFERENCES `products` (`id`),
+  ADD CONSTRAINT `product_vehicle_types_vehicle_types_id_foreign` FOREIGN KEY (`vehicle_types_id`) REFERENCES `vehicle_types` (`id`);
 
 --
 -- Constraints for table `tires`
@@ -1285,7 +1377,3 @@ ALTER TABLE `tire_vehicle_types`
 --
 ALTER TABLE `vehicle_type_photos`
   ADD CONSTRAINT `vehicle_type_photos_vehicle_type_id_foreign` FOREIGN KEY (`vehicle_type_id`) REFERENCES `vehicle_types` (`id`);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

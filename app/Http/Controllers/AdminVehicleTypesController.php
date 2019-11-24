@@ -38,7 +38,7 @@
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
 			$this->form[] = ['label'=>'Tipo de vehiculo','name'=>'vehicle_type','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Descripcion','name'=>'description','type'=>'textarea','validation'=>'string|min:5|max:5000','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Descripcion','name'=>'description','type'=>'textarea','validation'=>'string|min:0|max:5000','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Imagen','name'=>'photo','type'=>'upload','validation'=>'image|max:3000','width'=>'col-sm-10','help'=>'Tipo de imágenes soportados: JPG, JPEG, PNG, GIF, BMP', 'upload_encrypt'=>'true'];
 			# END FORM DO NOT REMOVE THIS LINE
 
