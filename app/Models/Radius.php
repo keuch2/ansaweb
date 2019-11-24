@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Radius extends Model
 {
     use SoftDeletes;
+    protected $table = 'radiuses';
 
     protected  $fillable = ['radius_name', 'radius_value'];
 

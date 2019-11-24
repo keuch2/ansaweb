@@ -4,26 +4,26 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitf121e6e76c6657379a79c10237fde605
+class ComposerStaticInit66accf651530a04b0813e57b4f634b61
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
-        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
         'e94defb743a4d9da5bb973e78c1fa8ff' => __DIR__ . '/..' . '/imanghafoori/laravel-terminator/src/helpers.php',
-        '95779e373bd3ef5069868a995b5280ab' => __DIR__ . '/..' . '/imanghafoori/laravel-heyman/src/helpers.php',
         '1374595b22715c0d85ab645d8272fe85' => __DIR__ . '/..' . '/imanghafoori/laravel-widgetize/src/helpers.php',
-        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        '95779e373bd3ef5069868a995b5280ab' => __DIR__ . '/..' . '/imanghafoori/laravel-heyman/src/helpers.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -159,8 +159,8 @@ class ComposerStaticInitf121e6e76c6657379a79c10237fde605
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
         ),
         'crocodicstudio\\crudbooster\\' => 
         array (
@@ -483,6 +483,11 @@ class ComposerStaticInitf121e6e76c6657379a79c10237fde605
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\CBHook' => __DIR__ . '/../..' . '/app/Http/Controllers/CBHook.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\CurrencyController' => __DIR__ . '/../..' . '/app/Http/Controllers/CurrencyController.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductController.php',
+        'App\\Http\\Controllers\\StaticContentController' => __DIR__ . '/../..' . '/app/Http/Controllers/StaticContentController.php',
+        'App\\Http\\Controllers\\TireController' => __DIR__ . '/../..' . '/app/Http/Controllers/TireController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -4949,10 +4954,10 @@ class ComposerStaticInitf121e6e76c6657379a79c10237fde605
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitf121e6e76c6657379a79c10237fde605::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitf121e6e76c6657379a79c10237fde605::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitf121e6e76c6657379a79c10237fde605::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitf121e6e76c6657379a79c10237fde605::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit66accf651530a04b0813e57b4f634b61::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit66accf651530a04b0813e57b4f634b61::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit66accf651530a04b0813e57b4f634b61::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit66accf651530a04b0813e57b4f634b61::$classMap;
 
         }, null, ClassLoader::class);
     }

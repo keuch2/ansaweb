@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Brand;
 use App\Models\ProductCategory;
+use App\Models\Profile;
+use App\Models\Radius;
 use App\Models\VehicleType;
+use App\Models\Width;
 use Illuminate\Http\Request;
 use Session;
 
@@ -16,11 +19,9 @@ class HomeController extends Controller
         $vehicleTypes = VehicleType::all();
         $brands = Brand::all();
         $productCategories = ProductCategory::all();
-        return view('home.home', ['data' => null,
-                                        'currencies' => $currencies,
-                                        'vehicleTypes' => $vehicleTypes,
-                                        'brands' => $brands,
-                                        'productCategories' => $productCategories,
-            ]);
+        $radiuses = Radius::all();
+        $widths = Width::all();
+        $profiles = Profile::all();
+        return view('home.home', compact('currencies', 'vehicleTypes','brands','productCategories','radiuses','widths','profiles'));
     }
 }
