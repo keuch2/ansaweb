@@ -2427,6 +2427,7 @@ class ComposerStaticInit66accf651530a04b0813e57b4f634b61
         'Imanghafoori\\Widgets\\Utils\\WidgetRenderer' => __DIR__ . '/..' . '/imanghafoori/laravel-widgetize/src/Utils/WidgetRenderer.php',
         'Imanghafoori\\Widgets\\WidgetGenerator' => __DIR__ . '/..' . '/imanghafoori/laravel-widgetize/src/WidgetGenerator.php',
         'Imanghafoori\\Widgets\\WidgetsServiceProvider' => __DIR__ . '/..' . '/imanghafoori/laravel-widgetize/src/WidgetsServiceProvider.php',
+        'ImportedSeeder' => __DIR__ . '/../..' . '/database/seeds/ImportedSeeder.php',
         'Intervention\\Image\\AbstractColor' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/AbstractColor.php',
         'Intervention\\Image\\AbstractDecoder' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/AbstractDecoder.php',
         'Intervention\\Image\\AbstractDriver' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/AbstractDriver.php',

@@ -1972,6 +1972,7 @@ return array(
     'Imanghafoori\\Widgets\\Utils\\WidgetRenderer' => $vendorDir . '/imanghafoori/laravel-widgetize/src/Utils/WidgetRenderer.php',
     'Imanghafoori\\Widgets\\WidgetGenerator' => $vendorDir . '/imanghafoori/laravel-widgetize/src/WidgetGenerator.php',
     'Imanghafoori\\Widgets\\WidgetsServiceProvider' => $vendorDir . '/imanghafoori/laravel-widgetize/src/WidgetsServiceProvider.php',
+    'ImportedSeeder' => $baseDir . '/database/seeds/ImportedSeeder.php',
     'Intervention\\Image\\AbstractColor' => $vendorDir . '/intervention/image/src/Intervention/Image/AbstractColor.php',
     'Intervention\\Image\\AbstractDecoder' => $vendorDir . '/intervention/image/src/Intervention/Image/AbstractDecoder.php',
     'Intervention\\Image\\AbstractDriver' => $vendorDir . '/intervention/image/src/Intervention/Image/AbstractDriver.php',
