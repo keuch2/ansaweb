@@ -7,6 +7,7 @@ use App\Models\ProductCategory;
 use App\Models\Profile;
 use App\Models\Radius;
 use App\Models\Promotion;
+use App\Models\Tire;
 use App\Models\VehicleType;
 use App\Models\Width;
 use Illuminate\Http\Request;
@@ -24,7 +25,18 @@ class HomeController extends Controller
         $radiuses = Radius::all();
         $widths = Width::all();
         $profiles = Profile::all();
-        return view('home.home', compact('promotions','currencies', 'vehicleTypes','brands','productCategories','radiuses','widths','profiles'));
+
+        $offers = Tire::where('discount_rate', '>', 0)->orderBy('id', 'DESC')->take(20)->get();
+        $featured = Tire::where('featured', '=', 1)->orderBy('id', 'DESC')->take(10)->get();
+
+        $dolarToGs = \DB::table('cms_settings')->where('name', 'cotizacion_dolar_usd_guaranigs')->first()->content;
+        $dolarToGs = (float)$dolarToGs;
+        $dolarToReal = \DB::table('cms_settings')->where('name', 'cotizacion_dolar_usd_real')->first()->content;
+        $dolarToReal = (float)$dolarToReal;
+
+        //dd($dolarToReal, $dolarToGs);
+
+        return view('home.home', compact('promotions','currencies', 'vehicleTypes','brands','productCategories','radiuses','widths','profiles', 'offers', 'featured', 'dolarToGs', 'dolarToReal'));
 
     }
 }
