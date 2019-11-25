@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Nov 24, 2019 at 06:52 PM
+-- Generation Time: Nov 25, 2019 at 10:39 AM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.8
 
@@ -304,7 +304,10 @@ INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `d
 (112, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/tire_photos/add-save', 'Añadir nueva información Perfil en Imagenes de neumaticos', '', 1, '2019-11-25 00:03:37', NULL),
 (113, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/tires/add-save', 'Añadir nueva información Goodyear prueba 2 en Neumaticos', '', 1, '2019-11-25 00:13:41', NULL),
 (114, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/tires/edit-save/2', 'Actualizar información GoodYear Prueba en Neumaticos', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>discount_rate</td><td>5</td><td>20</td></tr><tr><td>final_price</td><td>95</td><td>80</td></tr><tr><td>visit_counter</td><td></td><td></td></tr><tr><td>deleted_at</td><td></td><td></td></tr></tbody></table>', 1, '2019-11-25 00:13:55', NULL),
-(115, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/promotions/add-save', 'Añadir nueva información Alineacion y Balanceo en Promociones', '', 1, '2019-11-25 00:50:00', NULL);
+(115, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/promotions/add-save', 'Añadir nueva información Alineacion y Balanceo en Promociones', '', 1, '2019-11-25 00:50:00', NULL),
+(116, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/promotions/add-save', 'Añadir nueva información Otra Promocion en Promociones', '', 1, '2019-11-25 01:06:26', NULL),
+(117, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/promotions/delete-image', 'Eliminar la imagen de Otra Promocion en Promociones', '', 1, '2019-11-25 01:23:45', NULL),
+(118, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36', 'http://localhost:8001/admin/promotions/edit-save/2', 'Actualizar información Otra Promocion en Promociones', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>photo</td><td></td><td>uploads/1/2019-11/bfb6e6396c5e0c3e62e380f7e19e050b.png</td></tr><tr><td>local_link</td><td></td><td></td></tr><tr><td>external_link</td><td></td><td></td></tr><tr><td>deleted_at</td><td></td><td></td></tr></tbody></table>', 1, '2019-11-25 01:23:56', NULL);
 
 -- --------------------------------------------------------
 
@@ -808,7 +811,8 @@ CREATE TABLE `promotions` (
 --
 
 INSERT INTO `promotions` (`id`, `title`, `photo`, `local_link`, `external_link`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 'Alineacion y Balanceo', 'uploads/1/2019-11/27e0da521f43618f66f46c379fb195a5.jpg', NULL, NULL, NULL, '2019-11-25 00:50:00', NULL);
+(1, 'Alineacion y Balanceo', 'uploads/1/2019-11/27e0da521f43618f66f46c379fb195a5.jpg', NULL, NULL, NULL, '2019-11-25 00:50:00', NULL),
+(2, 'Otra Promocion', 'uploads/1/2019-11/bfb6e6396c5e0c3e62e380f7e19e050b.png', NULL, NULL, NULL, '2019-11-25 01:06:26', '2019-11-25 01:23:56');
 
 -- --------------------------------------------------------
 
@@ -868,9 +872,8 @@ CREATE TABLE `tires` (
 --
 
 INSERT INTO `tires` (`id`, `tire_code`, `tire_name`, `tire_type`, `brand_id`, `radius_id`, `width_id`, `profile_id`, `description`, `price`, `discount_rate`, `final_price`, `state`, `featured`, `visit_counter`, `photo`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, '84', 'GY R13', 'RADIAL', 1, 1, 1, 1, '<p>asdasd asd as</p>', 250000.00, 25.00, 187500.00, 'ACTIVO', 1, NULL, 'uploads/1/2019-05/911819af7f6935af425c4f3c472c3ccb.jpg', '2019-05-19 09:04:29', '2019-05-19 02:08:13', '2019-05-19 09:03:54'),
 (2, '1001', 'GoodYear Prueba', 'RADIAL', 3, 2, 2, 2, '<p>Detalles .. lalala...es un neumatico lindo y caro</p>', 100.00, 20.00, 80.00, 'ACTIVO', 1, NULL, 'uploads/1/2019-11/0aa54437a44cbf28a2d3a861a4d49f51.jpg', NULL, '2019-11-25 00:02:50', '2019-11-25 00:13:55'),
-(3, '1002', 'Goodyear prueba 2', 'CONVENCIONAL', 3, 3, 2, 2, '<p>neumatico de prueba</p>', 100.00, 0.00, 100.00, 'ACTIVO', 0, NULL, 'uploads/1/2019-11/6c6843f4984e28d2c77876921a2d1d60.jpg', NULL, '2019-11-25 00:13:41', NULL);
+(3, '1002', 'Goodyear prueba 2', 'CONVENCIONAL', 3, 3, 2, 2, '<p>neumatico de prueba</p>', 100.00, 0.00, 100.00, 'ACTIVO', 1, NULL, 'uploads/1/2019-11/6c6843f4984e28d2c77876921a2d1d60.jpg', NULL, '2019-11-25 00:13:41', NULL);
 
 -- --------------------------------------------------------
 
@@ -1251,7 +1254,7 @@ ALTER TABLE `cms_email_templates`
 -- AUTO_INCREMENT for table `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
 
 --
 -- AUTO_INCREMENT for table `cms_menus`
@@ -1353,7 +1356,7 @@ ALTER TABLE `profiles`
 -- AUTO_INCREMENT for table `promotions`
 --
 ALTER TABLE `promotions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `radiuses`

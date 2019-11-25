@@ -1,3 +1,6 @@
+@php
+
+@endphp
 @extends('frontlayout.front')
 
 @section('main-content')
@@ -37,12 +40,15 @@
                             @php
                                 $GsPrice = ($ft->final_price) * $dolarToGs;
                                 $RealPrice = ($ft->final_price) * $dolarToReal;
+
                             @endphp
 
                             <div class="product">
                                 <figure class="product-image-container">
                                     <a href="{{route('tire-byId', ['tireId'=>$ft->id])}}" class="product-image">
-                                        <img src="{{ url($ft->photo) }}" alt="neumatico">
+                                        @if(!empty($ft->photo))
+                                            <img src="{{ url($ft->photo) }}" alt="neumatico">
+                                        @endif
                                     </a>
                                 </figure>
                                 <div class="product-details">
@@ -82,7 +88,9 @@
                             @foreach($promotions as $promotion)
                                 <div class="banner banner-image">
                                     <a href="#">
-                                        <img src="{{ url($promotion->photo) }}" alt="promotion">
+                                        @if(!empty($promotion->photo))
+                                            <img src="{{ url($promotion->photo) }}" alt="promotion">
+                                        @endif
                                     </a>
                                 </div><!-- End .banner -->
                             @endforeach
@@ -105,7 +113,9 @@
                         <div class="partners-carousel owl-carousel owl-theme">
                             @foreach($brands as $brand)
                                 <a href="#" class="partner">
-                                    <img src="{{ url($brand->photo) }}" alt="logo">
+                                    @if(!empty($brand->photo))
+                                        <img src="{{ url($brand->photo) }}" alt="logo">
+                                    @endif
                                 </a>
                             @endforeach
                         </div><!-- End .partners-carousel -->
@@ -137,7 +147,9 @@
                             <div class="product product-overlay">
                                 <figure class="product-image-container">
                                     <a href="{{route('tire-byId', ['tireId'=>$offer->id])}}" class="product-image">
-                                        <img src="{{ url($offer->photo) }}" alt="neumatico">
+                                        @if(!empty($offer->photo))
+                                            <img src="{{ url($offer->photo) }}" alt="neumatico">
+                                        @endif
                                     </a>
                                     <span class="product-label label-sale">{{ number_format($offer->discount_rate, 0, ',', '.')}} % OFF</span>
                                     <div class="product-action">
