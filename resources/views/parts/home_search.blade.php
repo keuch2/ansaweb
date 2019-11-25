@@ -1,7 +1,7 @@
 <div class="banners-section">
     <div class="container">
         <h2 class="subtitle text-center"><span>Buscar Neumáticos por Medida</span></h2>
-        <form method="get" action="{{route('search.results')}}">
+        <form id="searchForm" method="get" action="{{route('search.results')}}">
         <div class="row">
 
             <div class="col-md-3">
@@ -34,7 +34,7 @@
             </div>
             <div class="col-md-3">
                 <h5 style="color:#003399;">.</h5>
-                <a href="javascript:;" class="form-control btn-dark">BUSCAR</a>
+                <a href="#" onclick="$('#searchForm').submit()" class="form-control btn-dark">BUSCAR</a>
             </div>
 
         </div>

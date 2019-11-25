@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class TireController extends Controller
 {
-    public function List()
+    public function index()
     {
         return ['tires' => 'all'];
     }

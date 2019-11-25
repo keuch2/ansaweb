@@ -1,6 +1,8 @@
 <div class="header-top">
     <div class="container">
 
+        {{--
+
         <div class="header-left header-dropdowns">
             <div style="padding-right: 20px;color:#000;">SELECCIONAR DIVISA</div>
             {{ csrf_field() }}
@@ -41,5 +43,7 @@
                 </div><!-- End .header-menu -->
             </div><!-- End .header-dropown -->
         </div><!-- End .header-right -->
+
+        --}}
     </div><!-- End .container -->
 </div><!-- End .header-top -->

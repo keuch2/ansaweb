@@ -17,13 +17,13 @@ Route::get('/landing', function () {
 });
 
 // Home
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
 // Currency
 Route::post('setcurrency-ajax', ['uses' => 'CurrencyController@ajaxSetCurrency'])->name('setcurrency-ajax');
 
 // Tires
-Route::get('/tires', ['uses' => 'TireController@List'])->name('tires-list');
+Route::get('/tires', ['uses' => 'TireController@index'])->name('tires-list');
 Route::get('/tires/byVehicleType/{vehicleTypeId}', ['uses' => 'TireController@ListByVehicleType'])->name('tires-list-byVehicleType');
 Route::get('/tires/byBrand/{brandId}', ['uses' => 'TireController@ListByBrand'])->name('tires-list-byBrand');
 Route::get('/tire/{tireId}', ['uses' => 'TireController@Tire'])->name('tire-byId');
