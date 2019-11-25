@@ -40,20 +40,24 @@
             </div><!-- End .container -->
         </div><!-- End .about-section -->
 
-        <div class="partners-container">
-            <div class="container">
-                <h2 class="subtitle">
-                    <span>Nuestras Marcas</span>
-                </h2>
-                <div class="partners-carousel owl-carousel owl-theme">
-                    @foreach($brands as $brand)
-                        <a href="#" class="partner">
-                            <img src="{{ url($brand->photo) }}" alt="logo">
-                        </a>
-                    @endforeach
-                </div><!-- End .partners-carousel -->
-            </div><!-- End .container -->
-        </div><!-- End .partners-container -->
+        @if(isset($brands))
+            @if(count($brands) > 0)
+                <div class="partners-container">
+                    <div class="container">
+                        <h2 class="subtitle">
+                            <span>Nuestras Marcas</span>
+                        </h2>
+                        <div class="partners-carousel owl-carousel owl-theme">
+                            @foreach($brands as $brand)
+                                <a href="#" class="partner">
+                                    <img src="{{ url($brand->photo) }}" alt="logo">
+                                </a>
+                            @endforeach
+                        </div><!-- End .partners-carousel -->
+                    </div><!-- End .container -->
+                </div><!-- End .partners-container -->
+            @endif
+        @endif
 
     </main><!-- End .main -->
 
