@@ -40,8 +40,32 @@ class TireController extends Controller
         $data = AnsaHelper::getHeaderData();
         $tire = Tire::findOrFail($tireId);
         $data['tire'] = $tire;
-        dd($tire);
-        return view('tires.view')->with($data);
 
+        // get aditional photos
+        $data['photos'] = $tire->tirePhotos;
+
+
+        // similar tires (last 5 with the same brand_id  or similar radius_id, width_id  or profile_id -> haha fucked!)
+        $widthId = $tire->width_id;
+        $profileId = $tire->profile_id;
+        $radiusId = $tire->radius_id;
+        $tireId = $tire->id;
+        $brandId = $tire->brand_id;
+
+        $similarTires = Tire::where('id', '<>', $tireId)->where('brand_id', '=', $brandId)
+                        ->orWhere(function($query) use ($tireId, $radiusId){
+                            $query->where('id', '<>', $tireId)->where('radius_id', '=', $radiusId);
+                        })
+                        ->orWhere(function($query2) use ($tireId, $profileId){
+                            $query2->where('id', '<>', $tireId)->where('profile_id', '=', $profileId);
+                        })->orWhere(function($query3) use ($tireId, $widthId) {
+                            $query3->where('id', '<>', $tireId)->where('width_id', '=', $widthId);
+                        })->orderBy('id', 'DESC')->take(\Config::get('content.maxSimilarTires'))->get();;
+
+        // get other products (tires) -> turn this off =D
+
+        //dd($data['tire'], $photos, $similarTires);
+        $data['similarTires'] = $similarTires;
+        return view('tires.view')->with($data);
     }
 }
