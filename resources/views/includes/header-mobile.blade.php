@@ -44,7 +44,7 @@
                                     <!-- categorias de productos -->
                                     <ul>
                                         @foreach($productCategories as $productCategory)
-                                            <li><a href="{{route('products-list-byProductCategory', ['productCategoryId' => $productCategory->id])}}">{{$productCategory->category_name}}</a></li>
+                                            <li><a href="{{route('products-list-byCategoryId', ['productCategoryId' => $productCategory->id])}}">{{$productCategory->category_name}}</a></li>
                                         @endforeach
                                     </ul>
                                 </li>

@@ -70,7 +70,7 @@
                 <div class="toolbox-item toolbox-show">
                     <label>Mostrando {{$tires->firstItem()}}–{{$tires->lastItem()}} de {{$tires->total()}} resultados</label>
                 </div><!-- End .toolbox-item -->
-                {!! $tires->links() !!}
+                {!! $tires->appends(['radius_id' => $request->radius_id,'profile_id'=>$request->profile_id,'width_id'=>$request->width_id])->links() !!}
                 {{--<ul class="pagination">
                     <li class="page-item disabled">
                         <a class="page-link page-link-btn" href="#"><i class="icon-angle-left"></i></a>
