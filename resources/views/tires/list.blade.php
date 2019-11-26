@@ -37,7 +37,7 @@
                         @php
                             $GsPrice = ($tire->final_price) * $dolarToGs;
                             $RealPrice = ($tire->final_price) * $dolarToReal;
-                            $GsOldPrice = ($tirer->price) * $dolarToGs;
+                            $GsOldPrice = ($tire->price) * $dolarToGs;
                         @endphp
 
                         <div class="col-6 col-md-4 col-xl-3">
