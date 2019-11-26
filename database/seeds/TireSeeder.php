@@ -7,7 +7,7 @@ use App\Models\Width;
 use App\Models\Radius;
 use App\Models\Profile;
 
-class ImportedSeeder extends Seeder
+class TireSeeder extends Seeder
 {
     /**
      * Run the database seeds.
