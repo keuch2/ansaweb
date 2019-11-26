@@ -31,11 +31,15 @@
                                             <img class="product-single-image" src="{{ url($tire->photo) }}" data-zoom-image="{{ url($tire->photo) }}"/>
                                         </div>
 
-                                        @foreach($photos as $photo)
-                                            <div class="product-item">
-                                                <img class="product-single-image" src="{{ url($photo->photo) }}" data-zoom-image="{{ url($photo->photo) }}"/>
-                                            </div>
-                                        @endforeach
+                                        @if(isset($photos))
+                                            @if(count($photos) > 0)
+                                                @foreach($photos as $photo)
+                                                    <div class="product-item">
+                                                        <img class="product-single-image" src="{{ url($photo->photo) }}" data-zoom-image="{{ url($photo->photo) }}"/>
+                                                    </div>
+                                                @endforeach
+                                            @endif
+                                        @endif
 
                                     </div>
                                     <!-- End .product-single-carousel -->
@@ -47,12 +51,15 @@
                                     <div class="col-3 owl-dot">
                                         <img src="{{ url($tire->photo) }}"/>
                                     </div>
-
-                                    @foreach($photos as $photo)
-                                        <div class="col-3 owl-dot">
-                                            <img src="{{ url($photo->photo) }}"/>
-                                        </div>
-                                    @endforeach
+                                    @if(isset($photos))
+                                        @if(count($photos) > 0)
+                                            @foreach($photos as $photo)
+                                                <div class="col-3 owl-dot">
+                                                    <img src="{{ url($photo->photo) }}"/>
+                                                </div>
+                                            @endforeach
+                                        @endif
+                                    @endif
 
                                 </div>
                             </div><!-- End .col-lg-7 -->
