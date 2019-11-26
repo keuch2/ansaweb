@@ -26,15 +26,17 @@
                             <div class="col-lg-7 col-md-6 product-single-gallery">
                                 <div class="product-slider-container product-item">
                                     <div class="product-single-carousel owl-carousel owl-theme">
+                                        <!-- main photo -->
                                         <div class="product-item">
-                                            <img class="product-single-image" src="img/neumatico.jpg" data-zoom-image="img/neumatico.jpg"/>
+                                            <img class="product-single-image" src="{{ url($tire->photo) }}" data-zoom-image="{{ url($tire->photo) }}"/>
                                         </div>
-                                        <div class="product-item">
-                                            <img class="product-single-image" src="img/neumatico2.jpg" data-zoom-image="img/neumatico2.jpg"/>
-                                        </div>
-                                        <div class="product-item">
-                                            <img class="product-single-image" src="img/neumatico3.jpg" data-zoom-image="img/neumatico3.jpg"/>
-                                        </div>
+
+                                        @foreach($photos as $photo)
+                                            <div class="product-item">
+                                                <img class="product-single-image" src="{{ url($photo->photo) }}" data-zoom-image="{{ url($photo->photo) }}"/>
+                                            </div>
+                                        @endforeach
+
                                     </div>
                                     <!-- End .product-single-carousel -->
                                     <span class="prod-full-screen">
@@ -43,21 +45,21 @@
                                 </div>
                                 <div class="prod-thumbnail row owl-dots" id='carousel-custom-dots'>
                                     <div class="col-3 owl-dot">
-                                        <img src="img/neumatico.jpg""/>
+                                        <img src="{{ url($tire->photo) }}"/>
                                     </div>
-                                    <div class="col-3 owl-dot">
-                                        <img src="img/neumatico2.jpg""/>
-                                    </div>
-                                    <div class="col-3 owl-dot">
-                                        <img src="img/neumatico3.jpg""/>
-                                    </div>
+
+                                    @foreach($photos as $photo)
+                                        <div class="col-3 owl-dot">
+                                            <img src="{{ url($photo->photo) }}"/>
+                                        </div>
+                                    @endforeach
 
                                 </div>
                             </div><!-- End .col-lg-7 -->
 
                             <div class="col-lg-5 col-md-6">
                                 <div class="product-single-details">
-                                    <h1 class="product-title">Neumatico {{$tire->brand->brand_name}}</h1>
+                                    <h1 class="product-title">Neumaático {{$tire->brand->brand_name}}</h1>
 
 
                                     <div class="price-box">
@@ -83,31 +85,31 @@
                                         <tbody>
                                         <tr>
                                             <th scope="row">MARCA:</th>
-                                            <td>LINGLONG</td>
+                                            <td>{{$tire->brand->brand_name}}</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">ARO:</th>
-                                            <td>13</td>
+                                            <td>{{$tire->radius->radius_name}} {{$tire->radius->radius_value}}</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">LARGURA:</th>
-                                            <td>175</td>
+                                            <td>{{$tire->width->width_name}} {{$tire->width->width_value}}</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">PERFIL:</th>
-                                            <td>70</td>
+                                            <td>{{$tire->profile->profile_name}} {{$tire->profile->profile_value}}</td>
                                         </tr>
+{{--                                        <tr>--}}
+{{--                                            <th scope="row">INDICE DE CARGA (POR CUBIERTA):</th>--}}
+{{--                                            <td>82 (475 Kg)</td>--}}
+{{--                                        </tr>--}}
+{{--                                        <tr>--}}
+{{--                                            <th scope="row">INDICE DE VELOCIDAD:</th>--}}
+{{--                                            <td>T (190 Km/h)</td>--}}
+{{--                                        </tr>--}}
                                         <tr>
-                                            <th scope="row">INDICE DE CARGA (POR CUBIERTA):</th>
-                                            <td>82 (475 Kg)</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">INDICE DE VELOCIDAD:</th>
-                                            <td>T (190 Km/h)</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">CATEGORIA :</th>
-                                            <td>PCR</td>
+                                            <th scope="row">TIPO :</th>
+                                            <td>{{$tire->tire_type}}</td>
                                         </tr>
 
                                         </tr>
@@ -157,205 +159,123 @@
                     <div class="sidebar-wrapper">
                         <div class="widget widget-brand">
                             <a href="#">
-                                <img src="img/marcas/1.jpg" alt="brand name">
+                                <img src="{{ url($tire->brand->photo) }}" alt="marca">
                             </a>
                         </div><!-- End .widget -->
 
-                        <div class="widget widget-featured">
-                            <h3 class="widget-title">Otros Productos</h3>
 
-                            <div class="widget-body">
-                                <div class="owl-carousel widget-featured-products">
-                                    <div class="featured-col">
+{{--                        <div class="widget widget-featured">--}}
+{{--                            <h3 class="widget-title">Otros Productos</h3>--}}
 
-                                        <div class="product product-sm">
-                                            <figure class="product-image-container">
-                                                <a href="product.html" class="product-image">
-                                                    <img src="img/neumatico.jpg" alt="product">
-                                                </a>
-                                            </figure>
-                                            <div class="product-details">
-                                                <h2 class="product-title">
-                                                    <a href="product.html">Neumatico</a>
-                                                </h2>
+{{--                            <div class="widget-body">--}}
+{{--                                <div class="owl-carousel widget-featured-products">--}}
+{{--                                    <div class="featured-col">--}}
 
-                                                <div class="price-box">
-                                                    <span class="product-price">Gs. 400.000</span>
-                                                    <span class="othercurrencies">RS$ 2039  /  US$ 938</span>
-                                                </div><!-- End .price-box -->
-                                            </div><!-- End .product-details -->
-                                        </div><!-- End .product -->
+{{--                                        <div class="product product-sm">--}}
+{{--                                            <figure class="product-image-container">--}}
+{{--                                                <a href="product.html" class="product-image">--}}
+{{--                                                    <img src="img/neumatico.jpg" alt="product">--}}
+{{--                                                </a>--}}
+{{--                                            </figure>--}}
+{{--                                            <div class="product-details">--}}
+{{--                                                <h2 class="product-title">--}}
+{{--                                                    <a href="product.html">Neumatico</a>--}}
+{{--                                                </h2>--}}
 
-                                        <div class="product product-sm">
-                                            <figure class="product-image-container">
-                                                <a href="product.html" class="product-image">
-                                                    <img src="img/neumatico.jpg" alt="product">
-                                                </a>
-                                            </figure>
-                                            <div class="product-details">
-                                                <h2 class="product-title">
-                                                    <a href="product.html">Neumatico</a>
-                                                </h2>
+{{--                                                <div class="price-box">--}}
+{{--                                                    <span class="product-price">Gs. 400.000</span>--}}
+{{--                                                    <span class="othercurrencies">RS$ 2039  /  US$ 938</span>--}}
+{{--                                                </div><!-- End .price-box -->--}}
+{{--                                            </div><!-- End .product-details -->--}}
+{{--                                        </div><!-- End .product -->--}}
 
-                                                <div class="price-box">
-                                                    <span class="product-price">Gs. 400.000</span>
-                                                    <span class="othercurrencies">RS$ 2039  /  US$ 938</span>
+{{--                                        <div class="product product-sm">--}}
+{{--                                            <figure class="product-image-container">--}}
+{{--                                                <a href="product.html" class="product-image">--}}
+{{--                                                    <img src="img/neumatico.jpg" alt="product">--}}
+{{--                                                </a>--}}
+{{--                                            </figure>--}}
+{{--                                            <div class="product-details">--}}
+{{--                                                <h2 class="product-title">--}}
+{{--                                                    <a href="product.html">Neumatico</a>--}}
+{{--                                                </h2>--}}
 
-                                                </div><!-- End .price-box -->
-                                            </div><!-- End .product-details -->
-                                        </div><!-- End .product -->
+{{--                                                <div class="price-box">--}}
+{{--                                                    <span class="product-price">Gs. 400.000</span>--}}
+{{--                                                    <span class="othercurrencies">RS$ 2039  /  US$ 938</span>--}}
 
-                                        <div class="product product-sm">
-                                            <figure class="product-image-container">
-                                                <a href="product.html" class="product-image">
-                                                    <img src="img/neumatico.jpg" alt="product">
-                                                </a>
-                                            </figure>
-                                            <div class="product-details">
-                                                <h2 class="product-title">
-                                                    <a href="product.html">Neumatico</a>
-                                                </h2>
+{{--                                                </div><!-- End .price-box -->--}}
+{{--                                            </div><!-- End .product-details -->--}}
+{{--                                        </div><!-- End .product -->--}}
 
-                                                <div class="price-box">
-                                                    <span class="product-price">Gs. 400.000</span>
-                                                    <span class="othercurrencies">RS$ 2039  /  US$ 938</span>
-                                                </div><!-- End .price-box -->
-                                            </div><!-- End .product-details -->
-                                        </div><!-- End .product -->
+{{--                                        <div class="product product-sm">--}}
+{{--                                            <figure class="product-image-container">--}}
+{{--                                                <a href="product.html" class="product-image">--}}
+{{--                                                    <img src="img/neumatico.jpg" alt="product">--}}
+{{--                                                </a>--}}
+{{--                                            </figure>--}}
+{{--                                            <div class="product-details">--}}
+{{--                                                <h2 class="product-title">--}}
+{{--                                                    <a href="product.html">Neumatico</a>--}}
+{{--                                                </h2>--}}
 
-
-
-
-                                    </div><!-- End .featured-col -->
-
-
-                                </div><!-- End .widget-featured-slider -->
-                            </div><!-- End .widget-body -->
-                        </div><!-- End .widget -->
+{{--                                                <div class="price-box">--}}
+{{--                                                    <span class="product-price">Gs. 400.000</span>--}}
+{{--                                                    <span class="othercurrencies">RS$ 2039  /  US$ 938</span>--}}
+{{--                                                </div><!-- End .price-box -->--}}
+{{--                                            </div><!-- End .product-details -->--}}
+{{--                                        </div><!-- End .product -->--}}
+{{--                                    </div><!-- End .featured-col -->--}}
+{{--                                </div><!-- End .widget-featured-slider -->--}}
+{{--                            </div><!-- End .widget-body -->--}}
+{{--                        </div><!-- End .widget -->--}}
                     </div>
                 </aside><!-- End .col-md-3 -->
             </div><!-- End .row -->
         </div><!-- End .container -->
 
-        <div class="featured-section">
-            <div class="container">
-                <h2 class="carousel-title">Productos Relacionados</h2>
+        @if(isset($similarTires))
+            @if(count($similarTires) > 0)
+                <div class="featured-section">
+                    <div class="container">
+                        <h2 class="carousel-title">Productos Relacionados</h2>
+                        <div class="featured-products owl-carousel owl-theme owl-dots-top">
 
-                <div class="featured-products owl-carousel owl-theme owl-dots-top">
+                            @foreach($similarTires as $similarTire)
 
-                    <div class="product">
-                        <figure class="product-image-container">
-                            <a href="product.html" class="product-image">
-                                <img src="img/neumatico.jpg" alt="product">
-                            </a>
-                        </figure>
-                        <div class="product-details">
-                            <h2 class="product-title">
-                                <a href="product.html">Neumatico</a>
-                            </h2>
-                            <div class="price-box">
-                                <span class="product-price">Gs. 255.000</span>
-                                <span class="othercurrencies">RS$ 2039  /  US$ 938</span>
-                            </div><!-- End .price-box -->
-                            <div class="product-action">
-                                <!--  <a href="product.html" class="paction add-cart" title="Add to Cart">
-                                    <span>Agregar al Carrito</span>
-                                </a> --> -->
-                            </div><!-- End .product-action -->
-                        </div><!-- End .product-details -->
-                    </div><!-- End .product -->
+                                @php
+                                    $GsPrice2 = ($tire->final_price) * $dolarToGs;
+                                    $RealPrice2 = ($tire->final_price) * $dolarToReal;
+                                @endphp
 
-                    <div class="product">
-                        <figure class="product-image-container">
-                            <a href="product.html" class="product-image">
-                                <img src="img/neumatico.jpg" alt="product">
-                            </a>
-                        </figure>
-                        <div class="product-details">
-                            <h2 class="product-title">
-                                <a href="product.html">Neumatico</a>
-                            </h2>
-                            <div class="price-box">
-                                <span class="product-price">Gs. 255.000</span>
-                                <span class="othercurrencies">RS$ 2039  /  US$ 938</span>
-                            </div><!-- End .price-box -->
-                            <div class="product-action">
-                                <!-- <a href="product.html" class="paction add-cart" title="Add to Cart">
-                                    <span>Agregar al Carrito</span>
-                                </a> -->
-                            </div><!-- End .product-action -->
-                        </div><!-- End .product-details -->
-                    </div><!-- End .product -->
+                                <div class="product">
+                                    <figure class="product-image-container">
+                                        <a href="{{route('tire-byId', ['tireId'=>$similarTire->id])}}" class="product-image">
+                                            <img src="{{ url($similarTire->photo) }}" alt="neumatico">
+                                        </a>
+                                    </figure>
+                                    <div class="product-details">
+                                        <h2 class="product-title">
+                                            <a href="{{route('tire-byId', ['tireId'=>$similarTire->id])}}">Neumático {{$similarTire->brand->brand_name}}</a>
+                                        </h2>
+                                        <div class="price-box">
+                                            <span class="product-price">Gs. {{number_format($GsPrice2, 0, ',', '.')}}</span>
+                                            <span class="othercurrencies">RS$ {{ number_format($RealPrice2, 2, ',', '.')}}  /  US$ {{ number_format($similarTire->final_price, 2, ',', '.')}}</span>
+                                        </div><!-- End .price-box -->
+                                        <div class="product-action">
+                                            <!--  <a href="product.html" class="paction add-cart" title="Add to Cart">
+                                                <span>Agregar al Carrito</span>
+                                            </a> --> -->
+                                        </div><!-- End .product-action -->
+                                    </div><!-- End .product-details -->
+                                </div><!-- End .product -->
+                            @endforeach
 
-                    <div class="product">
-                        <figure class="product-image-container">
-                            <a href="product.html" class="product-image">
-                                <img src="img/neumatico.jpg" alt="product">
-                            </a>
-                        </figure>
-                        <div class="product-details">
-                            <h2 class="product-title">
-                                <a href="product.html">Neumatico</a>
-                            </h2>
-                            <div class="price-box">
-                                <span class="product-price">Gs. 255.000</span>
-                                <span class="othercurrencies">RS$ 2039  /  US$ 938</span>
-                            </div><!-- End .price-box -->
-                            <div class="product-action">
-                                <!-- <a href="product.html" class="paction add-cart" title="Add to Cart">
-                                    <span>Agregar al Carrito</span>
-                                </a> -->
-                            </div><!-- End .product-action -->
-                        </div><!-- End .product-details -->
-                    </div><!-- End .product -->
-
-                    <div class="product">
-                        <figure class="product-image-container">
-                            <a href="product.html" class="product-image">
-                                <img src="img/neumatico.jpg" alt="product">
-                            </a>
-                        </figure>
-                        <div class="product-details">
-                            <h2 class="product-title">
-                                <a href="product.html">Neumatico</a>
-                            </h2>
-                            <div class="price-box">
-                                <span class="product-price">Gs. 255.000</span>
-                                <span class="othercurrencies">RS$ 2039  /  US$ 938</span>
-                            </div><!-- End .price-box -->
-                            <div class="product-action">
-                                <!-- <a href="product.html" class="paction add-cart" title="Add to Cart">
-                                    <span>Agregar al Carrito</span>
-                                </a> -->
-                            </div><!-- End .product-action -->
-                        </div><!-- End .product-details -->
-                    </div><!-- End .product -->
-
-                    <div class="product">
-                        <figure class="product-image-container">
-                            <a href="product.html" class="product-image">
-                                <img src="img/neumatico.jpg" alt="product">
-                            </a>
-                        </figure>
-                        <div class="product-details">
-                            <h2 class="product-title">
-                                <a href="product.html">Neumatico</a>
-                            </h2>
-                            <div class="price-box">
-                                <span class="product-price">Gs. 255.000</span>
-                                <span class="othercurrencies">RS$ 2039  /  US$ 938</span>
-                            </div><!-- End .price-box -->
-                            <div class="product-action">
-                                <!-- <a href="product.html" class="paction add-cart" title="Add to Cart">
-                                    <span>Agregar al Carrito</span>
-                                </a> -->
-                            </div><!-- End .product-action -->
-                        </div><!-- End .product-details -->
-                    </div><!-- End .product -->
-
-                </div><!-- End .featured-proucts -->
-            </div><!-- End .container -->
-        </div><!-- End .featured-section -->
+                        </div><!-- End .featured-proucts -->
+                    </div><!-- End .container -->
+                </div><!-- End .featured-section -->
+            @endif
+        @endif
     </main><!-- End .main -->
 
 

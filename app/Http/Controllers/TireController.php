@@ -60,11 +60,10 @@ class TireController extends Controller
                             $query2->where('id', '<>', $tireId)->where('profile_id', '=', $profileId);
                         })->orWhere(function($query3) use ($tireId, $widthId) {
                             $query3->where('id', '<>', $tireId)->where('width_id', '=', $widthId);
-                        })->orderBy('id', 'DESC')->take(\Config::get('content.maxSimilarTires'))->get();;
+                        })->orderBy('id', 'DESC')->take(\Config::get('content.maxSimilarTires'))->get();
 
         // get other products (tires) -> turn this off =D
 
-        //dd($data['tire'], $photos, $similarTires);
         $data['similarTires'] = $similarTires;
         return view('tires.view')->with($data);
     }
