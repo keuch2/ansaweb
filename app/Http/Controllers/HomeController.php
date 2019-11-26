@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\AnsaHelper;
 use App\Models\Brand;
 use App\Models\ProductCategory;
 use App\Models\Profile;
@@ -17,26 +18,18 @@ class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        $currencies = \Config::get('currency.currencies');
-        $vehicleTypes = VehicleType::all();
-        $brands = Brand::all();
-        $productCategories = ProductCategory::all();
-        $promotions = Promotion::orderBy('id', 'DESC')->take(20)->get();
-        $radiuses = Radius::all();
-        $widths = Width::all();
-        $profiles = Profile::all();
+        // basic data
+        $data = AnsaHelper::getHeaderData();
 
-        $offers = Tire::where('discount_rate', '>', 0)->orderBy('id', 'DESC')->take(20)->get();
-        $featured = Tire::where('featured', '=', 1)->orderBy('id', 'DESC')->take(10)->get();
+        // home data
+        $offers = Tire::where('discount_rate', '>', 0)->where('state', 'ACTIVO')->orderBy('id', 'DESC')->take(\Config::get('content.itemsPerPage'))->get();
+        $featured = Tire::where('featured', '=', 1)->where('state', 'ACTIVO')->orderBy('id', 'DESC')->take(\Config::get('content.maxFeaturedInHome'))->get();
+        $promotions = Promotion::orderBy('id', 'DESC')->take(\Config::get('content.maxPromotionsInHome'))->get();
 
-        $dolarToGs = \DB::table('cms_settings')->where('name', 'cotizacion_dolar_usd_guaranigs')->first()->content;
-        $dolarToGs = (float)$dolarToGs;
-        $dolarToReal = \DB::table('cms_settings')->where('name', 'cotizacion_dolar_usd_real')->first()->content;
-        $dolarToReal = (float)$dolarToReal;
+        $data['offers'] = $offers;
+        $data['featured'] = $featured;
+        $data['promotions'] = $promotions;
 
-        //dd($dolarToReal, $dolarToGs);
-
-        return view('home.home', compact('promotions','currencies', 'vehicleTypes','brands','productCategories','radiuses','widths','profiles', 'offers', 'featured', 'dolarToGs', 'dolarToReal'));
-
+        return view('home.home')->with($data);
     }
 }

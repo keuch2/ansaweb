@@ -23,6 +23,6 @@ class SearchController extends Controller
         if($request->width_id > 0) $search_params['width_id'] = $request->width_id;
         if($request->profile_id > 0) $search_params['profile_id'] = $request->profile_id;
         $tires = Tire::with('tirePhotos')->where($search_params)->paginate(12);
-        return view('search.index',compact('tires','currencies','vehicleTypes','brands','productCategories'));
+        return view('search.index',compact('tires','currencies','vehicleTypes','brands','productCategories','request'));
     }
 }

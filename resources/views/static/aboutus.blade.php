@@ -49,9 +49,11 @@
                         </h2>
                         <div class="partners-carousel owl-carousel owl-theme">
                             @foreach($brands as $brand)
+                                @if(!empty($brand->logo))
                                 <a href="#" class="partner">
                                     <img src="{{ url($brand->photo) }}" alt="logo">
                                 </a>
+                                @endif
                             @endforeach
                         </div><!-- End .partners-carousel -->
                     </div><!-- End .container -->
