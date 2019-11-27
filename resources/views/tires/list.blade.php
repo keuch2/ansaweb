@@ -44,9 +44,16 @@
                             <div class="grid-product">
                                 <figure class="product-image-container">
                                     <a href="{{route('tire-byId', ['tireId'=>$tire->id])}}" class="product-image">
-                                        @if(!empty($tire->photo))
-                                            <img src="{{ url($tire->photo) }}" alt="neumatico">
+{{--                                        @if(!empty($tire->photo))--}}
+{{--                                            <img src="{{ url($tire->photo) }}" alt="neumatico">--}}
+{{--                                        @endif--}}
+
+                                        @if($tire->photo)
+                                            <img src="{{ url($tire->photo) }}" alt="neumatico"/>
+                                        @else
+                                            <img src="/front/img/noimage.png"/>
                                         @endif
+
                                     </a>
                                 </figure>
                                 <div class="product-details">
