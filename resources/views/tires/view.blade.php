@@ -28,7 +28,11 @@
                                     <div class="product-single-carousel owl-carousel owl-theme">
                                         <!-- main photo -->
                                         <div class="product-item">
-                                            <img class="product-single-image" src="{{ url($tire->photo) }}" data-zoom-image="{{ url($tire->photo) }}"/>
+                                            @if($tire->photo)
+                                                <img class="product-single-image" src="{{ url($tire->photo)  }}" data-zoom-image="{{ url($tire->photo)  }}"/>
+                                            @else
+                                                <img class="product-single-image" src="/front/img/noimage.png" data-zoom-image="/front/img/noimage.png"/>
+                                            @endif
                                         </div>
 
                                         @if(isset($photos))
@@ -49,7 +53,12 @@
                                 </div>
                                 <div class="prod-thumbnail row owl-dots" id='carousel-custom-dots'>
                                     <div class="col-3 owl-dot">
-                                        <img src="{{ url($tire->photo) }}"/>
+                                        @if($tire->photo)
+                                            <img src="{{ url($tire->photo) }}"/>
+                                        @else
+                                            <img src="/front/img/noimage.png"/>
+                                        @endif
+{{--
                                     </div>
                                     @if(isset($photos))
                                         @if(count($photos) > 0)
