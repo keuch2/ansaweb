@@ -58,7 +58,7 @@
                                         @else
                                             <img src="/front/img/noimage.png"/>
                                         @endif
-{{--
+
                                     </div>
                                     @if(isset($photos))
                                         @if(count($photos) > 0)
@@ -75,7 +75,7 @@
 
                             <div class="col-lg-5 col-md-6">
                                 <div class="product-single-details">
-                                    <h1 class="product-title">Neumaático {{$tire->brand->brand_name}}</h1>
+                                    <h1 class="product-title">Neumático {{$tire->brand->brand_name}}</h1>
 
 
                                     <div class="price-box">
@@ -267,7 +267,11 @@
                                 <div class="product">
                                     <figure class="product-image-container">
                                         <a href="{{route('tire-byId', ['tireId'=>$similarTire->id])}}" class="product-image">
-                                            <img src="{{ url($similarTire->photo) }}" alt="neumatico">
+                                            @if(!empty($similarTire->photo))
+                                                <img src="{{ url($tire->photo) }}" alt="neumatico"/>
+                                            @else
+                                                <img src="/front/img/noimage.png" alt="neumatico"/>
+                                            @endif
                                         </a>
                                     </figure>
                                     <div class="product-details">
