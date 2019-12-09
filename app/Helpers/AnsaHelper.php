@@ -29,7 +29,8 @@ class AnsaHelper
     {
         $currencies = \Config::get('currency.currencies');
         $vehicleTypes = VehicleType::all();
-        $brands = Brand::all();
+        //$brands = Brand::all();
+        $brands = Brand::where(['featured'=>1])->orderBy('brands.brand_name', 'ASC')->get();
         $productCategories = ProductCategory::all();
         $radiuses = Radius::all();
         $widths = Width::all();
