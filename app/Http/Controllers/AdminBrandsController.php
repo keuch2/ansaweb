@@ -42,6 +42,7 @@
 			$this->form[] = ['label'=>'Logo','name'=>'photo','type'=>'upload','validation'=>'image|max:3000','width'=>'col-sm-10','help'=>'Tipo de imágenes soportados: JPG, JPEG, PNG, GIF, BMP', 'upload_encrypt'=>'true'];
 			$this->form[] = ['label'=>'Link local','name'=>'local_link','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Link externo','name'=>'external_link','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
+            $this->form[] = ['label'=>'Mostrar en menu','name'=>'featured','type'=>'checkbox','width'=>'col-sm-10','dataenum'=>'1|SI'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
@@ -271,6 +272,11 @@
 	    */
 	    public function hook_after_add($id) {        
 	        //Your code here
+            if(!$postdata['featured']){
+                $postdata['featured']=0;
+            }else{
+                $postdata['featured']=1;
+            }
 
 	    }
 
@@ -284,7 +290,11 @@
 	    */
 	    public function hook_before_edit(&$postdata,$id) {        
 	        //Your code here
-
+            if(!$postdata['featured']){
+                $postdata['featured']=0;
+            }else{
+                $postdata['featured']=1;
+            }
 	    }
 
 	    /* 

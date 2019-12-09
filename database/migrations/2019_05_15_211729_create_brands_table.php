@@ -19,6 +19,9 @@ class CreateBrandsTable extends Migration
             $table->string('photo')->nullable();
             $table->string('local_link')->nullable();
             $table->string('external_link')->nullable();
+            // show on menu ?
+            $table->boolean('featured')->default(true);
+
             $table->softDeletes();
             $table->timestamps();
         });
