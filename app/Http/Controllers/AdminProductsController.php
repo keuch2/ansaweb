@@ -296,6 +296,7 @@
             }else{
                 $postdata['featured']=1;
             }
+            $postdata['final_price'] = (float)$postdata['price'] - ((float)$postdata['price']*$postdata['discount_rate']/100);
 	    }
 
 	    /* 
@@ -325,6 +326,7 @@
             }else{
                 $postdata['featured']=1;
             }
+            $postdata['final_price'] = (float)$postdata['price'] - ((float)$postdata['price']*$postdata['discount_rate']/100);
 
 	    }
 
