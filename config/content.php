@@ -6,4 +6,5 @@ return [
     'maxFeaturedInHome'         => 10,
     'maxPromotionsInHome'       => 20,
     'maxSimilarTires'           => 5,
+    'maxSimilarProducts'        => 5,
 ];

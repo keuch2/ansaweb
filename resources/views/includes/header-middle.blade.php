@@ -46,6 +46,16 @@
                                     @endforeach
                                 </ul>
                             </li>
+
+                            <li><a href="#">Por Marca</a>
+                                <ul>
+                                    @foreach($brands as $brand)
+                                        <li><a href="{{route('products-list-byBrand', ['brandId' => $brand->id])}}">{{$brand->brand_name}}</a></li>
+                                    @endforeach
+                                </ul>
+                            </li>
+
+                            <li><a href="{{route('products-list')}}">Todos</a></li>
                         </ul>
                     </li>
 

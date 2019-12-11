@@ -11,6 +11,7 @@ class Product extends Model
 
     protected  $fillable = ['product_code', 'product_name', 'product_category_id', 'brand_id', 'description', 'price', 'discount_rate', 'final_price', 'state', 'featured', 'photo'];
 
+
     protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
 
 
@@ -22,6 +23,11 @@ class Product extends Model
     public function productCategory()
     {
         return $this->belongsTo(ProductCategory::class);
+    }
+
+    public function brand()
+    {
+        return $this->belongsTo(Brand::class);
     }
 
     public function vehicleTypes()

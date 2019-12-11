@@ -29,8 +29,10 @@ Route::get('/tires/byBrand/{brandId}', ['uses' => 'TireController@ListByBrand'])
 Route::get('/tire/{tireId}', ['uses' => 'TireController@Tire'])->name('tire-byId');
 
 // Products
-Route::get('/products', ['uses' => 'ProductController@List'])->name('products-list');
+Route::get('/products', ['uses' => 'ProductController@index'])->name('products-list');
 Route::get('/products/byCategoryId/{productCategoryId}', ['uses' => 'ProductController@ListByProductCategory'])->name('products-list-byCategoryId');
+Route::get('/products/byBrand/{brandId}', ['uses' => 'ProductController@ListByBrand'])->name('products-list-byBrand');
+Route::get('/product/{productId}', ['uses' => 'ProductController@Product'])->name('product-byId');
 
 // StaticContent
 Route::get('/static/sucursales', ['uses' => 'StaticContentController@BranchOffices'])->name('static-branchoffices');
