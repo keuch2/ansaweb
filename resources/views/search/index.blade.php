@@ -12,7 +12,7 @@
         <nav aria-label="breadcrumb" class="breadcrumb-nav">
             <div class="container">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
                     <li class="breadcrumb-item"><a href="#">Busqueda</a></li>
                 </ol>
             </div><!-- End .container -->
@@ -35,16 +35,29 @@
                     @foreach($tires as $tire)
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="grid-product">
-                            @if($tire->tirePhotos()->count()>0)
+{{--                            @if($tire->tirePhotos()->count()>0)--}}
+{{--                            <figure class="product-image-container">--}}
+{{--                                <a href="{{route('tire-byId',['tireId'=>$tire->id])}}" class="product-image">--}}
+{{--                                    <img src="{{$tire->tirePhotos[0]->photo}}" alt="{{$tire->tire_name}}">--}}
+{{--                                </a>--}}
+{{--                            </figure>--}}
+{{--                            @endif--}}
+
+
                             <figure class="product-image-container">
-                                <a href="{{route('tire-byId',['tireId'=>$tire->id])}}" class="product-image">
-                                    <img src="{{$tire->tirePhotos[0]->photo}}" alt="{{$tire->tire_name}}">
+                                <a href="{{route('tire-byId', ['tireId'=>$tire->id])}}" class="product-image">
+                                    @if($tire->photo)
+                                        <img src="{{ url($tire->photo) }}" alt="neumatico"/>
+                                    @else
+                                        <img src="/front/img/noimage.png"/>
+                                    @endif
                                 </a>
                             </figure>
-                            @endif
+
                             <div class="product-details">
                                 <h2 class="product-title">
-                                    <a href="product.html">{{$tire->tire_name}}</a>
+{{--                                    <a href="product.html">{{$tire->tire_name}}</a>--}}
+                                    <a href="{{route('tire-byId', ['tireId'=>$tire->id])}}">Neumático {{$tire->brand->brand_name}} {{$tire->tire_name}}</a>
                                 </h2>
                                 <div class="price-box">
                                     <span class="product-price">Gs. {{\App\Helpers\AnsaHelper::getGsPrice($tire->price)}}</span>
