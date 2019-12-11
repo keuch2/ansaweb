@@ -48,6 +48,8 @@
                                     <a href="{{route('tire-byId', ['tireId'=>$ft->id])}}" class="product-image">
                                         @if(!empty($ft->photo))
                                             <img src="{{ url($ft->photo) }}" alt="neumatico">
+                                        @else
+                                            <img src="/front/img/noimage.png"/>
                                         @endif
                                     </a>
                                 </figure>
@@ -55,7 +57,7 @@
                                     <div class="ratings-container">
                                     </div><!-- End .product-container -->
                                     <h2 class="product-title">
-                                        <a href="{{route('tire-byId', ['tireId'=>$ft->id])}}">Neumático {{$ft->brand->brand_name}}</a>
+                                        <a href="{{route('tire-byId', ['tireId'=>$ft->id])}}">Neumático {{$ft->brand->brand_name}} {{$ft->tire_name}}</a>
                                     </h2>
                                     <div class="price-box">
                                         <span class="product-price">Gs. {{number_format($GsPrice, 0, ',', '.')}}</span>
@@ -162,7 +164,7 @@
                                     <div class="ratings-container">
                                     </div><!-- End .product-container -->
                                     <h2 class="product-title">
-                                        <a href="{{route('tire-byId', ['tireId'=>$offer->id])}}">Neumático {{$offer->brand->brand_name}}</a>
+                                        <a href="{{route('tire-byId', ['tireId'=>$offer->id])}}">Neumático {{$offer->brand->brand_name}} {{$offer->tire_name}}</a>
                                     </h2>
                                     <div class="price-box">
                                         <span class="old-price">Gs. {{number_format($GsOldPrice, 0, ',', '.')}}</span>
