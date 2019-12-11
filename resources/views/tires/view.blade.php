@@ -75,7 +75,7 @@
 
                             <div class="col-lg-5 col-md-6">
                                 <div class="product-single-details">
-                                    <h1 class="product-title">Neumático {{$tire->brand->brand_name}}</h1>
+                                    <h1 class="product-title">Neumático {{$tire->brand->brand_name}}  {{$tire->tire_name}}</h1>
 
 
                                     <div class="price-box">
@@ -276,7 +276,8 @@
                                     </figure>
                                     <div class="product-details">
                                         <h2 class="product-title">
-                                            <a href="{{route('tire-byId', ['tireId'=>$similarTire->id])}}">Neumático {{$similarTire->brand->brand_name}}</a>
+{{--                                            <a href="{{route('tire-byId', ['tireId'=>$similarTire->id])}}">Neumático {{$similarTire->brand->brand_name}}</a>--}}
+                                            <a href="{{route('tire-byId', ['tireId'=>$similarTire->id])}}">Neumático {{$similarTire->brand->brand_name}} {{$similarTire->tire_name}}</a>
                                         </h2>
                                         <div class="price-box">
                                             <span class="product-price">Gs. {{number_format($GsPrice2, 0, ',', '.')}}</span>
