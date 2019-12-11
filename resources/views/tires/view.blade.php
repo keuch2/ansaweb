@@ -87,7 +87,7 @@
                                             <span class="product-price">Gs. {{number_format($GsPrice, 0, ',', '.')}}</span>
                                             <span class="othercurrencies">RS$ {{ number_format($RealPrice, 2, ',', '.')}}  /  US$ {{ number_format($tire->final_price, 2, ',', '.')}}</span>
                                         @else
-                                            <span class="product-price">Consulte con un representante</span>
+                                            <span class="product-price">Consulte precio con un representante</span>
                                         @endif
                                     </div><!-- End .price-box -->
 
@@ -294,7 +294,7 @@
                                                 <span class="product-price">Gs. {{number_format($GsPrice2, 0, ',', '.')}}</span>
                                                 <span class="othercurrencies">RS$ {{ number_format($RealPrice2, 2, ',', '.')}}  /  US$ {{ number_format($similarTire->final_price, 2, ',', '.')}}</span>
                                             @else
-                                                <span class="product-price">Consulte con un representante</span>
+                                                <span class="product-price">Consulte precio con un representante</span>
                                             @endif
                                         </div><!-- End .price-box -->
                                         <div class="product-action">
