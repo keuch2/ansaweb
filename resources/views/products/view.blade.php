@@ -77,7 +77,7 @@
                                 <div class="product-single-details">
                                     product_name
 {{--                                    <h1 class="product-title">Producto {{$product->brand->brand_name}}</h1>--}}
-                                    <h1 class="product-title">Producto {{$product->product_name}}</h1>
+                                    <h1 class="product-title">Producto {{$product->brand->brand_name}} {{$product->product_name}}</h1>
 
 
                                     <div class="price-box">
@@ -277,7 +277,7 @@
                                     </figure>
                                     <div class="product-details">
                                         <h2 class="product-title">
-                                            <a href="{{route('product-byId', ['productId'=>$similarProduct->id])}}">Producto {{$similarProduct->brand->brand_name}}</a>
+                                            <a href="{{route('product-byId', ['productId'=>$similarProduct->id])}}">Producto {{$similarProduct->brand->brand_name}}  {{$similarProduct->product_name}}</a>
                                         </h2>
                                         <div class="price-box">
                                             <span class="product-price">Gs. {{number_format($GsPrice2, 0, ',', '.')}}</span>
