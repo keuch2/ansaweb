@@ -63,6 +63,7 @@
 			$this->form[] = ['label'=>'Precio final','name'=>'final_price','type'=>'hidden']; //,'validation'=>'min:0|numeric','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Estado','name'=>'state','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','dataenum'=>'ACTIVO;INACTIVO'];
 			$this->form[] = ['label'=>'Destacado','name'=>'featured','type'=>'checkbox','width'=>'col-sm-10','dataenum'=>'1|SI'];
+            $this->form[] = ['label'=>'Mostrar precio ?','name'=>'show_price','type'=>'checkbox','width'=>'col-sm-10','dataenum'=>'1|SI'];
 			//$this->form[] = ['label'=>'Contador de visitas','name'=>'visit_counter','type'=>'number','validation'=>'integer|min:0','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Imagen principal','name'=>'photo','type'=>'upload','validation'=>'required|image|max:10000','width'=>'col-sm-10','help'=>'Tipo de imágenes soportados: JPG, JPEG, PNG, GIF, BMP', 'upload_encrypt'=>'true'];
 			# END FORM DO NOT REMOVE THIS LINE
@@ -305,6 +306,13 @@
             }else{
                 $postdata['featured']=1;
             }
+
+            if(!$postdata['show_price']){
+                $postdata['show_price']=0;
+            }else{
+                $postdata['show_price']=1;
+            }
+
             $postdata['final_price'] = (float)$postdata['price'] - ((float)$postdata['price']*$postdata['discount_rate']/100);
 
 	    }
@@ -336,6 +344,13 @@
             }else{
                 $postdata['featured']=1;
             }
+
+            if(!$postdata['show_price']){
+                $postdata['show_price']=0;
+            }else{
+                $postdata['show_price']=1;
+            }
+
             $postdata['final_price'] = (float)$postdata['price'] - ((float)$postdata['price']*$postdata['discount_rate']/100);
 
 	    }

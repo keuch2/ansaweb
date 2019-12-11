@@ -10,7 +10,7 @@ class Tire extends Model
     use SoftDeletes;
 
     protected  $fillable = ['tire_code', 'tire_name', 'tire_type', 'brand_id', 'radius_id', 'width_id', 'profile_id', 'description',
-                            'price', 'discount_rate', 'final_price', 'state', 'featured', 'visit_counter', 'photo'];
+                            'price', 'discount_rate', 'final_price', 'state', 'featured', 'show_price', 'visit_counter', 'photo'];
 
     protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
 
