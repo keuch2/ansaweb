@@ -52,7 +52,8 @@
 {{--                                        @endif--}}
 
                                         @if($tire->photo)
-                                            <img src="{{ url($tire->photo) }}" alt="neumatico" style="height: 200px;"/>
+{{--                                            <img src="{{ url($tire->photo) }}" alt="neumatico" style="height: 200px;"/>--}}
+                                            <img src="{{ url($tire->photo) }}" alt="neumatico"/>
                                         @else
                                             <img src="/front/img/noimage.png"/>
                                         @endif
