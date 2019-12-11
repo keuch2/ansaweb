@@ -75,7 +75,9 @@
 
                             <div class="col-lg-5 col-md-6">
                                 <div class="product-single-details">
-                                    <h1 class="product-title">Producto {{$product->brand->brand_name}}</h1>
+                                    product_name
+{{--                                    <h1 class="product-title">Producto {{$product->brand->brand_name}}</h1>--}}
+                                    <h1 class="product-title">Producto {{$product->product_name}}</h1>
 
 
                                     <div class="price-box">

@@ -62,7 +62,8 @@
                                 </figure>
                                 <div class="product-details">
                                     <h2 class="product-title">
-                                        <a href="{{route('product-byId', ['productId'=>$product->id])}}">Producto {{$product->brand->brand_name}}</a>
+{{--                                        <a href="{{route('product-byId', ['productId'=>$product->id])}}">Producto {{$product->brand->brand_name}}</a>--}}
+                                        <a href="{{route('product-byId', ['productId'=>$product->id])}}">Producto {{$product->product_name}}</a>
                                     </h2>
                                     <div class="price-box">
                                         <span class="product-price">Gs. {{number_format($GsPrice, 0, ',', '.')}}</span>
