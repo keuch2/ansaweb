@@ -46,8 +46,8 @@
 
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="grid-product">
-                                <figure class="product-image-container" style="text-align: center;">
-                                    <a href="{{route('tire-byId', ['tireId'=>$tire->id])}}" class="product-image">
+                                <figure class="product-image-container">
+                                    <a href="{{route('tire-byId', ['tireId'=>$tire->id])}}" class="product-image" style="text-align: center;">
 {{--                                        @if(!empty($tire->photo))--}}
 {{--                                            <img src="{{ url($tire->photo) }}" alt="neumatico">--}}
 {{--                                        @endif--}}
