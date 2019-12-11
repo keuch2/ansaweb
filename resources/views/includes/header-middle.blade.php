@@ -21,17 +21,17 @@
                                     @endforeach
                                 </ul>
                             </li>
+{{--                            deactivated by client--}}
+{{--                            <li><a href="#">Por Marca</a>--}}
+{{--                                <!-- marcas de neumaticos -->--}}
+{{--                                <ul>--}}
+{{--                                    @foreach($brands as $brand)--}}
+{{--                                        <li><a href="{{route('tires-list-byBrand', ['brandId' => $brand->id])}}">{{$brand->brand_name}}</a></li>--}}
+{{--                                    @endforeach--}}
+{{--                                </ul>--}}
+{{--                            </li>--}}
 
-                            <li><a href="#">Por Marca</a>
-                                <!-- marcas de neumaticos -->
-                                <ul>
-                                    @foreach($brands as $brand)
-                                        <li><a href="{{route('tires-list-byBrand', ['brandId' => $brand->id])}}">{{$brand->brand_name}}</a></li>
-                                    @endforeach
-                                </ul>
-                            </li>
-
-                            <li><a href="{{route('tires-list')}}">Todos</a></li>
+{{--                            <li><a href="{{route('tires-list')}}">Todos</a></li>--}}
                         </ul>
                     </li>
 
@@ -46,16 +46,16 @@
                                     @endforeach
                                 </ul>
                             </li>
+{{--                            deactivated by client--}}
+{{--                            <li><a href="#">Por Marca</a>--}}
+{{--                                <ul>--}}
+{{--                                    @foreach($brands as $brand)--}}
+{{--                                        <li><a href="{{route('products-list-byBrand', ['brandId' => $brand->id])}}">{{$brand->brand_name}}</a></li>--}}
+{{--                                    @endforeach--}}
+{{--                                </ul>--}}
+{{--                            </li>--}}
 
-                            <li><a href="#">Por Marca</a>
-                                <ul>
-                                    @foreach($brands as $brand)
-                                        <li><a href="{{route('products-list-byBrand', ['brandId' => $brand->id])}}">{{$brand->brand_name}}</a></li>
-                                    @endforeach
-                                </ul>
-                            </li>
-
-                            <li><a href="{{route('products-list')}}">Todos</a></li>
+{{--                            <li><a href="{{route('products-list')}}">Todos</a></li>--}}
                         </ul>
                     </li>
 
