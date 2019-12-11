@@ -52,7 +52,7 @@
 {{--                                        @endif--}}
 
                                         @if($tire->photo)
-                                            <img src="{{ url($tire->photo) }}" alt="neumatico"/>
+                                            <img src="{{ url($tire->photo) }}" alt="neumatico" width="75%"/>
                                         @else
                                             <img src="/front/img/noimage.png"/>
                                         @endif
@@ -69,7 +69,7 @@
                                             <span class="product-price">Gs. {{number_format($GsPrice, 0, ',', '.')}}</span>
                                             <span class="othercurrencies">RS$ {{ number_format($RealPrice, 2, ',', '.')}}  /  US$ {{ number_format($tire->final_price, 2, ',', '.')}}</span>
                                         @else
-                                            <span class="product-price">Consulte con un representante</span>
+                                            <span class="product-price">Consulte precio con un representante</span>
                                         @endif
                                     </div><!-- End .price-box -->
                                     <!-- <div class="product-grid-action">
