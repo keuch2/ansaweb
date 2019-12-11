@@ -44,6 +44,8 @@ class CreateTiresTable extends Migration
             $table->enum('state', ['ACTIVO', 'INACTIVO'])->default('ACTIVO');
             $table->boolean('featured')->default(true);
 
+            $table->boolean('show_price')->default(true);
+
             $table->integer('visit_counter')->nullable();
 
             $table->string('photo')->nullable();

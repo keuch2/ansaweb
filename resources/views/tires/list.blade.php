@@ -35,9 +35,12 @@
                     @foreach($tires as $tire)
 
                         @php
-                            $GsPrice = ($tire->final_price) * $dolarToGs;
-                            $RealPrice = ($tire->final_price) * $dolarToReal;
-                            $GsOldPrice = ($tire->price) * $dolarToGs;
+                            if($tire->show_price)
+                            {
+                                $GsPrice = ($tire->final_price) * $dolarToGs;
+                                $RealPrice = ($tire->final_price) * $dolarToReal;
+                                $GsOldPrice = ($tire->price) * $dolarToGs;
+                            }
                         @endphp
 
                         <div class="col-6 col-md-4 col-xl-3">
@@ -62,8 +65,12 @@
                                         <a href="{{route('tire-byId', ['tireId'=>$tire->id])}}">Neumático {{$tire->brand->brand_name}} {{$tire->tire_name}}</a>
                                     </h2>
                                     <div class="price-box">
-                                        <span class="product-price">Gs. {{number_format($GsPrice, 0, ',', '.')}}</span>
-                                        <span class="othercurrencies">RS$ {{ number_format($RealPrice, 2, ',', '.')}}  /  US$ {{ number_format($tire->final_price, 2, ',', '.')}}</span>
+                                        @if($tire->show_price)
+                                            <span class="product-price">Gs. {{number_format($GsPrice, 0, ',', '.')}}</span>
+                                            <span class="othercurrencies">RS$ {{ number_format($RealPrice, 2, ',', '.')}}  /  US$ {{ number_format($tire->final_price, 2, ',', '.')}}</span>
+                                        @else
+                                            <span class="product-price">Consulte con un representante</span>
+                                        @endif
                                     </div><!-- End .price-box -->
                                     <!-- <div class="product-grid-action">
                                             <a href="product.html" class="paction add-cart" title="Add to Cart">
