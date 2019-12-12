@@ -56,7 +56,7 @@
                                             <img src="{{ url($tire->photo) }}" alt="neumatico" style="margin-left:auto; margin-right:auto; display:block;height: 240px; width: auto;"/>
 
                                         @else
-                                            <img src="/front/img/noimage.png"/>
+                                            <img src="/front/img/noimage.png" style="margin-left:auto; margin-right:auto; display:block;height: 240px; width: auto;"/>
                                         @endif
 
                                     </a>
