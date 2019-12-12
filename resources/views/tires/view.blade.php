@@ -83,7 +83,10 @@
 
                                     <div class="price-box">
                                         @if($tire->show_price)
-                                            <span class="old-price">Gs. {{number_format($GsOldPrice, 0, ',', '.')}}</span>
+                                            @if($tire->discount_rate > 0)
+{{--                                                deactivated by customer request--}}
+{{--                                                <span class="old-price">Gs. {{number_format($GsOldPrice, 0, ',', '.')}}</span>--}}
+                                            @endif
                                             <span class="product-price">Gs. {{number_format($GsPrice, 0, ',', '.')}}</span>
                                             <span class="othercurrencies">RS$ {{ number_format($RealPrice, 2, ',', '.')}}  /  US$ {{ number_format($tire->final_price, 2, ',', '.')}}</span>
                                         @else

@@ -78,10 +78,11 @@
                                     product_name
 {{--                                    <h1 class="product-title">Producto {{$product->brand->brand_name}}</h1>--}}
                                     <h1 class="product-title">Producto {{$product->brand->brand_name}} {{$product->product_name}}</h1>
-
-
                                     <div class="price-box">
-                                        <span class="old-price">Gs. {{number_format($GsOldPrice, 0, ',', '.')}}</span>
+                                        @if($product->discount_rate > 0)
+{{--                                            deactivated by customer request--}}
+{{--                                            <span class="old-price">Gs. {{number_format($GsOldPrice, 0, ',', '.')}}</span>--}}
+                                        @endif
                                         <span class="product-price">Gs. {{number_format($GsPrice, 0, ',', '.')}}</span>
                                         <span class="othercurrencies">RS$ {{ number_format($RealPrice, 2, ',', '.')}}  /  US$ {{ number_format($product->final_price, 2, ',', '.')}}</span>
                                     </div><!-- End .price-box -->

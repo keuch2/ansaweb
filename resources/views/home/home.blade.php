@@ -47,9 +47,9 @@
                                 <figure class="product-image-container">
                                     <a href="{{route('tire-byId', ['tireId'=>$ft->id])}}" class="product-image">
                                         @if(!empty($ft->photo))
-                                            <img src="{{ url($ft->photo) }}" alt="neumatico">
+                                            <img src="{{ url($ft->photo) }}" alt="neumatico" style="margin-left:auto; margin-right:auto; display:block;height: 240px; width: auto;">
                                         @else
-                                            <img src="/front/img/noimage.png"/>
+                                            <img src="/front/img/noimage.png" style="margin-left:auto; margin-right:auto; display:block;height: 240px; width: auto;"/>
                                         @endif
                                     </a>
                                 </figure>
@@ -60,8 +60,12 @@
                                         <a href="{{route('tire-byId', ['tireId'=>$ft->id])}}">Neumático {{$ft->brand->brand_name}} {{$ft->tire_name}}</a>
                                     </h2>
                                     <div class="price-box">
-                                        <span class="product-price">Gs. {{number_format($GsPrice, 0, ',', '.')}}</span>
-                                        <span class="othercurrencies">RS$ {{ number_format($RealPrice, 2, ',', '.')}}  /  US$ {{ number_format($ft->final_price, 2, ',', '.')}}</span>
+                                        @if($ft->show_price)
+                                            <span class="product-price">Gs. {{number_format($GsPrice, 0, ',', '.')}}</span>
+                                            <span class="othercurrencies">RS$ {{ number_format($RealPrice, 2, ',', '.')}}  /  US$ {{ number_format($ft->final_price, 2, ',', '.')}}</span>
+                                        @else
+                                            <span class="product-price">Consulte precio con un representante</span>
+                                        @endif
                                     </div><!-- End .price-box -->
                                     <div class="product-action">
                                         <!-- <a href="product.html" class="paction add-cart" title="Add to Cart">
@@ -153,7 +157,8 @@
                                             <img src="{{ url($offer->photo) }}" alt="neumatico">
                                         @endif
                                     </a>
-                                    <span class="product-label label-sale">{{ number_format($offer->discount_rate, 0, ',', '.')}} % OFF</span>
+{{--                                    deactivated by customer request--}}
+{{--                                    <span class="product-label label-sale">{{ number_format($offer->discount_rate, 0, ',', '.')}} % OFF</span>--}}
                                     <div class="product-action">
                                         <!-- <a href="product.html" class="paction add-cart" title="Add to Cart">
                                             <span>Agregar al Carrito</span>
@@ -167,9 +172,10 @@
                                         <a href="{{route('tire-byId', ['tireId'=>$offer->id])}}">Neumático {{$offer->brand->brand_name}} {{$offer->tire_name}}</a>
                                     </h2>
                                     <div class="price-box">
-                                        <span class="old-price">Gs. {{number_format($GsOldPrice, 0, ',', '.')}}</span>
+{{--                                        deactivated by customer request--}}
+{{--                                        <span class="old-price">Gs. {{number_format($GsOldPrice, 0, ',', '.')}}</span>--}}
                                         <span class="product-price">Gs. {{number_format($GsPrice, 0, ',', '.')}}</span>
-                                        <span class="othercurrencies">RS$ {{ number_format($RealPrice, 2, ',', '.')}}  /  US$ {{ number_format($ft->final_price, 2, ',', '.')}}</span>
+                                        <span class="othercurrencies">RS$ {{ number_format($RealPrice, 2, ',', '.')}}  /  US$ {{ number_format($offer->final_price, 2, ',', '.')}}</span>
                                     </div><!-- End .price-box -->
 
                                 </div><!-- End .product-details -->
