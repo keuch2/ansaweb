@@ -49,8 +49,9 @@
                         </h2>
                         <div class="partners-carousel owl-carousel owl-theme">
                             @foreach($brands as $brand)
-                                @if(!empty($brand->logo))
-                                <a href="#" class="partner">
+                                @if(!empty($brand->photo))
+
+                                <a href="{{route('tires-list-byBrand', ['brandId' => $brand->id])}}" class="partner">
                                     <img src="{{ url($brand->photo) }}" alt="logo">
                                 </a>
                                 @endif
