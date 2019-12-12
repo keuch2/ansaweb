@@ -53,7 +53,9 @@
 {{--                                        @endif--}}
 
                                         @if($product->photo)
-                                            <img src="{{ url($product->photo) }}" alt="producto"/>
+                                            <img src="{{ url($product->photo) }}" alt="producto" style="margin-left:auto; margin-right:auto; display:block;height: 240px; width: auto;"/>
+
+
                                         @else
                                             <img src="/front/img/noimage.png"/>
                                         @endif
