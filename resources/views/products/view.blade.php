@@ -269,9 +269,9 @@
                                     <figure class="product-image-container">
                                         <a href="{{route('product-byId', ['productId'=>$similarProduct->id])}}" class="product-image">
                                             @if(!empty($similarProduct->photo))
-                                                <img src="{{ url($similarProduct->photo) }}" alt="producto"/>
+                                                <img src="{{ url($similarProduct->photo) }}" alt="producto" style="margin-left:auto; margin-right:auto; display:block;height: 240px; width: auto;"/>
                                             @else
-                                                <img src="/front/img/noimage.png" alt="producto"/>
+                                                <img src="/front/img/noimage.png" alt="producto" style="margin-left:auto; margin-right:auto; display:block;height: 240px; width: auto;"/>
                                             @endif
                                         </a>
                                     </figure>
