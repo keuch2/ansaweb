@@ -269,8 +269,8 @@
                                 @php
                                     if($similarTire->show_price)
                                     {
-                                        $GsPrice2 = ($tire->final_price) * $dolarToGs;
-                                        $RealPrice2 = ($tire->final_price) * $dolarToReal;
+                                        $GsPrice2 = ($similarTire->final_price) * $dolarToGs;
+                                        $RealPrice2 = ($similarTire->final_price) * $dolarToReal;
                                     }
                                 @endphp
 
@@ -278,7 +278,7 @@
                                     <figure class="product-image-container">
                                         <a href="{{route('tire-byId', ['tireId'=>$similarTire->id])}}" class="product-image">
                                             @if(!empty($similarTire->photo))
-                                                <img src="{{ url($tire->photo) }}" alt="neumatico"/>
+                                                <img src="{{ url($similarTire->photo) }}" alt="neumatico"/>
                                             @else
                                                 <img src="/front/img/noimage.png" alt="neumatico"/>
                                             @endif
