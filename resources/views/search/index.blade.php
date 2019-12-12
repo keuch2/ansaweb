@@ -47,7 +47,9 @@
                             <figure class="product-image-container">
                                 <a href="{{route('tire-byId', ['tireId'=>$tire->id])}}" class="product-image">
                                     @if($tire->photo)
-                                        <img src="{{ url($tire->photo) }}" alt="neumatico"/>
+{{--                                        <img src="{{ url($tire->photo) }}" alt="neumatico"/>--}}
+                                        <img src="{{ url($tire->photo) }}" alt="neumatico" style="margin-left:auto; margin-right:auto; display:block;height: 240px; width: auto;"/>
+
                                     @else
                                         <img src="/front/img/noimage.png"/>
                                     @endif
