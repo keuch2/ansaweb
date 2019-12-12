@@ -47,13 +47,13 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="grid-product">
                                 <figure class="product-image-container">
-                                    <a href="{{route('tire-byId', ['tireId'=>$tire->id])}}" class="product-image" style="text-align: center;">
+                                    <a href="{{route('tire-byId', ['tireId'=>$tire->id])}}" class="product-image">
 {{--                                        @if(!empty($tire->photo))--}}
 {{--                                            <img src="{{ url($tire->photo) }}" alt="neumatico">--}}
 {{--                                        @endif--}}
 
                                         @if($tire->photo)
-                                            <img src="{{ url($tire->photo) }}" alt="neumatico" style="height: 240px; width: auto;"/>
+                                            <img src="{{ url($tire->photo) }}" alt="neumatico" style="margin-left:auto; margin-right:auto; display:block;height: 240px; width: auto;"/>
 
                                         @else
                                             <img src="/front/img/noimage.png"/>
