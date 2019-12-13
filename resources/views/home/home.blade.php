@@ -22,33 +22,45 @@
 {{--        </div><!-- End .home-top-container -->--}}
 
 
-
         <div class="home-top-container">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="owl-carousel owl-theme">
-                            <div class="item">
-                                <a href="#">
-                                    <img src="/front/img/mra.jpg" alt="banner">
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a href="#">
-                                    <img src="/front/img/mra.jpg" alt="banner">
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a href="#">
-                                    <img src="/front/img/mra.jpg" alt="banner">
-                                </a>
-                            </div>
+
+                            @if(isset($banners))
+                                @if(count($banners) > 0)
+                                    @foreach($banners as $banner)
+                                        <div class="item">
+                                            <a href="#">
+                                                <img src="{{ url($banner->photo) }}" alt="banner">
+                                            </a>
+                                        </div>
+                                    @endforeach
+                                @else
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="/front/img/mra.jpg" alt="banner">
+                                        </a>
+                                    </div>
+                                @endif
+                            @else
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/front/img/mra.jpg" alt="banner">
+                                    </a>
+                                </div>
+
+                            @endif
                         </div><!-- End .banner -->
 
                     </div><!-- End .col-lg-5 -->
                 </div><!-- End .row -->
             </div><!-- End .container -->
         </div><!-- End .home-top-container -->
+
+
+
 
 
 
