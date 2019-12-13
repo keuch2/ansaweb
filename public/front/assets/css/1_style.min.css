@@ -2390,7 +2390,7 @@ a:focus {
 .product-image-container {
     position: relative;
     display: block;
-    background-color: #fafafa;
+    /*background-color: #fafafa;*/
     margin-bottom: 2.4rem;
     transition: all .3s
 }
@@ -10597,15 +10597,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     border-bottom: 2px #003399 solid;
 }
 
-.sucursal a.maplink {
-    background-color:#003399;
-    padding:4px;
-    border-radius: 4px;
-    font-size: 12px;
-    text-transform: uppercase;
-    color:#fff;
-}
-
 
 .sucursal p {
     font-size: 15px;
@@ -10613,30 +10604,4 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     margin:0px;
     padding-bottom: 15px;
     text-align: justify;
-}
-
-.sucursal img{
-    margin-bottom: 10px;
-    border-radius: 6px;
-
-}
-
-
-#servicioslist {
-    text-align:left;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-#servicioslist ul {
-    padding-top: 15px;
-    padding:0px;
-    margin:0px;
-}
-
-#servicioslist ul li{
-    font-weight: bold;
-    border-bottom: 1px solid #999;
-    margin-bottom:15px;
-    padding-bottom: 15px;
 }

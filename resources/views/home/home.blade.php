@@ -7,19 +7,50 @@
 
     <main class="main">
 
+{{--        <div class="home-top-container">--}}
+{{--            <div class="container">--}}
+{{--                <div class="row">--}}
+{{--                    <div class="col-lg-12">--}}
+{{--                        <div class="banner banner-image">--}}
+{{--                            <a href="#">--}}
+{{--                                <img src="front/img/mra.jpg" alt="banner">--}}
+{{--                            </a>--}}
+{{--                        </div><!-- End .banner -->--}}
+{{--                    </div><!-- End .col-lg-5 -->--}}
+{{--                </div><!-- End .row -->--}}
+{{--            </div><!-- End .container -->--}}
+{{--        </div><!-- End .home-top-container -->--}}
+
+
+
         <div class="home-top-container">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="banner banner-image">
-                            <a href="#">
-                                <img src="front/img/mra.jpg" alt="banner">
-                            </a>
+                        <div class="owl-carousel owl-theme">
+                            <div class="item">
+                                <a href="#">
+                                    <img src="/front/img/mra.jpg" alt="banner">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <img src="/front/img/mra.jpg" alt="banner">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#">
+                                    <img src="/front/img/mra.jpg" alt="banner">
+                                </a>
+                            </div>
                         </div><!-- End .banner -->
+
                     </div><!-- End .col-lg-5 -->
                 </div><!-- End .row -->
             </div><!-- End .container -->
         </div><!-- End .home-top-container -->
+
+
 
         <!-- BUSCADOR -->
         @include('parts.home_search')

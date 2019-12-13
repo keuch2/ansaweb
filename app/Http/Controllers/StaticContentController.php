@@ -38,4 +38,19 @@ class StaticContentController extends Controller
             'productCategories' => $productCategories,
         ]);
     }
+
+    public function Services()
+    {
+        $currencies = \Config::get('currency.currencies');
+        $vehicleTypes = VehicleType::all();
+        $brands = Brand::all();
+        $productCategories = ProductCategory::all();
+
+        return view('static.services', ['data' => null,
+            'currencies' => $currencies,
+            'vehicleTypes' => $vehicleTypes,
+            'brands' => $brands,
+            'productCategories' => $productCategories,
+        ]);
+    }
 }
