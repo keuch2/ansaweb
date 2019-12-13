@@ -26,7 +26,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="owl-carousel owl-theme">
+{{--                        <div class="owl-carousel owl-theme">--}}
+                        <div class="home-carousel owl-carousel owl-theme">
 
                             @if(isset($banners))
                                 @if(count($banners) > 0)

@@ -74,7 +74,8 @@
     }
 
 
-    $('.owl-carousel').owlCarousel({
+    //$('.owl-carousel').owlCarousel({
+    $('.home-carousel').owlCarousel({
         loop:true,
         autoplay:true,
         margin:10,
