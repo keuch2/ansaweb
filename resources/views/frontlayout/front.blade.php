@@ -16,6 +16,9 @@
     <!-- Main CSS File -->
     <link rel="stylesheet" href="/front/assets/css/style.min.css">
 
+    <link rel="stylesheet" href="/front/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="/front/owlcarousel/owl.theme.default.min.css">
+
     @yield('header_scripts')
 </head>
 <body>
@@ -42,6 +45,8 @@
 <!-- Main JS File -->
 <script src="/front/assets/js/main.min.js"></script>
 
+<script src="/owlcarousel/owl.carousel.min.js"></script>
+
 @yield('footer_scripts')
 
 <script>
@@ -67,6 +72,25 @@
             }
         });
     }
+
+
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        autoplay:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        }
+    })
 
 </script>
 

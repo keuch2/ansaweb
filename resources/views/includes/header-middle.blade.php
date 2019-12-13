@@ -59,7 +59,7 @@
                         </ul>
                     </li>
 
-                    <li><a href="#">Servicios</a></li>
+                    <li><a href="{{route('static-services')}}">Servicios</a></li>
                     <li><a href="{{route('static-branchoffices')}}">Sucursales</a></li>
                     <li><a href="{{route('static-aboutus')}}">Acerca de ANSA</a></li>
                 </ul>
@@ -88,7 +88,7 @@
             </button>
             <div class="header-contact">
                 <span>Call Center</span>
-                <a href="tel:#"><strong>+595 21 123 456</strong></a>
+                <a href="https://wa.me/595984679739" target="_blank"><strong>+595 984 679739<img src="/front/img/whatsapp.png" width="25px" style="display: inline;"></strong></a>
             </div><!-- End .header-contact -->
 
 

@@ -63,7 +63,7 @@
 
                     </ul>
                 </li>
-                <li><a href="#">Servicios</a></li>
+                <li><a href="{{route('static-services')}}">Servicios</a></li>
                 <li><a href="{{route('static-branchoffices')}}">Sucursales</a></li>
                 <li><a href="{{route('static-aboutus')}}">Acerca de ANSA</a></li>
             </ul>

@@ -1,6 +1,7 @@
 <?php
 namespace App\Helpers;
 
+use App\Models\Banner;
 use App\Models\Brand;
 use App\Models\ProductCategory;
 use App\Models\Profile;
@@ -36,6 +37,8 @@ class AnsaHelper
         $widths = Width::all();
         $profiles = Profile::all();
 
+        $banners = Banner::orderBy('id', 'DESC')->take(5)->get();
+
         $dolarToGs = \DB::table('cms_settings')->where('name', 'cotizacion_dolar_usd_guaranigs')->first()->content;
         $dolarToGs = (float)$dolarToGs;
         $dolarToReal = \DB::table('cms_settings')->where('name', 'cotizacion_dolar_usd_real')->first()->content;
@@ -49,7 +52,8 @@ class AnsaHelper
                 'widths' => $widths,
                 'profiles' => $profiles,
                 'dolarToGs' => $dolarToGs,
-                'dolarToReal' => $dolarToReal
+                'dolarToReal' => $dolarToReal,
+                'banners' => $banners
             ];
     }
 

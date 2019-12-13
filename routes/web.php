@@ -37,6 +37,7 @@ Route::get('/product/{productId}', ['uses' => 'ProductController@Product'])->nam
 // StaticContent
 Route::get('/static/sucursales', ['uses' => 'StaticContentController@BranchOffices'])->name('static-branchoffices');
 Route::get('/static/aboutus', ['uses' => 'StaticContentController@AboutUs'])->name('static-aboutus');
+Route::get('/static/services', ['uses' => 'StaticContentController@Services'])->name('static-services');
 
 // Search
 Route::get('/buscar/', ['uses' => 'SearchController@getSearch'])->name('search.results');
