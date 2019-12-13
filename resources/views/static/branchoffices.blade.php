@@ -153,7 +153,7 @@
                     <div class="col-md-6">
                         <div class="sucursal">
                             <h3>ENCARNACION</h3>
-                            <img src="/front/img/locales/encarnacion.jpg">
+                            <img src="/front/img/locales/encarnacion2.jpg">
                             <p>Ruta 6 km 3 - Barrio Santa María<br>
                                 Tel. 217279562 / +595 984 679 722</p>
                             <p>
