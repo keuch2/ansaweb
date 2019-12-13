@@ -45,7 +45,7 @@
 <!-- Main JS File -->
 <script src="/front/assets/js/main.min.js"></script>
 
-<script src="/owlcarousel/owl.carousel.min.js"></script>
+<script src="front//owlcarousel/owl.carousel.min.js"></script>
 
 @yield('footer_scripts')
 
