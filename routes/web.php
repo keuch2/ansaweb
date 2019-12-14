@@ -12,10 +12,10 @@
 */
 
 // default landing
-Route::get('/landing', function () {
-   //return redirect('/landing/');
-    return redirect('/');
-});
+//Route::get('/landing', function () {
+//   //return redirect('/landing/');
+//    return redirect('/');
+//});
 
 // Home
 Route::get('/', 'HomeController@index')->name('home');
