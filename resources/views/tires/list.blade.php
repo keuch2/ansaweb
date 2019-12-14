@@ -53,10 +53,12 @@
 {{--                                        @endif--}}
 
                                         @if($tire->photo)
-                                            <img src="{{ url($tire->photo) }}" alt="neumatico" style="margin-left:auto; margin-right:auto; display:block;height: 240px; width: auto;"/>
+{{--                                            <img src="{{ url($tire->photo) }}" alt="neumatico" style="margin-left:auto; margin-right:auto; display:block;height: 240px; width: auto;"/>--}}
+                                            <img src="{{ url($tire->photo) }}" alt="neumatico"/>
 
                                         @else
-                                            <img src="/front/img/noimage.png" style="margin-left:auto; margin-right:auto; display:block;height: 240px; width: auto;"/>
+{{--                                            <img src="/front/img/noimage.png" style="margin-left:auto; margin-right:auto; display:block;height: 240px; width: auto;"/>--}}
+                                            <img src="/front/img/noimage.png"/>
                                         @endif
 
                                     </a>

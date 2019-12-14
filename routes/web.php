@@ -13,10 +13,12 @@
 
 // default landing
 Route::get('/landing', function () {
-   return redirect('/landing/');
+   //return redirect('/landing/');
+    return redirect('/');
 });
 
 // Home
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 
 // Currency

@@ -91,9 +91,11 @@
                                 <figure class="product-image-container">
                                     <a href="{{route('tire-byId', ['tireId'=>$ft->id])}}" class="product-image">
                                         @if(!empty($ft->photo))
-                                            <img src="{{ url($ft->photo) }}" alt="neumatico" style="margin-left:auto; margin-right:auto; display:block;height: 240px; width: auto;">
+{{--                                            <img src="{{ url($ft->photo) }}" alt="neumatico" style="margin-left:auto; margin-right:auto; display:block;height: 240px; width: auto;">--}}
+                                            <img src="{{ url($ft->photo) }}" alt="neumatico"/>
                                         @else
-                                            <img src="/front/img/noimage.png" style="margin-left:auto; margin-right:auto; display:block;height: 240px; width: auto;"/>
+{{--                                            <img src="/front/img/noimage.png" style="margin-left:auto; margin-right:auto; display:block;height: 240px; width: auto;"/>--}}
+                                            <img src="/front/img/noimage.png"/>
                                         @endif
                                     </a>
                                 </figure>
