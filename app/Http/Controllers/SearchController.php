@@ -22,6 +22,10 @@ class SearchController extends Controller
         if($request->radius_id > 0) $search_params['radius_id'] = $request->radius_id;
         if($request->width_id > 0) $search_params['width_id'] = $request->width_id;
         if($request->profile_id > 0) $search_params['profile_id'] = $request->profile_id;
+
+        // only search on active tires
+        $search_params['state'] = 'ACTIVO';
+
         $tires = Tire::with('tirePhotos')->where($search_params)->paginate(12);
         return view('search.index',compact('tires','currencies','vehicleTypes','brands','productCategories','request'));
     }
