@@ -6,11 +6,6 @@
 @section('main-content')
 
     <main class="main">
-
-
-
-
-
         <div class="home-top-container">
             <div class="home-carousel owl-carousel owl-theme">
 
@@ -40,11 +35,6 @@
                 @endif
             </div><!-- End .banner -->
         </div><!-- End .home-top-container -->
-
-
-
-
-
 
         <!-- BUSCADOR -->
         @include('parts.home_search')

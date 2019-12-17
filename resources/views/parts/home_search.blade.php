@@ -1,5 +1,10 @@
 <div class="banners-section">
     <div class="container">
+
+        <div style="padding-bottom: 30px;">
+            <img src="/front/img/medidas.jpg" width="100%">
+        </div>
+
         <h2 class="subtitle text-center"><span>Buscar Neumáticos por Medida</span></h2>
         <form id="searchForm" method="get" action="{{route('search.results')}}">
         <div class="row">
