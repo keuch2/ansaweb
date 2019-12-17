@@ -122,13 +122,6 @@
                                         <li><a href="{{route('tires-list-byVehicleType', ['vehicleTypeId' => $vehicleType->id])}}">{{$vehicleType->vehicle_type}}</a></li>
                                     @endforeach
 
-{{--                                    <li><a href="http://www.americaneumaticos.com.py/tires/byVehicleType/1">Autos</a></li>--}}
-{{--                                    <li><a href="http://www.americaneumaticos.com.py/tires/byVehicleType/2">Camionetas</a></li>--}}
-{{--                                    <li><a href="http://www.americaneumaticos.com.py/tires/byVehicleType/3">Camiones</a></li>--}}
-{{--                                    <li><a href="http://www.americaneumaticos.com.py/tires/byVehicleType/4">Motos</a></li>--}}
-{{--                                    <li><a href="http://www.americaneumaticos.com.py/tires/byVehicleType/6">Agricolas</a></li>--}}
-{{--                                    <li><a href="http://www.americaneumaticos.com.py/tires/byVehicleType/7">Utilitarios</a></li>--}}
-{{--                                    <li><a href="http://www.americaneumaticos.com.py/tires/byVehicleType/8">OTR/Industriales</a></li>--}}
                                 </ul>
                             </div><!-- End .widget -->
                         </div><!-- End .col-md-3 -->
@@ -143,10 +136,6 @@
                                         <li><a href="{{route('products-list-byCategoryId', ['productCategoryId' => $productCategory->id])}}">{{$productCategory->category_name}}</a></li>
                                     @endforeach
 
-{{--                                    <li><a href="http://www.americaneumaticos.com.py/products/byCategoryId/2">Cámaras</a></li>--}}
-{{--                                    <li><a href="http://www.americaneumaticos.com.py/products/byCategoryId/3">Llantas</a></li>--}}
-{{--                                    <li><a href="http://www.americaneumaticos.com.py/products/byCategoryId/4">Tratamiento Multifunciones para el Diesel</a></li>--}}
-{{--                                    <li><a href="http://www.americaneumaticos.com.py/products/byCategoryId/5">Blindaje de  cubiertas contra pinchazos</a></li>--}}
                                 </ul>
                             </div><!-- End .widget -->
                         </div><!-- End .col-md-3 -->
