@@ -144,7 +144,7 @@
                             <p>Ruta Transchaco Km. 17,5 esquina Avda. Gral. Díaz <br>
                                 Tel. (021) 755 403</p>
                             <p>
-                                <a class="maplink" href="https://goo.gl/maps/8cQ26om8MBoMadiB7" target="_blank">ver en mapa</a>
+                                <a class="maplink" href="https://maps.app.goo.gl/mLGrABZrvAnr1Y8y7" target="_blank">ver en mapa</a>
                             </p>
 
                         </div>
@@ -153,7 +153,7 @@
                     <div class="col-md-6">
                         <div class="sucursal">
                             <h3>ENCARNACION</h3>
-                            <img src="/front/img/locales/encarnacion2.jpg">
+                            <img src="/front/img/locales/encarnacion.jpg">
                             <p>Ruta 6 km 3 - Barrio Santa María<br>
                                 Tel. 217279562 / +595 984 679 722</p>
                             <p>
@@ -168,7 +168,7 @@
                             <p>Avda. Paraguay c/ Pablo VI<br>
                                 Tel. (046) 242819</p>
                             <p>
-                                <a class="maplink" href="https://goo.gl/maps/57Dyh6JxJf1qvnXg6" target="_blank">ver en mapa</a>
+                                <a class="maplink" href="https://goo.gl/maps/tVPYunBFq7gGKsR86" target="_blank">ver en mapa</a>
                             </p>
                         </div>
                     </div>
@@ -190,7 +190,7 @@
                             <p>Gaspar Rodríguez de Francia / Ruta VII - Barrio Sinuelo II<br>
                                 Tel. (0984) 679 735</p>
                             <p>
-                                <a class="maplink" href="https://goo.gl/maps/6hQAydbJE4QLkf9b9" target="_blank">ver en mapa</a>
+                                <a class="maplink" href="https://maps.app.goo.gl/xoq5PajUCzg6oD4EA" target="_blank">ver en mapa</a>
                             </p>
                         </div>
                     </div>
@@ -200,7 +200,7 @@
                             <img src="/front/img/locales/capitanbado.jpg">
                             <p>Avda. Internacional c/ José E. Diaz<br>Tel. (037) 230 450</p>
                             <p>
-                                <a class="maplink" href="https://goo.gl/maps/ZvpGS33UwBQX3ENWA" target="_blank">ver en mapa</a>
+                                <a class="maplink" href="https://goo.gl/maps/b1U67dbngRDpS66f6" target="_blank">ver en mapa</a>
                             </p>
                         </div>
                     </div>
@@ -210,7 +210,7 @@
                             <img src="/front/img/locales/bellavista.jpg">
                             <p>Gral Diaz e/ Ruta Internacional<br>Tel. (038) 238 546</p>
                             <p>
-                                <a class="maplink" href="https://goo.gl/maps/bcvfbofd9avsjdqX6" target="_blank">ver en mapa</a>
+                                <a class="maplink" href="https://goo.gl/maps/amiRi1nmynhBW3kU9" target="_blank">ver en mapa</a>
                             </p>
                         </div>
                     </div>
@@ -232,72 +232,72 @@
     @section('footer_scripts')
 
 
-        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDc3LRykbLB-y8MuomRUIY0qH5S6xgBLX4"></script>
-        <script src="/front/assets/js/jquery.gmap.js"></script>
+{{--        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDc3LRykbLB-y8MuomRUIY0qH5S6xgBLX4"></script>--}}
+{{--        <script src="/front/assets/js/jquery.gmap.js"></script>--}}
 
-        <script type="text/javascript">
+{{--        <script type="text/javascript">--}}
 
-            $('#map').gMap({
+{{--            $('#map').gMap({--}}
 
 
-                zoom: 6,
-                doubleclickzoom: true,
-                controls: {
-                    panControl: true,
-                    zoomControl: true,
-                    mapTypeControl: true,
-                    scaleControl: true,
-                    streetViewControl: false,
-                    overviewMapControl: false
-                },
-                markers: [
+{{--                zoom: 6,--}}
+{{--                doubleclickzoom: true,--}}
+{{--                controls: {--}}
+{{--                    panControl: true,--}}
+{{--                    zoomControl: true,--}}
+{{--                    mapTypeControl: true,--}}
+{{--                    scaleControl: true,--}}
+{{--                    streetViewControl: false,--}}
+{{--                    overviewMapControl: false--}}
+{{--                },--}}
+{{--                markers: [--}}
 
-                    {
-                        latitude:-22.555366,
-                        longitude:-55.718493,
-                        html: "Casa Central"
-                    },
+{{--                    {--}}
+{{--                        latitude:-22.555366,--}}
+{{--                        longitude:-55.718493,--}}
+{{--                        html: "Casa Central"--}}
+{{--                    },--}}
 
-                    {
-                        latitude:-25.204563,
-                        longitude:-57.525122,
-                        html: "Mariano Roque Alonso"
-                    },
+{{--                    {--}}
+{{--                        latitude:-25.204563,--}}
+{{--                        longitude:-57.525122,--}}
+{{--                        html: "Mariano Roque Alonso"--}}
+{{--                    },--}}
 
-                    {
-                        latitude:-25.329102,
-                        longitude:-57.544691,
-                        html: "Fernando de la Mora"
-                    },
+{{--                    {--}}
+{{--                        latitude:-25.329102,--}}
+{{--                        longitude:-57.544691,--}}
+{{--                        html: "Fernando de la Mora"--}}
+{{--                    },--}}
 
-                    {
-                        latitude:-27.307728,
-                        longitude:-55.839396,
-                        html: "Encarnacion"
-                    },
+{{--                    {--}}
+{{--                        latitude:-27.307728,--}}
+{{--                        longitude:-55.839396,--}}
+{{--                        html: "Encarnacion"--}}
+{{--                    },--}}
 
-                    {
-                        latitude:-24.061220,
-                        longitude:-54.307098,
-                        html: "Salto del Guaira"
-                    },
+{{--                    {--}}
+{{--                        latitude:-24.061220,--}}
+{{--                        longitude:-54.307098,--}}
+{{--                        html: "Salto del Guaira"--}}
+{{--                    },--}}
 
-                    {
-                        latitude:-25.4994966,
-                        longitude:-54.6602588,
-                        html: "Ciudad del Este"
-                    },
+{{--                    {--}}
+{{--                        latitude:-25.4994966,--}}
+{{--                        longitude:-54.6602588,--}}
+{{--                        html: "Ciudad del Este"--}}
+{{--                    },--}}
 
-                    {
-                        latitude:-25.7906925,
-                        longitude:-55.106021,
-                        html: "Santa Rita"
-                    }
+{{--                    {--}}
+{{--                        latitude:-25.7906925,--}}
+{{--                        longitude:-55.106021,--}}
+{{--                        html: "Santa Rita"--}}
+{{--                    }--}}
 
-                ]
-            });
+{{--                ]--}}
+{{--            });--}}
 
-        </script>
+{{--        </script>--}}
 
     @endsection
 

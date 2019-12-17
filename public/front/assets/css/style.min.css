@@ -2065,18 +2065,18 @@ a:focus {
 .footer {
     flex: 0 0 auto;
     color: #90969a;
-    background-color: #1c2023;
+    background-color: #003399;
     font-size: 1.3rem;
     line-height: 1.4
 }
 
 .footer .social-icon {
-    color: #fff;
-    background-color: #43494e;
+    color: #003399;
+    background-color: #fee11e;
     margin-bottom: 0;
     width: 3.4rem;
     height: 3.4rem;
-    font-size: 1.3rem
+    font-size: 1.3rem;
 }
 
 .footer .social-icon+.social-icon {
@@ -2148,7 +2148,7 @@ a:focus {
 }
 
 .footer a {
-    color: inherit
+    color: #fff;
 }
 
 .footer a:hover,
@@ -2264,7 +2264,7 @@ a:focus {
     flex-direction: column;
     padding-top: 3rem;
     padding-bottom: 5.6rem;
-    border-top: 1px solid #353a3e
+    border-top: 1px solid #fee11e;
 }
 
 .footer-bottom .social-icon {
@@ -2982,7 +2982,6 @@ a:focus {
     display: block;
     position: relative;
     margin-bottom: 0;
-    background-color: #ccc
 }
 
 .banner.banner-cat {
@@ -5612,7 +5611,7 @@ a:focus {
 
 .partner {
     display: block;
-    opacity: .6;
+    opacity: 1;
     padding-bottom: .8rem;
     padding-top: .8rem;
     transition: all .3s
