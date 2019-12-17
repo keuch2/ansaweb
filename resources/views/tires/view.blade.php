@@ -305,7 +305,7 @@
                                         <div class="product-action">
                                             <!--  <a href="product.html" class="paction add-cart" title="Add to Cart">
                                                 <span>Agregar al Carrito</span>
-                                            </a> --> -->
+                                            </a> -->
                                         </div><!-- End .product-action -->
                                     </div><!-- End .product-details -->
                                 </div><!-- End .product -->
