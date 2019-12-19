@@ -13,7 +13,7 @@ class SearchController extends Controller
 {
     public function getSearch(Request $request)
     {
-        dd($request->all());
+
         $currencies = \Config::get('currency.currencies');
         $vehicleTypes = VehicleType::all();
         $brands = Brand::all();
@@ -27,7 +27,9 @@ class SearchController extends Controller
         // only search on active tires
         $search_params['state'] = 'ACTIVO';
 
-        $tires = Tire::with('tirePhotos')->where($search_params)->paginate(12);
+        //$tires = Tire::with('tirePhotos')->where($search_params)->paginate(12);
+        $tires = Tire::where($search_params)->paginate(12);
+
         return view('search.index',compact('tires','currencies','vehicleTypes','brands','productCategories','request'));
     }
 }
