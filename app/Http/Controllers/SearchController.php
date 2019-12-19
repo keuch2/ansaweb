@@ -13,6 +13,7 @@ class SearchController extends Controller
 {
     public function getSearch(Request $request)
     {
+        dd($request->all());
         $currencies = \Config::get('currency.currencies');
         $vehicleTypes = VehicleType::all();
         $brands = Brand::all();
