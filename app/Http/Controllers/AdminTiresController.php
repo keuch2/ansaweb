@@ -34,8 +34,8 @@
 			$this->col[] = ["label"=>"Nombre neumatico","name"=>"tire_name"];
 			$this->col[] = ["label"=>"Tipo de neumatico","name"=>"tire_type"];
 			$this->col[] = ["label"=>"Marca","name"=>"brand_id","join"=>"brands,brand_name"];
-			$this->col[] = ["label"=>"Radio","name"=>"radius_id","join"=>"radiuses,radius_name"];
-			$this->col[] = ["label"=>"Ancho","name"=>"width_id","join"=>"widths,width_name"];
+			$this->col[] = ["label"=>"Aro","name"=>"radius_id","join"=>"radiuses,radius_name"];
+			$this->col[] = ["label"=>"Largura","name"=>"width_id","join"=>"widths,width_name"];
 			$this->col[] = ["label"=>"Perfil","name"=>"profile_id","join"=>"profiles,profile_name"];
             $this->col[] = ["label"=>"Precio Base","name"=>"price"];
             $this->col[] = ["label"=>"Descuento","name"=>"discount_rate"];
@@ -54,8 +54,8 @@
             $this->form[] = ['label'=> 'Tipos de vehiculos', 'type'=>'select2', 'name'=> 'tiposvehiculos', 'datatable'=>'vehicle_types,vehicle_type', 'relationship_table'=>'tire_vehicle_types'];
 
 			$this->form[] = ['label'=>'Marca','name'=>'brand_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'brands,brand_name'];
-			$this->form[] = ['label'=>'Radio','name'=>'radius_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'radiuses,radius_name'];
-			$this->form[] = ['label'=>'Ancho','name'=>'width_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'widths,width_name'];
+			$this->form[] = ['label'=>'Aro','name'=>'radius_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'radiuses,radius_name'];
+			$this->form[] = ['label'=>'Largura','name'=>'width_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'widths,width_name'];
 			$this->form[] = ['label'=>'Perfil','name'=>'profile_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'profiles,profile_name'];
 			$this->form[] = ['label'=>'Descripcion','name'=>'description','type'=>'wysiwyg','validation'=>'string|min:5|max:5000','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Precio base','name'=>'price','type'=>'number','validation'=>'required|min:0|numeric','width'=>'col-sm-10', 'help'=>'Precio base del neumatico en Dolares (USD)'];

@@ -30,14 +30,14 @@
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Nombre del ancho","name"=>"width_name"];
-			$this->col[] = ["label"=>"Valor del ancho","name"=>"width_value"];
+			$this->col[] = ["label"=>"Nombre de la largura","name"=>"width_name"];
+			$this->col[] = ["label"=>"Valor de la largura","name"=>"width_value"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Nombre del ancho','name'=>'width_name','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Valor del ancho','name'=>'width_value','type'=>'number','validation'=>'required|min:0', 'step'=>'any','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Nombre de la largura','name'=>'width_name','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Valor de a largura','name'=>'width_value','type'=>'number','validation'=>'required|min:0', 'step'=>'any','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
