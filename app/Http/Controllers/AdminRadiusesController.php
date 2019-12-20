@@ -30,14 +30,14 @@
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Nombre del radio","name"=>"radius_name"];
-			$this->col[] = ["label"=>"Valor del radio","name"=>"radius_value"];
+			$this->col[] = ["label"=>"Nombre del aro","name"=>"radius_name"];
+			$this->col[] = ["label"=>"Valor del aro","name"=>"radius_value"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Nombre del radio','name'=>'radius_name','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Valor del radio','name'=>'radius_value','type'=>'number','validation'=>'required|min:0','step'=>'any' ,'width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Nombre del aro','name'=>'radius_name','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Valor del aro','name'=>'radius_value','type'=>'number','validation'=>'required|min:0','step'=>'any' ,'width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
