@@ -153,7 +153,7 @@
                     <div class="col-md-6">
                         <div class="sucursal">
                             <h3>ENCARNACION</h3>
-                            <img src="/front/img/locales/encarnacion.jpg">
+                            <img src="/front/img/locales/encarnacion2.jpg">
                             <p>Ruta 6 km 3 - Barrio Santa María<br>
                                 Tel. 217279562 / +595 984 679 722</p>
                             <p>
@@ -231,73 +231,6 @@
 
     @section('footer_scripts')
 
-
-{{--        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDc3LRykbLB-y8MuomRUIY0qH5S6xgBLX4"></script>--}}
-{{--        <script src="/front/assets/js/jquery.gmap.js"></script>--}}
-
-{{--        <script type="text/javascript">--}}
-
-{{--            $('#map').gMap({--}}
-
-
-{{--                zoom: 6,--}}
-{{--                doubleclickzoom: true,--}}
-{{--                controls: {--}}
-{{--                    panControl: true,--}}
-{{--                    zoomControl: true,--}}
-{{--                    mapTypeControl: true,--}}
-{{--                    scaleControl: true,--}}
-{{--                    streetViewControl: false,--}}
-{{--                    overviewMapControl: false--}}
-{{--                },--}}
-{{--                markers: [--}}
-
-{{--                    {--}}
-{{--                        latitude:-22.555366,--}}
-{{--                        longitude:-55.718493,--}}
-{{--                        html: "Casa Central"--}}
-{{--                    },--}}
-
-{{--                    {--}}
-{{--                        latitude:-25.204563,--}}
-{{--                        longitude:-57.525122,--}}
-{{--                        html: "Mariano Roque Alonso"--}}
-{{--                    },--}}
-
-{{--                    {--}}
-{{--                        latitude:-25.329102,--}}
-{{--                        longitude:-57.544691,--}}
-{{--                        html: "Fernando de la Mora"--}}
-{{--                    },--}}
-
-{{--                    {--}}
-{{--                        latitude:-27.307728,--}}
-{{--                        longitude:-55.839396,--}}
-{{--                        html: "Encarnacion"--}}
-{{--                    },--}}
-
-{{--                    {--}}
-{{--                        latitude:-24.061220,--}}
-{{--                        longitude:-54.307098,--}}
-{{--                        html: "Salto del Guaira"--}}
-{{--                    },--}}
-
-{{--                    {--}}
-{{--                        latitude:-25.4994966,--}}
-{{--                        longitude:-54.6602588,--}}
-{{--                        html: "Ciudad del Este"--}}
-{{--                    },--}}
-
-{{--                    {--}}
-{{--                        latitude:-25.7906925,--}}
-{{--                        longitude:-55.106021,--}}
-{{--                        html: "Santa Rita"--}}
-{{--                    }--}}
-
-{{--                ]--}}
-{{--            });--}}
-
-{{--        </script>--}}
 
     @endsection
 
