@@ -49,6 +49,7 @@
                                         @endif
 
                                     </div>
+                                @php dd('test'); @endphp
                                     <!-- End .product-single-carousel -->
                                     <span class="prod-full-screen">
                                             <i class="icon-plus"></i>
@@ -187,7 +188,6 @@
             </div><!-- End .row -->
         </div><!-- End .container -->
 
-        @php dd('test'); @endphp
 
         @if(isset($similarTires))
             @if(count($similarTires) > 0)
