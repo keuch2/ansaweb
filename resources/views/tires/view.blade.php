@@ -41,13 +41,10 @@
                                         @if(isset($photos))
                                             @if(count($photos) > 0)
                                                 @foreach($photos as $photo)
-                                                    @php dd($photo); @endphp
-                                                    @if(!empty($photo))
+                                                    @if(!empty($photo->photo))
                                                         <div class="product-item">
                                                             <img class="product-single-image" src="{{ url($photo->photo) }}" data-zoom-image="{{ url($photo->photo) }}"/>
                                                         </div>
-                                                    @else
-                                                        NuLL
                                                     @endif
                                                 @endforeach
                                             @endif
@@ -72,7 +69,7 @@
                                     @if(isset($photos))
                                         @if(count($photos) > 0)
                                             @foreach($photos as $photo)
-                                                @if(!empty($photo))
+                                                @if(!empty($photo->photo))
                                                     <div class="col-3 owl-dot">
                                                         <img src="{{ url($photo->photo) }}"/>
                                                     </div>
