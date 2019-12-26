@@ -41,6 +41,7 @@
                                         @if(isset($photos))
                                             @if(count($photos) > 0)
                                                 @foreach($photos as $photo)
+                                                    @php dd($photo); @endphp
                                                     @if(!empty($photo))
                                                         <div class="product-item">
                                                             <img class="product-single-image" src="{{ url($photo->photo) }}" data-zoom-image="{{ url($photo->photo) }}"/>
