@@ -21,7 +21,6 @@
                 </ol>
             </div><!-- End .container -->
         </nav>
-        @php dd('test'); @endphp
         <div class="container">
             <div class="row">
                 <div class="col-lg-9">
@@ -187,6 +186,8 @@
                 </aside><!-- End .col-md-3 -->
             </div><!-- End .row -->
         </div><!-- End .container -->
+
+        @php dd('test'); @endphp
 
         @if(isset($similarTires))
             @if(count($similarTires) > 0)
