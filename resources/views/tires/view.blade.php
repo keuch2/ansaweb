@@ -3,7 +3,6 @@
 @section('main-content')
 
     @php
-        //dd($tire);
         if($tire->show_price)
         {
             $GsPrice = ($tire->final_price) * $dolarToGs;
@@ -186,6 +185,7 @@
                     <div class="sidebar-wrapper">
                         <div class="widget widget-brand">
                             @if($tire->brand->photo)
+                                @php dd($tire->brand); @endphp
                                 <a href="#">
                                     <img src="{{ url($tire->brand->photo) }}" alt="marca">
                                 </a>
