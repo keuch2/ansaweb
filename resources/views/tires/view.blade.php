@@ -3,6 +3,7 @@
 @section('main-content')
 
     @php
+        dd($tire);
         if($tire->show_price)
         {
             $GsPrice = ($tire->final_price) * $dolarToGs;
