@@ -49,7 +49,6 @@
                                                 @endforeach
                                             @endif
                                         @endif
-                                        @php dd('fuck'); @endphp
 
                                     </div>
                                     <!-- End .product-single-carousel -->
