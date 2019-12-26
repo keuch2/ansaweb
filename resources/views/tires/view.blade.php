@@ -169,7 +169,7 @@
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="product-desc-content" role="tabpanel" aria-labelledby="product-tab-desc">
                                 <div class="product-desc-content">
-                                    <p><p>{!! $tire->description !!}</p></p>
+{{--                                    <p><p>{!! $tire->description !!}</p></p>--}}
                                 </div><!-- End .product-desc-content -->
                             </div><!-- End .tab-pane -->
 
@@ -185,7 +185,6 @@
                     <div class="sidebar-wrapper">
                         <div class="widget widget-brand">
                             @if($tire->brand->photo)
-                                @php dd($tire->brand); @endphp
                                 <a href="#">
                                     <img src="{{ url($tire->brand->photo) }}" alt="marca">
                                 </a>
