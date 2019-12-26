@@ -40,6 +40,7 @@
 
                                         @if(isset($photos))
                                             @if(count($photos) > 0)
+                                                @php dd($photos); @endphp
                                                 @foreach($photos as $photo)
                                                     <div class="product-item">
                                                         <img class="product-single-image" src="{{ url($photo->photo) }}" data-zoom-image="{{ url($photo->photo) }}"/>
@@ -47,7 +48,6 @@
                                                 @endforeach
                                             @endif
                                         @endif
-                                        @php dd('test'); @endphp
 
                                     </div>
                                     <!-- End .product-single-carousel -->
