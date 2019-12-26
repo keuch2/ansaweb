@@ -45,6 +45,8 @@
                                                         <div class="product-item">
                                                             <img class="product-single-image" src="{{ url($photo->photo) }}" data-zoom-image="{{ url($photo->photo) }}"/>
                                                         </div>
+                                                    @else
+                                                        NuLL
                                                     @endif
                                                 @endforeach
                                             @endif
