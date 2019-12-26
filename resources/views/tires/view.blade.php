@@ -21,6 +21,7 @@
                 </ol>
             </div><!-- End .container -->
         </nav>
+        @php dd('test'); @endphp
         <div class="container">
             <div class="row">
                 <div class="col-lg-9">
@@ -187,62 +188,62 @@
             </div><!-- End .row -->
         </div><!-- End .container -->
 
-{{--        @if(isset($similarTires))--}}
-{{--            @if(count($similarTires) > 0)--}}
-{{--                <div class="featured-section">--}}
-{{--                    <div class="container">--}}
-{{--                        <h2 class="carousel-title">Productos Relacionados</h2>--}}
-{{--                        <div class="featured-products owl-carousel owl-theme owl-dots-top">--}}
+        @if(isset($similarTires))
+            @if(count($similarTires) > 0)
+                <div class="featured-section">
+                    <div class="container">
+                        <h2 class="carousel-title">Productos Relacionados</h2>
+                        <div class="featured-products owl-carousel owl-theme owl-dots-top">
 
-{{--                            @foreach($similarTires as $similarTire)--}}
+                            @foreach($similarTires as $similarTire)
 
-{{--                                @php--}}
-{{--                                    if($similarTire->show_price)--}}
-{{--                                    {--}}
-{{--                                        $GsPrice2 = ($similarTire->final_price) * $dolarToGs;--}}
-{{--                                        $RealPrice2 = ($similarTire->final_price) * $dolarToReal;--}}
-{{--                                    }--}}
-{{--                                @endphp--}}
+                                @php
+                                    if($similarTire->show_price)
+                                    {
+                                        $GsPrice2 = ($similarTire->final_price) * $dolarToGs;
+                                        $RealPrice2 = ($similarTire->final_price) * $dolarToReal;
+                                    }
+                                @endphp
 
-{{--                                <div class="product">--}}
-{{--                                    <figure class="product-image-container">--}}
-{{--                                        <a href="{{route('tire-byId', ['tireId'=>$similarTire->id])}}" class="product-image">--}}
-{{--                                            @if(!empty($similarTire->photo))--}}
+                                <div class="product">
+                                    <figure class="product-image-container">
+                                        <a href="{{route('tire-byId', ['tireId'=>$similarTire->id])}}" class="product-image">
+                                            @if(!empty($similarTire->photo))
 {{--                                                <img src="{{ url($similarTire->photo) }}" alt="neumatico" style="margin-left:auto; margin-right:auto; display:block;height: 240px; width: auto;"/>--}}
-{{--                                                <img src="{{ url($similarTire->photo) }}" alt="neumatico"/>--}}
-{{--                                            @else--}}
+                                                <img src="{{ url($similarTire->photo) }}" alt="neumatico"/>
+                                            @else
 {{--                                                <img src="/front/img/noimage.png" alt="neumatico" style="margin-left:auto; margin-right:auto; display:block;height: 240px; width: auto;"/>--}}
-{{--                                                <img src="/front/img/noimage.png" alt="neumatico"/>--}}
-{{--                                            @endif--}}
-{{--                                        </a>--}}
-{{--                                    </figure>--}}
-{{--                                    <div class="product-details">--}}
-{{--                                        <h2 class="product-title">--}}
+                                                <img src="/front/img/noimage.png" alt="neumatico"/>
+                                            @endif
+                                        </a>
+                                    </figure>
+                                    <div class="product-details">
+                                        <h2 class="product-title">
 {{--                                            <a href="{{route('tire-byId', ['tireId'=>$similarTire->id])}}">Neumático {{$similarTire->brand->brand_name}}</a>--}}
-{{--                                            <a href="{{route('tire-byId', ['tireId'=>$similarTire->id])}}">Neumático {{$similarTire->brand->brand_name}} {{$similarTire->tire_name}}</a>--}}
-{{--                                        </h2>--}}
-{{--                                        <div class="price-box">--}}
-{{--                                            @if($similarTire->show_price)--}}
-{{--                                                <span class="product-price">Gs. {{number_format($GsPrice2, 0, ',', '.')}}</span>--}}
-{{--                                                <span class="othercurrencies">RS$ {{ number_format($RealPrice2, 2, ',', '.')}}  /  US$ {{ number_format($similarTire->final_price, 2, ',', '.')}}</span>--}}
-{{--                                            @else--}}
-{{--                                                <span class="product-price">Consulte precio con un representante</span>--}}
-{{--                                            @endif--}}
-{{--                                        </div><!-- End .price-box -->--}}
-{{--                                        <div class="product-action">--}}
-{{--                                            <!--  <a href="product.html" class="paction add-cart" title="Add to Cart">--}}
-{{--                                                <span>Agregar al Carrito</span>--}}
-{{--                                            </a> -->--}}
-{{--                                        </div><!-- End .product-action -->--}}
-{{--                                    </div><!-- End .product-details -->--}}
-{{--                                </div><!-- End .product -->--}}
-{{--                            @endforeach--}}
+                                            <a href="{{route('tire-byId', ['tireId'=>$similarTire->id])}}">Neumático {{$similarTire->brand->brand_name}} {{$similarTire->tire_name}}</a>
+                                        </h2>
+                                        <div class="price-box">
+                                            @if($similarTire->show_price)
+                                                <span class="product-price">Gs. {{number_format($GsPrice2, 0, ',', '.')}}</span>
+                                                <span class="othercurrencies">RS$ {{ number_format($RealPrice2, 2, ',', '.')}}  /  US$ {{ number_format($similarTire->final_price, 2, ',', '.')}}</span>
+                                            @else
+                                                <span class="product-price">Consulte precio con un representante</span>
+                                            @endif
+                                        </div><!-- End .price-box -->
+                                        <div class="product-action">
+                                            <!--  <a href="product.html" class="paction add-cart" title="Add to Cart">
+                                                <span>Agregar al Carrito</span>
+                                            </a> -->
+                                        </div><!-- End .product-action -->
+                                    </div><!-- End .product-details -->
+                                </div><!-- End .product -->
+                            @endforeach
 
-{{--                        </div><!-- End .featured-proucts -->--}}
-{{--                    </div><!-- End .container -->--}}
-{{--                </div><!-- End .featured-section -->--}}
-{{--            @endif--}}
-{{--        @endif--}}
+                        </div><!-- End .featured-proucts -->
+                    </div><!-- End .container -->
+                </div><!-- End .featured-section -->
+            @endif
+        @endif
     </main><!-- End .main -->
 
 
