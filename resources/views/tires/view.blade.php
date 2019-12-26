@@ -19,7 +19,6 @@
                     <li class="breadcrumb-item"><a href="#">Neumático</a></li>
                     <li class="breadcrumb-item active" aria-current="page">{{$tire->brand->brand_name}}</li>
                 </ol>
-                @php dd('test'); @endphp
             </div><!-- End .container -->
         </nav>
         <div class="container">
@@ -38,6 +37,7 @@
                                                 <img class="product-single-image" src="/front/img/noimage.png" data-zoom-image="/front/img/noimage.png"/>
                                             @endif
                                         </div>
+                                        @php dd('test'); @endphp
 
                                         @if(isset($photos))
                                             @if(count($photos) > 0)
