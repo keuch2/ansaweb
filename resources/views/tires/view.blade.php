@@ -19,6 +19,7 @@
                     <li class="breadcrumb-item"><a href="#">Neumático</a></li>
                     <li class="breadcrumb-item active" aria-current="page">{{$tire->brand->brand_name}}</li>
                 </ol>
+                @php dd('test'); @endphp
             </div><!-- End .container -->
         </nav>
         <div class="container">
@@ -49,7 +50,6 @@
                                         @endif
 
                                     </div>
-                                @php dd('test'); @endphp
                                     <!-- End .product-single-carousel -->
                                     <span class="prod-full-screen">
                                             <i class="icon-plus"></i>
