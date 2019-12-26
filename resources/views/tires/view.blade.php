@@ -37,7 +37,6 @@
                                                 <img class="product-single-image" src="/front/img/noimage.png" data-zoom-image="/front/img/noimage.png"/>
                                             @endif
                                         </div>
-                                        @php dd('test'); @endphp
 
                                         @if(isset($photos))
                                             @if(count($photos) > 0)
@@ -48,6 +47,7 @@
                                                 @endforeach
                                             @endif
                                         @endif
+                                        @php dd('test'); @endphp
 
                                     </div>
                                     <!-- End .product-single-carousel -->
