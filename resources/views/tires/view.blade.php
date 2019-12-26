@@ -106,41 +106,33 @@
 
                                     <h3>Especificaciones Técnicas</h3>
 
-                                    <table class="table table-striped">
+{{--                                    <table class="table table-striped">--}}
 
-                                        <tbody>
-                                        <tr>
-                                            <th scope="row">MARCA:</th>
-                                            <td>{{$tire->brand->brand_name}}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">ARO:</th>
-                                            <td>{{$tire->radius->radius_name}} {{$tire->radius->radius_value}}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">LARGURA:</th>
-                                            <td>{{$tire->width->width_name}} {{$tire->width->width_value}}</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">PERFIL:</th>
-                                            <td>{{$tire->profile->profile_name}} {{$tire->profile->profile_value}}</td>
-                                        </tr>
+{{--                                        <tbody>--}}
 {{--                                        <tr>--}}
-{{--                                            <th scope="row">INDICE DE CARGA (POR CUBIERTA):</th>--}}
-{{--                                            <td>82 (475 Kg)</td>--}}
+{{--                                            <th scope="row">MARCA:</th>--}}
+{{--                                            <td>{{$tire->brand->brand_name}}</td>--}}
 {{--                                        </tr>--}}
 {{--                                        <tr>--}}
-{{--                                            <th scope="row">INDICE DE VELOCIDAD:</th>--}}
-{{--                                            <td>T (190 Km/h)</td>--}}
+{{--                                            <th scope="row">ARO:</th>--}}
+{{--                                            <td>{{$tire->radius->radius_name}} {{$tire->radius->radius_value}}</td>--}}
 {{--                                        </tr>--}}
-                                        <tr>
-                                            <th scope="row">TIPO :</th>
-                                            <td>{{$tire->tire_type}}</td>
-                                        </tr>
+{{--                                        <tr>--}}
+{{--                                            <th scope="row">LARGURA:</th>--}}
+{{--                                            <td>{{$tire->width->width_name}} {{$tire->width->width_value}}</td>--}}
+{{--                                        </tr>--}}
+{{--                                        <tr>--}}
+{{--                                            <th scope="row">PERFIL:</th>--}}
+{{--                                            <td>{{$tire->profile->profile_name}} {{$tire->profile->profile_value}}</td>--}}
+{{--                                        </tr>--}}
+{{--                                        <tr>--}}
+{{--                                            <th scope="row">TIPO :</th>--}}
+{{--                                            <td>{{$tire->tire_type}}</td>--}}
+{{--                                        </tr>--}}
 
-                                        </tr>
-                                        </tbody>
-                                    </table>
+{{--                                        </tr>--}}
+{{--                                        </tbody>--}}
+{{--                                    </table>--}}
 
 
                                     <div class="product-action product-all-icons">
@@ -190,73 +182,6 @@
                                 </a>
                             @endif
                         </div><!-- End .widget -->
-
-
-{{--                        <div class="widget widget-featured">--}}
-{{--                            <h3 class="widget-title">Otros Productos</h3>--}}
-
-{{--                            <div class="widget-body">--}}
-{{--                                <div class="owl-carousel widget-featured-products">--}}
-{{--                                    <div class="featured-col">--}}
-
-{{--                                        <div class="product product-sm">--}}
-{{--                                            <figure class="product-image-container">--}}
-{{--                                                <a href="product.html" class="product-image">--}}
-{{--                                                    <img src="img/neumatico.jpg" alt="product">--}}
-{{--                                                </a>--}}
-{{--                                            </figure>--}}
-{{--                                            <div class="product-details">--}}
-{{--                                                <h2 class="product-title">--}}
-{{--                                                    <a href="product.html">Neumatico</a>--}}
-{{--                                                </h2>--}}
-
-{{--                                                <div class="price-box">--}}
-{{--                                                    <span class="product-price">Gs. 400.000</span>--}}
-{{--                                                    <span class="othercurrencies">RS$ 2039  /  US$ 938</span>--}}
-{{--                                                </div><!-- End .price-box -->--}}
-{{--                                            </div><!-- End .product-details -->--}}
-{{--                                        </div><!-- End .product -->--}}
-
-{{--                                        <div class="product product-sm">--}}
-{{--                                            <figure class="product-image-container">--}}
-{{--                                                <a href="product.html" class="product-image">--}}
-{{--                                                    <img src="img/neumatico.jpg" alt="product">--}}
-{{--                                                </a>--}}
-{{--                                            </figure>--}}
-{{--                                            <div class="product-details">--}}
-{{--                                                <h2 class="product-title">--}}
-{{--                                                    <a href="product.html">Neumatico</a>--}}
-{{--                                                </h2>--}}
-
-{{--                                                <div class="price-box">--}}
-{{--                                                    <span class="product-price">Gs. 400.000</span>--}}
-{{--                                                    <span class="othercurrencies">RS$ 2039  /  US$ 938</span>--}}
-
-{{--                                                </div><!-- End .price-box -->--}}
-{{--                                            </div><!-- End .product-details -->--}}
-{{--                                        </div><!-- End .product -->--}}
-
-{{--                                        <div class="product product-sm">--}}
-{{--                                            <figure class="product-image-container">--}}
-{{--                                                <a href="product.html" class="product-image">--}}
-{{--                                                    <img src="img/neumatico.jpg" alt="product">--}}
-{{--                                                </a>--}}
-{{--                                            </figure>--}}
-{{--                                            <div class="product-details">--}}
-{{--                                                <h2 class="product-title">--}}
-{{--                                                    <a href="product.html">Neumatico</a>--}}
-{{--                                                </h2>--}}
-
-{{--                                                <div class="price-box">--}}
-{{--                                                    <span class="product-price">Gs. 400.000</span>--}}
-{{--                                                    <span class="othercurrencies">RS$ 2039  /  US$ 938</span>--}}
-{{--                                                </div><!-- End .price-box -->--}}
-{{--                                            </div><!-- End .product-details -->--}}
-{{--                                        </div><!-- End .product -->--}}
-{{--                                    </div><!-- End .featured-col -->--}}
-{{--                                </div><!-- End .widget-featured-slider -->--}}
-{{--                            </div><!-- End .widget-body -->--}}
-{{--                        </div><!-- End .widget -->--}}
                     </div>
                 </aside><!-- End .col-md-3 -->
             </div><!-- End .row -->
