@@ -68,8 +68,9 @@
                                         <a href="{{route('product-byId', ['productId'=>$product->id])}}">Producto {{$product->brand->brand_name}} {{$product->product_name}}</a>
                                     </h2>
                                     <div class="price-box">
-                                        <span class="product-price">Gs. {{number_format($GsPrice, 0, ',', '.')}}</span>
-                                        <span class="othercurrencies">RS$ {{ number_format($RealPrice, 2, ',', '.')}}  /  US$ {{ number_format($product->final_price, 2, ',', '.')}}</span>
+                                        <span class="product-price">US$ {{number_format($product->final_price, 2, ',', '.')}}</span>
+{{--                                        <span class="product-price">Gs. {{number_format($GsPrice, 0, ',', '.')}}</span>--}}
+{{--                                        <span class="othercurrencies">RS$ {{ number_format($RealPrice, 2, ',', '.')}}  /  US$ {{ number_format($product->final_price, 2, ',', '.')}}</span>--}}
                                     </div><!-- End .price-box -->
                                     <!-- <div class="product-grid-action">
                                             <a href="product.html" class="paction add-cart" title="Add to Cart">

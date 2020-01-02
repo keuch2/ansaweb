@@ -83,8 +83,9 @@
 {{--                                            deactivated by customer request--}}
 {{--                                            <span class="old-price">Gs. {{number_format($GsOldPrice, 0, ',', '.')}}</span>--}}
                                         @endif
-                                        <span class="product-price">Gs. {{number_format($GsPrice, 0, ',', '.')}}</span>
-                                        <span class="othercurrencies">RS$ {{ number_format($RealPrice, 2, ',', '.')}}  /  US$ {{ number_format($product->final_price, 2, ',', '.')}}</span>
+                                            <span class="product-price">US$ {{number_format($product->final_price, 2, ',', '.')}}</span>
+{{--                                        <span class="product-price">Gs. {{number_format($GsPrice, 0, ',', '.')}}</span>--}}
+{{--                                        <span class="othercurrencies">RS$ {{ number_format($RealPrice, 2, ',', '.')}}  /  US$ {{ number_format($product->final_price, 2, ',', '.')}}</span>--}}
                                     </div><!-- End .price-box -->
 
                                     <div class="product-desc">
@@ -283,8 +284,9 @@
                                             <a href="{{route('product-byId', ['productId'=>$similarProduct->id])}}">Producto {{$similarProduct->brand->brand_name}}  {{$similarProduct->product_name}}</a>
                                         </h2>
                                         <div class="price-box">
-                                            <span class="product-price">Gs. {{number_format($GsPrice2, 0, ',', '.')}}</span>
-                                            <span class="othercurrencies">RS$ {{ number_format($RealPrice2, 2, ',', '.')}}  /  US$ {{ number_format($similarProduct->final_price, 2, ',', '.')}}</span>
+                                            <span class="product-price">US$ {{number_format($similarProduct->final_price, 2, ',', '.')}}</span>
+{{--                                            <span class="product-price">Gs. {{number_format($GsPrice2, 0, ',', '.')}}</span>--}}
+{{--                                            <span class="othercurrencies">RS$ {{ number_format($RealPrice2, 2, ',', '.')}}  /  US$ {{ number_format($similarProduct->final_price, 2, ',', '.')}}</span>--}}
                                         </div><!-- End .price-box -->
                                         <div class="product-action">
                                             <!--  <a href="product.html" class="paction add-cart" title="Add to Cart">
