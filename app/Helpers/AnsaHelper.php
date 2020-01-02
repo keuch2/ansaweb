@@ -33,9 +33,13 @@ class AnsaHelper
         //$brands = Brand::all();
         $brands = Brand::where(['featured'=>1])->orderBy('brands.brand_name', 'ASC')->get();
         $productCategories = ProductCategory::all();
-        $radiuses = Radius::all();
-        $widths = Width::all();
-        $profiles = Profile::all();
+
+        //$radiuses = Radius::all();
+        $radiuses = Radius::orderBy('radius_name', 'asc')->get();
+        //$widths = Width::all();
+        $widths = Width::orderBy('width_name', 'asc')->get();
+        //$profiles = Profile::all();
+        $profiles = Profile::orderBy('profile_name', 'asc')->get();
 
         $banners = Banner::orderBy('id', 'DESC')->take(5)->get();
 
