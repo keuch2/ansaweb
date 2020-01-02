@@ -70,8 +70,11 @@
                                     </h2>
                                     <div class="price-box">
                                         @if($tire->show_price)
-                                            <span class="product-price">Gs. {{number_format($GsPrice, 0, ',', '.')}}</span>
-                                            <span class="othercurrencies">RS$ {{ number_format($RealPrice, 2, ',', '.')}}  /  US$ {{ number_format($tire->final_price, 2, ',', '.')}}</span>
+
+                                            <span class="product-price">US$ {{number_format($tire->final_price, 2, ',', '.')}}</span>
+{{--                                            <span class="product-price">Gs. {{number_format($GsPrice, 0, ',', '.')}}</span>--}}
+
+{{--                                            <span class="othercurrencies">RS$ {{ number_format($RealPrice, 2, ',', '.')}}  /  US$ {{ number_format($tire->final_price, 2, ',', '.')}}</span>--}}
                                         @else
                                             <span class="product-price">Consulte precio con un representante</span>
                                         @endif

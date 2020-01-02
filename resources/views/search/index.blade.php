@@ -62,8 +62,9 @@
                                     <a href="{{route('tire-byId', ['tireId'=>$tire->id])}}">Neumático {{$tire->brand->brand_name}} {{$tire->tire_name}}</a>
                                 </h2>
                                 <div class="price-box">
-                                    <span class="product-price">Gs. {{\App\Helpers\AnsaHelper::getGsPrice($tire->price)}}</span>
-                                    <span class="othercurrencies">RS$ {{\App\Helpers\AnsaHelper::getRsPrice($tire->price)}}  /  US$ {{$tire->price}}</span>
+                                    <span class="product-price">US$ {{number_format($tire->final_price, 2, ',', '.')}}</span>
+{{--                                    <span class="product-price">Gs. {{\App\Helpers\AnsaHelper::getGsPrice($tire->price)}}</span>--}}
+{{--                                    <span class="othercurrencies">RS$ {{\App\Helpers\AnsaHelper::getRsPrice($tire->price)}}  /  US$ {{$tire->price}}</span>--}}
                                 </div><!-- End .price-box -->
                                 <!-- <div class="product-grid-action">
                                         <a href="product.html" class="paction add-cart" title="Add to Cart">
