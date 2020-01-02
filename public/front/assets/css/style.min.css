@@ -10639,3 +10639,31 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     margin-bottom:15px;
     padding-bottom: 15px;
 }
+#mobilecallcenter {
+    padding: 12px;
+}
+#mobilecallcenter span {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    color:#fff;
+    padding-bottom: 5px;
+}
+
+#mobilecallcenter a{
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    color:#fff;
+}
+
+#mensajebusqueda {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color:#fff;
+    text-align: center;
+    padding-top: 30px;
+}
+

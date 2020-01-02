@@ -2,99 +2,6 @@
 
 @section('main-content')
 
-
-{{--    <main class="main">--}}
-{{--        <nav aria-label="breadcrumb" class="breadcrumb-nav">--}}
-{{--            <div class="container">--}}
-{{--                <ol class="breadcrumb">--}}
-{{--                    <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>--}}
-{{--                    <li class="breadcrumb-item active" aria-current="page">Sucursales</li>--}}
-{{--                </ol>--}}
-{{--            </div><!-- End .container -->--}}
-
-{{--        </nav><div class="page-header">--}}
-{{--            <div class="container">--}}
-{{--                <h1>Sucursales</h1>--}}
-{{--            </div><!-- End .container -->--}}
-{{--        </div><!-- End .page-header -->--}}
-
-{{--        <div class="container">--}}
-{{--            <div id="map"></div><!-- End #map -->--}}
-
-{{--            <!-- Google Map-->--}}
-
-{{--            <div class="row">--}}
-{{--                <div class="col-md-3">--}}
-{{--                    <div class="sucursal">--}}
-{{--                        <h3>CASA CENTRAL</h3>--}}
-{{--                        <p>Pitiantuta esq. Oleary y 1 de Diciembre<br>--}}
-{{--                            Tel. (0336)273125<br>--}}
-{{--                            Pedro Juan Caballero</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="col-md-3">--}}
-{{--                    <div class="sucursal">--}}
-{{--                        <h3>MARIANO ROQUE ALONSO</h3>--}}
-{{--                        <p>Ruta Transchaco Km. 17,5 esquina Avda. Gral. Díaz <br>--}}
-{{--                            Tel. (021) 755 403</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="col-md-3">--}}
-{{--                    <div class="sucursal">--}}
-{{--                        <h3>FERNANDO DE LA MORA</h3>--}}
-{{--                        <p>Ruta Mcal. Estigarribia Km. 5 y Juan de Salazar<br>--}}
-{{--                            Tel. (021)524145</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="col-md-3">--}}
-{{--                    <div class="sucursal">--}}
-{{--                        <h3>ENCARNACION</h3>--}}
-{{--                        <p>Ruta 6 km 3,5 - Barrio Santa María<br>--}}
-{{--                            Tel. (071) 208562 / 208563</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="col-md-3">--}}
-{{--                    <div class="sucursal">--}}
-{{--                        <h3>SALTO DEL GUAIRA</h3>--}}
-{{--                        <p>Avda. Paraguay c/ Pablo VI<br>--}}
-{{--                            Tel. (046) 242819</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="col-md-3">--}}
-{{--                    <div class="sucursal">--}}
-{{--                        <h3>CIUDAD DEL ESTE</h3>--}}
-{{--                        <p>Avda. San Blas - Ruta Internacional Km. 5<br>--}}
-{{--                            Tel. (061) 570725</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="col-md-3">--}}
-{{--                    <div class="sucursal">--}}
-{{--                        <h3>SANTA RITA</h3>--}}
-{{--                        <p>Gaspar Rodríguez de Francia / Ruta VII - Barrio Sinuelo II<br>--}}
-{{--                            Tel. (0984) 679751</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="col-md-3">--}}
-{{--                    <div class="sucursal">--}}
-{{--                        <h3>CAPITAN BADO</h3>--}}
-{{--                        <p>Avda. Internacional c/ José E. Diaz<br>Tel. (037) 230 450</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="col-md-3">--}}
-{{--                    <div class="sucursal">--}}
-{{--                        <h3>BELLA VISTA</h3>--}}
-{{--                        <p>Gral Diaz e/ Ruta Internacional<br>Tel. (038) 238 546</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-
-{{--        </div><!-- End .container -->--}}
-
-{{--        <div class="mb-8"></div><!-- margin -->--}}
-{{--    </main><!-- End .main -->--}}
-
-
 <main class="main">
     <nav aria-label="breadcrumb" class="breadcrumb-nav">
         <div class="container">
@@ -168,7 +75,7 @@
                             <p>Avda. Paraguay c/ Pablo VI<br>
                                 Tel. (046) 242819</p>
                             <p>
-                                <a class="maplink" href="https://goo.gl/maps/tVPYunBFq7gGKsR86" target="_blank">ver en mapa</a>
+                                <a class="maplink" href="https://goo.gl/maps/tk7xT5M93PWDH5EM6" target="_blank">ver en mapa</a>
                             </p>
                         </div>
                     </div>
@@ -200,7 +107,7 @@
                             <img src="/front/img/locales/capitanbado.jpg">
                             <p>Avda. Internacional c/ José E. Diaz<br>Tel. (037) 230 450</p>
                             <p>
-                                <a class="maplink" href="https://goo.gl/maps/b1U67dbngRDpS66f6" target="_blank">ver en mapa</a>
+                                <a class="maplink" href="https://goo.gl/maps/euXE3ukszrQXgc4p6" target="_blank">ver en mapa</a>
                             </p>
                         </div>
                     </div>
@@ -210,7 +117,7 @@
                             <img src="/front/img/locales/bellavista.jpg">
                             <p>Gral Diaz e/ Ruta Internacional<br>Tel. (038) 238 546</p>
                             <p>
-                                <a class="maplink" href="https://goo.gl/maps/amiRi1nmynhBW3kU9" target="_blank">ver en mapa</a>
+                                <a class="maplink" href="https://goo.gl/maps/K8k7DPTcwdm1XxoF6" target="_blank">ver en mapa</a>
                             </p>
                         </div>
                     </div>

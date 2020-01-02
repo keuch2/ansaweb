@@ -2,7 +2,7 @@
     <div class="container">
 
         <div style="padding-bottom: 30px;">
-            <img src="/front/img/medidas2.jpg" width="100%">
+            <img src="/front/img/medidas3.jpg" width="100%">
         </div>
 
         <h2 class="subtitle text-center"><span>Buscar Neumáticos por Medida</span></h2>
@@ -51,4 +51,5 @@
         </form>
 
     </div>
+    <div id="mensajebusqueda">Si no encuentras lo que buscas contáctanos vía telefónica</div>
 </div>

@@ -73,5 +73,11 @@
             <a href="#" class="social-icon" target="_blank"><i class="icon-facebook"></i></a>
             <a href="#" class="social-icon" target="_blank"><i class="icon-instagram"></i></a>
         </div><!-- End .social-icons -->
+
+        <div id="mobilecallcenter">
+            <span>Call Center</span>
+            <a href="https://wa.me/595984679739" target="_blank"><strong>+595 984 679739 <img src="/front/img/whatsapp.png" width="25px" style="display: inline;"></strong></a>
+        </div>
+
     </div><!-- End .mobile-menu-wrapper -->
 </div><!-- End .mobile-menu-container -->
