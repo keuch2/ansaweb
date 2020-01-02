@@ -29,10 +29,12 @@ class AnsaHelper
     public static function getHeaderData()
     {
         $currencies = \Config::get('currency.currencies');
-        $vehicleTypes = VehicleType::all();
+        //$vehicleTypes = VehicleType::all();
+        $vehicleTypes = VehicleType::orderBy('vehicle_type', 'asc')->get();
         //$brands = Brand::all();
         $brands = Brand::where(['featured'=>1])->orderBy('brands.brand_name', 'ASC')->get();
-        $productCategories = ProductCategory::all();
+        //$productCategories = ProductCategory::all();
+        $productCategories = ProductCategory::orderBy('category_name', 'asc')->get();
 
         //$radiuses = Radius::all();
         $radiuses = Radius::orderBy('radius_name', 'asc')->get();
