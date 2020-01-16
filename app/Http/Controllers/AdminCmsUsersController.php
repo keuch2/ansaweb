@@ -62,6 +62,6 @@ class AdminCmsUsersController extends \crocodicstudio\crudbooster\controllers\CB
     public function hook_query_index(&$query) {
         //Your code here
 
-        $query->where('id', '<>', '2');
+        $query->where('email', '<>', 'sebastian@deepbit.tech');
     }
 }
