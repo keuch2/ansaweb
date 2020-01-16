@@ -58,4 +58,10 @@ class AdminCmsUsersController extends \crocodicstudio\crudbooster\controllers\CB
 	public function hook_before_add(&$postdata) {      
 	    unset($postdata['password_confirmation']);
 	}
+
+    public function hook_query_index(&$query) {
+        //Your code here
+
+        $query->where('id', '<>', '2');
+    }
 }
