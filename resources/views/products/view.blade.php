@@ -29,9 +29,11 @@
                                         <!-- main photo -->
                                         <div class="product-item">
                                             @if($product->photo)
-                                                <img class="product-single-image" src="{{ url($product->photo)  }}" data-zoom-image="{{ url($product->photo)  }}"/>
+{{--                                                <img class="product-single-image" src="{{ url($product->photo)  }}" data-zoom-image="{{ url($product->photo)  }}"/>--}}
+                                                <img class="product-single-image" src="{{ url($product->photo)  }}"/>
                                             @else
-                                                <img class="product-single-image" src="/front/img/noimage.png" data-zoom-image="/front/img/noimage.png"/>
+{{--                                                <img class="product-single-image" src="/front/img/noimage.png" data-zoom-image="/front/img/noimage.png"/>--}}
+                                                <img class="product-single-image" src="/front/img/noimage.png"/>
                                             @endif
                                         </div>
 
@@ -39,7 +41,8 @@
                                             @if(count($photos) > 0)
                                                 @foreach($photos as $photo)
                                                     <div class="product-item">
-                                                        <img class="product-single-image" src="{{ url($photo->photo) }}" data-zoom-image="{{ url($photo->photo) }}"/>
+{{--                                                        <img class="product-single-image" src="{{ url($photo->photo) }}" data-zoom-image="{{ url($photo->photo) }}"/>--}}
+                                                        <img class="product-single-image" src="{{ url($photo->photo) }}"/>
                                                     </div>
                                                 @endforeach
                                             @endif
@@ -47,9 +50,9 @@
 
                                     </div>
                                     <!-- End .product-single-carousel -->
-                                    <span class="prod-full-screen">
-                                            <i class="icon-plus"></i>
-                                        </span>
+{{--                                    <span class="prod-full-screen">--}}
+{{--                                            <i class="icon-plus"></i>--}}
+{{--                                        </span>--}}
                                 </div>
                                 <div class="prod-thumbnail row owl-dots" id='carousel-custom-dots'>
                                     <div class="col-3 owl-dot">
