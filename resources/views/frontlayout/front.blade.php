@@ -121,7 +121,7 @@
                                         <div class="sucursal">
                                             <h3>CASA CENTRAL</h3>
                                             <p>Pitiantuta esq. Oleary y 1 de Diciembre<br>
-                                                Tel. <a href="tel:+5950336273125">(0336)273125</a>br>
+                                                Tel. <a href="tel:+5950336273125">(0336)273125</a><br>
                                                 Pedro Juan Caballero
                                             </p>
                                             <p>
@@ -129,6 +129,7 @@
                                             </p>
                                         </div>
                                     </div>
+
                                     <div class="col-md-6">
                                         <div class="sucursal">
                                             <h3>MARIANO ROQUE ALONSO</h3>
