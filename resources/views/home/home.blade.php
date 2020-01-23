@@ -208,6 +208,10 @@
 
         <div class="mb-5"></div><!-- margin -->
 
+        <div class="container" style="text-align: center;">
+            <img src="/front/img/garantia.jpg" style="display: inline-block;">
+        </div>
+
 
     </main><!-- End .main -->
 

@@ -503,8 +503,8 @@ a:focus {
 
 .logo img {
     display: block;
-    max-width: 100%;
-    height: auto
+    max-height: 49px;
+    height: auto;
 }
 
 .header-dropdown {
@@ -1295,8 +1295,30 @@ a:focus {
 }
 
 @media screen and (max-width: 767px) {
+    .header-right {
+        border:none;
+    }
     .header-contact {
-        display: none
+        display: block;
+        border:none;
+    }
+    .header-contact {
+        padding-right: 0rem;
+        margin-right: 0rem;
+        font-size: 1.5rem;
+    }
+
+    .header-contact::after {
+        content: '';
+        display:none;
+    }
+
+    .header-contact span {
+        display: block;
+        color: #65829d;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase
     }
     .header-search .header-search-wrapper {
         width: 380px
@@ -2148,7 +2170,7 @@ a:focus {
 }
 
 .footer a {
-    color: #fff;
+   color: #fff;
 }
 
 .footer a:hover,
@@ -10666,4 +10688,46 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     text-align: center;
     padding-top: 30px;
 }
+#mensajebusqueda a {
+    display: inline-block;
+ }
+
+ #foot-social-icons {
+    padding-top: 10px;
+ }
+
+ #foot-social-icons a{
+    font-size: 36px;
+ }
+
+
+
+#sucursalesfoot .sucursal h3{
+    font-size: 12px;
+    color:#fff;
+    padding: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+}
+
+#sucursalesfoot .sucursal p{
+    font-size: 12px;
+    color:#fff;
+    padding: 0px;
+    margin:0px;
+    padding-bottom: 5px;
+}
+
+#sucursalesfoot .maplink {
+    display: block;
+    padding: 0px;
+    margin:0px;
+    padding-bottom: 15px;
+}
+.widget .links {
+    color: #fff;
+}
+
+
+
 

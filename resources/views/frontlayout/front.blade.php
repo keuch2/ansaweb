@@ -104,15 +104,107 @@
     gtag('config', 'UA-118985324-1');
 </script>
 
-
-
 <footer class="footer">
     <div class="footer-middle">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="row">
-                        <div class="col-md-4">
+
+                        <div class="col-md-6">
+                            <div class="widget">
+                                <h4 class="widget-title">Sucursales</h4>
+
+                                <div class="row" id="sucursalesfoot">
+
+                                    <div class="col-md-6">
+                                        <div class="sucursal">
+                                            <h3>CASA CENTRAL</h3>
+                                            <p>Pitiantuta esq. Oleary y 1 de Diciembre<br>
+                                                Tel. <a href="tel:+5950336273125">(0336)273125</a>br>
+                                                Pedro Juan Caballero
+                                            </p>
+                                            <p>
+                                                <a class="maplink" href="https://goo.gl/maps/ryh9NsbyqvdeNTeV9" target="_blank">ver en mapa</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="sucursal">
+                                            <h3>MARIANO ROQUE ALONSO</h3>
+                                            <p>Ruta Transchaco Km. 17,5 esquina Avda. Gral. Díaz <br>
+                                                Tel. <a href="tel:+59521755403">(021) 755 403</a></p>
+                                            <p>
+                                                <a class="maplink" href="https://maps.app.goo.gl/mLGrABZrvAnr1Y8y7" target="_blank">ver en mapa</a>
+                                            </p>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="sucursal">
+                                            <h3>ENCARNACION</h3>
+                                            <p>Ruta 6 km 3 - Barrio Santa María<br>
+                                                Tel. <a href="tel:+595217279562">(021) 7279562</a> / <a href="tel:+595984679722">+595 984 679 722</a></p>
+                                            <p>
+                                                <a class="maplink" href="https://goo.gl/maps/CRBo8cFBhMWSnarbA" target="_blank">ver en mapa</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="sucursal">
+                                            <h3>SALTO DEL GUAIRA</h3>
+                                            <p>Avda. Paraguay c/ Pablo VI<br>
+                                                Tel. <a href="tel:+595046242819">(046) 242819</a></p>
+                                            <p>
+                                                <a class="maplink" href="https://goo.gl/maps/tk7xT5M93PWDH5EM6" target="_blank">ver en mapa</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="sucursal">
+                                            <h3>CIUDAD DEL ESTE</h3>
+                                            <p>Avda. San Blas - Ruta Internacional Km. 5<br>
+                                                Tel. <a href="tel:+595061570725">(061) 570725</a></p>
+                                            <p>
+                                                <a class="maplink" href="https://goo.gl/maps/tbrfQA2GS8jWr4MN7" target="_blank">ver en mapa</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="sucursal">
+                                            <h3>SANTA RITA</h3>
+                                            <p>Gaspar Rodríguez de Francia / Ruta VII - Barrio Sinuelo II<br>
+                                                Tel. <a href="tel:+595984679735">(0984) 679 735</a></p>
+                                            <p>
+                                                <a class="maplink" href="https://maps.app.goo.gl/xoq5PajUCzg6oD4EA" target="_blank">ver en mapa</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="sucursal">
+                                            <h3>CAPITAN BADO</h3>
+                                            <p>Avda. Internacional c/ José E. Diaz<br>Tel. <a href="tel:+59537230450">(037) 230 450</a></p>
+                                            <p>
+                                                <a class="maplink" href="https://goo.gl/maps/euXE3ukszrQXgc4p6" target="_blank">ver en mapa</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="sucursal">
+                                            <h3>BELLA VISTA</h3>
+                                            <p>Gral Diaz e/ Ruta Internacional<br>Tel. <a href="tel:+59538238546">(038) 238 546</a></p>
+                                            <p>
+                                                <a class="maplink" href="https://goo.gl/maps/K8k7DPTcwdm1XxoF6  " target="_blank">ver en mapa</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div><!-- End .widget -->
+                        </div><!-- End .col-md-3 -->
+
+                        <div class="col-md-3">
                             <div class="widget">
                                 <h4 class="widget-title">Neumáticos</h4>
 
@@ -123,58 +215,47 @@
                                     @endforeach
 
                                 </ul>
-                            </div><!-- End .widget -->
-                        </div><!-- End .col-md-3 -->
 
-                        <div class="col-md-4">
-                            <div class="widget">
-                                <h4 class="widget-title">Productos</h4>
-
+                                <h4 class="widget-title" style="padding-top: 20px;">Productos</h4>
                                 <ul class="links">
-
                                     @foreach($productCategories as $productCategory)
                                         <li><a href="{{route('products-list-byCategoryId', ['productCategoryId' => $productCategory->id])}}">{{$productCategory->category_name}}</a></li>
                                     @endforeach
-
                                 </ul>
                             </div><!-- End .widget -->
                         </div><!-- End .col-md-3 -->
 
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="widget">
+                                <h4 class="widget-title">Servicios</h4>
 
-                                <h4 class="widget-title">Sobre Nosotros</h4>
-
-                                <ul class="links">
-                                    <li><a href="{{route('home')}}">Inicio</a></li>
-                                    <li><a href="{{route('static-services')}}">Servicios</a></li>
-                                    <li><a href="{{route('static-aboutus')}}">Acerca de ANSA</a></li>
-                                    <li><a href="{{route('static-branchoffices')}}">Sucursales</a></li>
+                                <ul class="links" style="padding-bottom: 20px;">
+                                    <li>Montura</li>
+                                    <li>Balanceo</li>
+                                    <li>Alineación</li>
+                                    <li>Suspensión</li>
+                                    <li>Mecánica Ligera</li>
+                                    <li>Cambio de aceite y filtros</li>
                                 </ul>
+
+
+                                <h4 class="widget-title" style="padding-top: 20px;">Seguinos</h4>
+                                <div id="foot-social-icons">
+                                    <a href="https://www.facebook.com/americaneumaticospy/" target="_blank"><i class="icon-facebook"></i></a>
+                                    <a href="https://www.instagram.com/americaneumaticospy/" target="_blank"><i class="icon-instagram"></i></a>
+                                </div><!-- End .social-icons -->
+                                <a href="https://wa.me/595984679739" target="_blank"><img src="/front/img/contactowhatsapp.jpg"></a>
                             </div><!-- End .widget -->
                         </div><!-- End .col-md-3 -->
-
-
                     </div><!-- End .row -->
                 </div><!-- End .col-lg-8 -->
-
-
             </div><!-- End .row -->
         </div><!-- End .container -->
     </div><!-- End .footer-middle -->
-
-    <div class="container">
-        <div class="footer-bottom">
-            <p class="footer-copyright">América Neumáticos S.A. &copy;  2019.  All Rights Reserved</p>
-
-
-            <div class="social-icons">
-                <a href="https://www.facebook.com/americaneumaticospy/" class="social-icon" target="_blank"><i class="icon-facebook"></i></a>
-                <a href="https://www.instagram.com/americaneumaticospy/" class="social-icon" target="_blank"><i class="icon-instagram"></i></a>
-            </div><!-- End .social-icons -->
-        </div><!-- End .footer-bottom -->
-    </div><!-- End .containr -->
 </footer><!-- End .footer -->
+
+
+
 
 
 
