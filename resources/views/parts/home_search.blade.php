@@ -51,5 +51,9 @@
         </form>
 
     </div>
-    <div id="mensajebusqueda">Si no encuentras lo que buscas contáctanos vía telefónica</div>
+
+    <div id="mensajebusqueda"><a href="https://wa.me/595984679739" target="_blank"><img src="/front/img/contactowhatsapp.jpg"></a></div>
+
+
+
 </div>
