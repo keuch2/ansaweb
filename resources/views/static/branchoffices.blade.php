@@ -44,16 +44,32 @@
                             </p>
                         </div>
                     </div>
+
                     <div class="col-md-6">
                         <div class="sucursal">
-                            <h3>MARIANO ROQUE ALONSO</h3>
-                            <img src="/front/img/locales/mariano.jpg">
-                            <p>Ruta Transchaco Km. 17,5 esquina Avda. Gral. Díaz <br>
-                                Tel. (021) 755 403</p>
-                            <p>
-                                <a class="maplink" href="https://maps.app.goo.gl/mLGrABZrvAnr1Y8y7" target="_blank">ver en mapa</a>
+                            <h3>TRUCK CENTER</h3>
+                            <img src="/front/img/locales2/pjc-truck.jpg">
+                            <p>Pitiantuta esq. 1 de Diciembre<br>
+                                Tel. (0336)273125<br>
+                                Pedro Juan Caballero
                             </p>
+                            <p>
+                                <a class="maplink" href="https://goo.gl/maps/ryh9NsbyqvdeNTeV9" target="_blank">ver en mapa</a>
+                            </p>
+                        </div>
+                    </div>
 
+                    <div class="col-md-6">
+                        <div class="sucursal">
+                            <h3>ANSA SHOPPING CHINA PJC</h3>
+                            <img src="/front/img/locales2/pjc-shoppingchina.jpg">
+                            <p>Pitiantuta esq. 1 de Diciembre<br>
+                                Tel. (0336)273125<br>
+                                Pedro Juan Caballero
+                            </p>
+                            <p>
+                                <a class="maplink" href="https://goo.gl/maps/ryh9NsbyqvdeNTeV9" target="_blank">ver en mapa</a>
+                            </p>
                         </div>
                     </div>
 
@@ -71,7 +87,7 @@
                     <div class="col-md-6">
                         <div class="sucursal">
                             <h3>SALTO DEL GUAIRA</h3>
-                            <img src="/front/img/locales/saltodelguaira.jpg">
+                            <img src="/front/img/locales2/saltodelguaira.jpg">
                             <p>Avda. Paraguay c/ Pablo VI<br>
                                 Tel. (046) 242819</p>
                             <p>
@@ -82,7 +98,7 @@
                     <div class="col-md-6">
                         <div class="sucursal">
                             <h3>CIUDAD DEL ESTE</h3>
-                            <img src="/front/img/locales/ciudaddeleste.jpg">
+                            <img src="/front/img/locales2/cde.jpg">
                             <p>Avda. San Blas - Ruta Internacional Km. 5<br>
                                 Tel. (061) 570725</p>
                             <p>
@@ -93,7 +109,7 @@
                     <div class="col-md-6">
                         <div class="sucursal">
                             <h3>SANTA RITA</h3>
-                            <img src="/front/img/locales/santarita.jpg">
+                            <img src="/front/img/locales2/santarita.jpg">
                             <p>Gaspar Rodríguez de Francia / Ruta VII - Barrio Sinuelo II<br>
                                 Tel. (0984) 679 735</p>
                             <p>
@@ -104,7 +120,7 @@
                     <div class="col-md-6">
                         <div class="sucursal">
                             <h3>CAPITAN BADO</h3>
-                            <img src="/front/img/locales/capitanbado.jpg">
+                            <img src="/front/img/locales2/capitanbado.jpg">
                             <p>Avda. Internacional c/ José E. Diaz<br>Tel. (037) 230 450</p>
                             <p>
                                 <a class="maplink" href="https://goo.gl/maps/euXE3ukszrQXgc4p6" target="_blank">ver en mapa</a>
@@ -114,7 +130,7 @@
                     <div class="col-md-6">
                         <div class="sucursal">
                             <h3>BELLA VISTA</h3>
-                            <img src="/front/img/locales/bellavista.jpg">
+                            <img src="/front/img/locales2/bellavista.jpg">
                             <p>Gral Diaz e/ Ruta Internacional<br>Tel. (038) 238 546</p>
                             <p>
                                 <a class="maplink" href="https://goo.gl/maps/K8k7DPTcwdm1XxoF6" target="_blank">ver en mapa</a>
