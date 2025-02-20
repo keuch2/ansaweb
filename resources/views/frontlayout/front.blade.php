@@ -144,11 +144,38 @@
 
                                     <div class="col-md-6">
                                         <div class="sucursal">
-                                            <h3>MARIANO ROQUE ALONSO</h3>
-                                            <p>Ruta Transchaco Km. 17,5 esquina Avda. Gral. Díaz <br>
-                                                Tel. <a href="tel:+59521755403">(021) 755 403</a></p>
+                                            <h3>TRUCK CENTER</h3>
+                                            <p>Pitiantuta esq. Oleary y 1 de Diciembre<br>
+                                            Tel. <a href="tel:+5950336273125">(0336)273125</a><br>
+                                            Pedro Juan Caballero</p>
                                             <p>
-                                                <a class="maplink" href="https://maps.app.goo.gl/mLGrABZrvAnr1Y8y7" target="_blank">ver en mapa</a>
+                                                <a class="maplink" href="https://goo.gl/maps/ryh9NsbyqvdeNTeV9" target="_blank">ver en mapa</a>
+                                            </p>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="sucursal">
+                                            <h3>ANSA SHOPPING CHINA PJC</h3>
+                                            <p>Pitiantuta esq. 1 de Diciembre<br>
+                                            Tel. <a href="tel:+5950336273125">(0336)273125</a><br>
+                                            Pedro Juan Caballero</p>
+                                            <p>
+                                                <a class="maplink" href="https://goo.gl/maps/ryh9NsbyqvdeNTeV9" target="_blank">ver en mapa</a>
+                                            </p>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="sucursal">
+                                            <h3>ANSA ASUNCIÓN</h3>
+                                            <p>Complejo Barrail, Avda. Artigas entre Av Gral Máximo Santos y Concepción Leyes de Chaves. Deposito  05<br>
+                                            Tel. <a href="tel:+59521755403">(021)755403</a><br>
+                                            Asunción</p>
+                                            <p>
+                                                <a class="maplink" href="https://maps.app.goo.gl/RdaN5HwYmUJ7S58z6" target="_blank">ver en mapa</a>
                                             </p>
 
                                         </div>
